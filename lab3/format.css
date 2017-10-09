@@ -1,0 +1,65 @@
+body{
+    background-color:aqua;
+    font-family:Arial;
+    }
+
+h1{
+    border:2px solid green;
+    color:blue;
+    padding:1em;
+    text-align:center
+    }
+
+h.format1{
+    font-style:italic;
+    font-weight:bold;
+    text-decoration:underline;
+    text-align:center
+    }
+
+ p{
+    font-family:Times New Roman;
+    font-style:italic
+    }
+
+li.disk{
+    list-style-type:disk;
+    font-style:italic
+    }
+
+li.circle{
+    list-style-type:circle;
+    font-style:italic
+    }
+
+li.square{
+    list-style-type:square;
+    font-style:italic
+    }
+
+li.image{
+    list-style-image:URL(smiley.png);
+    font-style:italic
+    }
+        
+a:link{
+    color:darkblue;
+    background-color: yellow
+    }
+
+a:visited{
+    color:firebrick;
+    background-color: yellow
+    }
+
+a:hover{
+    color:darkgoldenrod;
+    background-color: green;
+    font-weight:bolder
+    }
+
+a:active{
+    color:crimson;
+    background-color: green;
+    font-weight:bolder;        
+    }

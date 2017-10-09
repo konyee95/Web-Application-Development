@@ -1,0 +1,83 @@
+body{
+    background-color:#ffff66;
+    margin:0;
+}
+
+h2{
+    float:center;
+}
+
+img{
+    padding:10px;
+}
+
+#wrapper
+{
+    margin: 0auto;
+    width:100%;
+    background:#ffff66;
+}
+
+#header{
+    background:#ffff66;
+    padding:5px;
+}
+
+#header html{
+    margin:0;
+}
+
+#navigation
+{
+    float:right;
+    width:100%;
+    margin:0;
+    background:olive;
+}
+
+#navigation ul 
+{
+    margin:0;
+    padding:0;
+}
+
+#navigation ul li
+{
+    list-style-type:none;
+    display:inline;
+}
+
+#navigation li a 
+{
+    display:block;
+    float:left;
+    padding:5px 10px;
+    color:white;
+    text-decoration:none;
+    border-right:1px solid #fff;
+}
+
+#navigation li a:hover{
+    background:greenyellow
+}
+
+#pengenalan-paragraph p {
+    text-align:justify;
+}
+#sejarah-paragraph p{
+    text-align:justify;
+}
+#matlamat-paragraph p{
+    text-align:left;
+}
+#strategi-paragraph p{
+    text-align:justify;
+}
+
+.to-right {
+    float: right;
+}
+
+.to-left {
+    float: left;
+}
