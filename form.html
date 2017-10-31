@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>form</title>
+        
+        <script type="text/javascript">
+            function CalcDistance(){
+                var x1 = parseFloat(document.MyForm.x1.value);
+                var y1 = parseFloat(document.MyForm.y1.value);
+                var x2 = parseFloat(document.MyForm.x2.value);
+                var y2 = parseFloat(document.MyForm.y2.value);
+                document.MyForm.result.value = distance(x1,y1,x2,y2);
+                document.MyForm.sum.value = sum(x1,y1,x2,y2);
+                document.MyForm.average.value = average(x1,y1,x2,y2);
+                document.MyForm.product.value = product(x1,y1,x2,y2);
+                document.MyForm.largest.value = largest(x1,y1,x2,y2);
+                document.MyForm.smallest.value = smallest(x1,y1,x2,y2);
+            }
+    
+            function distance(x1,y1,x2,y2){
+                console.log(x2)
+                const a = Math.pow(Math.abs(x1 - x2), 2);
+                const b = Math.pow(Math.abs(y1 - y2), 2);
+                return Math.sqrt(a + b);
+            }
+
+            function sum(x1,y1,x2,y2){
+                return x1+y1+x2+y2;
+            }
+
+            function average(x1,y1,x2,y2){
+                return (x1+y1+x2+y2)/4;
+            }
+
+            function product (x1,y1,x2,y2){
+                return x1*y1*x2*y2;
+            }
+
+            function largest(x1,y1,x2,y2){
+                max = Math.max(x1,y1,x2,y2);
+                return max;
+            }
+
+            function smallest(x1,y1,x2,y2){
+                min = Math.min(x1,y1,x2,y2);
+                return min;
+            }
+            </script>
+    </head>
+    <body>
+        <form name="MyForm">
+            Please fill in this form<br><br>
+            Enter x1 value: <input type="text" name="x1"/><br>
+            Enter y1 value: <input type="text" name="y1"/><br>
+            Enter x2 value: <input type="text" name="x2"/><br>
+            Enter y2 value: <input type="text" name="y2"/><p>
+            <input type="button" name="calculateButton" value="Calculate" onclick="CalcDistance()"/>
+            <input type="reset" name="ClearButton" value="Clear"/><br>
+            <form> Distance:<input type="text" name="result" value=""/><br>
+                Sum:<input type="text" name="sum" value=""/><br>
+                Average:<input type="text" name="average" value=""/><br>
+                Product:<input type="text" name="product" value=""/><br>
+                Largest:<input type="text" name="largest" value=""/><br>
+                Smallest:<input type="text" name="smallest" value=""/><p></form>
+        </form>
+
+    </body>
+</html>

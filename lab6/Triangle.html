@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Calculation for triangle </title>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+        var a= parseInt(window.prompt("Enter the side a for triangle","0"));
+        var b= parseInt(window.prompt("Enter the side b for triangle","0"));
+        var angleC= parseInt(window.prompt("Enter the value of angle C","0"));
+        var asquare= Math.pow(a,2);
+        var bsquare= Math.pow(b,2);
+        var cosC= Math.cos(angleC);
+        var two_a_b_cosC= 2*a*b*cosC;
+        var csquare=(asquare+bsquare)-(two_a_b_cosC);
+        c= Math.sqrt(csquare);
+        document.write("The side c for the triangle is "+c);
+        </script>
+    </body>
+</html>

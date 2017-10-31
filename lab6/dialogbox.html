@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Dialog Boxes and Event Handlers</title>
+        <script type="text/javascript">
+        function myConfirm(){
+            var answer = confirm("You are about to leave our site. We are not responsible for any third party website contents.Are you sure you want to proceed?");
+            if(answer)
+            { window.location="http://www.softpedia.com";}
+            else
+            { document.write("Thanks for sticking around.");}
+        }
+            </script>
+            <body>
+                <form name="myform">
+                    <input type="button" value="Download Apps at Softpedia" onClick="myConfirm();">
+                </form>
+            </body>
+    </head>
+</html>

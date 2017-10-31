@@ -1,0 +1,42 @@
+<?xml-stylesheet version="1.0" type="text/css" href="Books.css"?>
+<!DOCTYPE inventory [
+    <!ELEMENT inventory (book)*>
+
+    <!ELEMENT book (title,author,isbn,publisher,pages,price)>
+    <!ATTLIST book instock (yes|no) #REQUIRED>
+    <!ELEMENT title (#PCDATA)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT isbn (#PCDATA)>
+    <!ELEMENT publisher (#PCDATA)>
+    <!ELEMENT pages (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+]>
+
+<inventory>
+    <book instock="yes">
+        <title>Beginning web programming with html, xhtml, and css</title>
+        <author>Duckett,Jon</author>
+        <isbn>0764570781</isbn>
+        <publisher>Wrox pr inc</publisher>
+        <pages>840</pages>
+        <price>MYR 119.80</price>
+    </book>
+
+    <book instock="yes">
+        <title>Core web programing (2nd edition)</title>
+        <author>Mary Hall, Larry Brown</author>
+        <isbn>0130897930</isbn>
+        <publisher>Prentice hall ptr</publisher>
+        <pages>1385</pages>
+        <price>MYR 125.50</price>
+    </book>
+
+    <book instock="no">
+        <title>An introduction to web design and programming</title>
+        <author>Paul S. Wang,Sanda Katila</author>
+        <isbn>0534395287</isbn>
+        <publisher>Course Technology</publisher>
+        <pages>592</pages>
+        <price>MYR 251.00</price>
+    </book>
+</inventory>

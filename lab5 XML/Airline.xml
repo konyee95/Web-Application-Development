@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<airplane>
+    <flight number="MH1134">
+        <destination>Penang</destination>
+        <time>
+            <departure>0735</departure>
+            <arrival>0825</arrival>
+        </time>
+        <departure_date>June 1,2006</departure_date>
+        <stops>0</stops>
+        <aircraft>734</aircraft>
+    </flight>
+
+    <flight number="MH1138">
+        <destination>Johor</destination>
+        <time>
+            <departure>1130</departure>
+            <arrival>1220</arrival>
+        </time>
+        <departure_date>June 1,2006</departure_date>
+        <stops>0</stops>
+        <aircraft>332</aircraft>
+    </flight>
+
+    <flight number="MH1148">
+        <destination>Ipoh</destination>
+        <time>
+            <departure>0815</departure>
+            <arrival>0850</arrival>
+        </time>
+        <departure_date>June 1,2006</departure_date>
+        <stops>0</stops>
+        <aircraft>330</aircraft>
+    </flight>
+
+    <flight number="MH1154">
+        <destination>Penang</destination>
+        <time>
+            <departure>0735</departure>
+            <arrival>0825</arrival>
+        </time>
+        <departure_date>June 1,2006</departure_date>
+        <stops>0</stops>
+        <aircraft>734</aircraft>
+    </flight>
+</airplane>
+

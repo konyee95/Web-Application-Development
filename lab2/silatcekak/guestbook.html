@@ -3,6 +3,41 @@
 <head>
     <title>silat cekak page</title>
     <link rel="stylesheet" type="text/css" href="format.css" />
+
+    <script type="text/javascript">
+    function verify(){
+
+      var user = document.getElementById("name");
+      var email = document.getElementById("email");
+      var gender = document.getElementById("gender");
+      var comment = document.getElementById("comment");
+      var password = document.getElementById("pass1");
+
+      if (username.value === ""){
+        alert("You did not enter an username\n"+"Please enter the value now");
+        user.focus();
+        return false;
+      } 
+
+      if (email.value === ""){
+        alert("You did not enter an email\n"+"Please enter the value now");
+        email.focus();
+        return false;
+      }   
+
+      if (gender.value === ""){
+        alert("You did not select you gender\n"+"Please select the value now");
+        gender.focus();
+        return false;
+      } 
+
+      if (password.value === ""){
+        alert("You did not enter your password\n"+"Please enter the value now");
+        password.focus();
+        return false;
+      } 
+    }
+    </script>
 </head>
 
 <body>
@@ -44,18 +79,18 @@
           <td nowrap>&nbsp;</td>
         </tr>
         <tr>
-          <td nowrap id="gender">Name</td>
-          <td nowrap id="gender"><input type="text" name="textfield" id="textfield"></td>
+          <td nowrap >Name</td>
+          <td nowrap id="name"><input type="text" name="textfield" id="name"></td>
         </tr>
         <tr>
           <td nowrap>Email</td>
-          <td nowrap><input type="text" name="textfield2" id="textfield2"></td>
+          <td nowrap><input type="text" name="textfield2" id="email"></td>
         </tr>
         <tr>
           <td nowrap>Gender</td>
           <td nowrap><input type="radio" name="radio" id="radio" value="radio">
           <label for="radio">Female
-            <input type="radio" name="radio2" id="radio2" value="radio2">
+            <input type="radio" name="radio" id="radio2" value="radio2">
           Male</label></td>
         </tr>
         <tr>
@@ -71,7 +106,7 @@
           <td nowrap>&nbsp;</td>
         </tr>
         <tr>
-          <td nowrap><input type="submit" name="submit" id="submit" value="Submit Form">
+          <td nowrap><input type="submit" name="submit" id="submit" value="Submit Form" onclick="verify()">
           <input name="reset" type="reset" id="reset" value="Reset Form"></td>
           <td nowrap>&nbsp;</td>
         </tr>

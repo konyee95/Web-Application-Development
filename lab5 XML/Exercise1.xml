@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<Subjects_MI>
+    <subject>
+    <code>BITM 2113</code>
+    <name>Web Application Development</name>
+    <credits>3</credits>
+    <lecturer>Sazilah Salam</lecturer>
+    <synopsis>...</synopsis>
+    </subject>
+
+    <subject>
+    <code>BITM 2123</code>
+    <name>Digital Audio and Video Techology</name>
+    <credits>3</credits>
+    <lecturer>Mohd Lutfi Dolhait</lecturer>
+    </subject>
+
+    <subject>
+    <code>BITM 3413</code>
+    <name>Geographical Information System</name>
+    <credits>3</credits>
+    <lecturer>Prof.Nanna Suryana Herman</lecturer>
+    </subject>
+
+    <subject>
+    <code>BITM 3213</code>
+    <name>Interactive Computer Graphic</name>
+    <credits>3</credits>
+    <lecturer>Aniza Othman</lecturer>
+    <type>Elective</type>
+    </subject>
+
+    <subject>
+    <code>BITM 3223</code>
+    <name>Virtual Reality Technology</name>
+    <credits>3</credits>
+    <lecturer>Syariffanor Hisham</lecturer>
+    <type>Core</type>
+    </subject>
+
+    </Subjects_MI>

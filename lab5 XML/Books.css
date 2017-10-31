@@ -1,0 +1,32 @@
+inventory{
+    background:linear-gradient(to right, yellow,orange );
+    width:100%;
+}
+
+book{
+    margin-left: 30pt;
+    margin-top: 12pt;
+    font-size: 10pt;
+    display: list-item;
+    list-style-type: decimal;
+}
+
+title{
+    font-style: italic;
+    color: red;
+    text-tr
+}
+
+author{
+    color:#0000FF;
+    font-weight: bold;
+}
+
+instock{
+    font-style: italic;
+    font-size: 20pt;
+}
+
+isbn,publisher,pages,price{
+    color: #000000;
+}
