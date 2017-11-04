@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex sidebar</title>
+
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      background-color: rgb(147, 213, 239);
+      padding: 20px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      background-color: snow;
+      border: 5px solid skyblue;
+      border-radius: 5px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    #main {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #info-container {
+      flex: 0.75;
+      background-color: snow;
+      border: 5px solid coral;
+      border-radius: 5px;
+    }
+
+    #login-panel {
+      flex: 0.25;
+      background-color: snow;
+      border: 5px solid blueviolet;
+      border-radius: 5px;
+    }
+
+    .some-padding {
+      padding: 20px;
+    }
+
+    .some-margin {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Flex Sidebars</h1>
+
+    <div id="main">
+      <div id="info-container" class="some-padding some-margin">
+        <h3>MyLibrary</h3>
+        <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+          ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+      </div>
+      <div id="login-panel" class="some-padding some-margin">
+        <h3>Login Panel</h3>
+        <ul>
+          <li>Sample text</li>
+          <li>Sample text</li>
+          <li>Sample text</li>
+          <li>Sample text</li>
+          <li>Sample text</li>
+          <li>Sample text</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Display Property</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* flex-direction: column; */
+      border: 10px solid springgreen;
+      margin: 0px;
+    }
+    .simple-block {
+      border: 3px solid darkmagenta;
+      margin: 10px;
+      padding: 0px 10px;
+    }
+    .inline-text {
+      display: inline;
+      background-color: #099;
+      margin: 50px;
+    }
+    .inline-block-text {
+      display: inline-block;
+      background-color: orange;
+      margin: 50px;
+    }
+    .simple-block-div {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <p class="simple-block">This is a long long long <span class="inline-text">inline</span> text</p>
+  <p class="simple-block">This is a long long long <span class="inline-block-text">inline-block-text</span> text</p>
+  <div class="simple-block-div simple-block">
+    <p class="simple-block">By default div will have display property: block</p>
+  </div>
+</body>
+</html>
