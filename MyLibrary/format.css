@@ -1,3 +1,7 @@
+.test-shit {
+	border: 5px solid red;
+}
+
 body{
 	background-color: paleturquoise;
 	margin: 0;
@@ -7,9 +11,18 @@ img{
 	padding: 10px;
 }
 
-#navigation{
+#main {
+	margin: 0 10px;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	margin: 0;
+	height: 100%;
+}
+#navigation{
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 #navigation ul{
@@ -33,6 +46,30 @@ img{
 
 #navigation li a:hover{
 	background: yellow;
+}
+
+#content{
+	display:flex;
+	flex-direction: row;
+	margin: 0;
+	flex:0.75;
+	width: 100%;
+	height: 100%
+
+}
+#library-info{
+	width:100%;
+	flex:0.75;
+}
+
+#user-info{
+	width: 100%;
+	flex: 0.25;
+}
+
+#user-info-table {
+	width: 100%;
+	padding: 10px;
 }
 
 .to-right{
