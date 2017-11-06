@@ -1,14 +1,19 @@
 .test-shit {
-	border: 5px solid red;
+	border: 5px solid blue;
 }
 
 body{
-	background-color: paleturquoise;
+	background-color:white;
 	margin: 0;
 }
 
 img{
 	padding: 10px;
+}
+
+table{
+	border: 2px solid lightseagreen;
+	border-bottom-right-radius: 5px;
 }
 
 #main {
@@ -23,6 +28,7 @@ img{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: 0 25px;
 }
 
 #navigation ul{
@@ -39,7 +45,7 @@ img{
 	display: block;
 	float: left;
 	padding: 5px 10px;
-	color: deeppink;
+	color: tomato;
 	text-decoration: underline;
 	border-right: 1px solid darkblue;
 }
