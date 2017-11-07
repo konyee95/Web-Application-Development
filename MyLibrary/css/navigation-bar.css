@@ -36,3 +36,17 @@
   box-sizing: border-box;
   padding-left: 10px;
 }
+
+/* style text-input placeholder */
+::-webkit-input-placeholder {
+  color: rgba(32, 32, 32, 0.7);
+  font-weight: bold;
+}
+:-moz-placeholder {
+  color: rgba(32, 32, 32, 0.7);
+  font-weight: bold;
+}
+:-ms-input-placeholder {
+  color: rgba(32, 32, 32, 0.7);
+  font-weight: bold;
+}
