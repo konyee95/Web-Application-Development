@@ -1,74 +1,73 @@
 <html>
-    <head>
-        <title>Temperature conversion</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script type = "text/javascript">
-            function convert(){
-                var c = parseFloat(document.temperature.celcius.value);
-                document.temperature.fahrenheit.value = fahrenheit(c);
-                document.temperature.kelvin.value = kelvin(c);
-                if(c.value ===""){
-                    alert("Please fill in all the textfields.");
-                    return false;
-                }
-                
-                else if(c.value !== value){
-                    alert("The input must be a number.");
-                    return false;
-                }
 
-                else
-                    return true;
+<head>
+    <title>Temperature conversion</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+         function convert() {
+            console.log('sds')
+            var a = document.getElementById("celcius");
+            const a_value = parseFloat(a.value);
+
+            console.log(a_value)
+
+            if (a_value === "") {
+                alert("Please fill in all the textfields.");
+                return false;
+            } else {
+                var f = a_value * 1.8 + 32;
+                var k = a_value + 273.15;
+                console.log(f);
+                console.log(k);
+                document.temperature.fahrenheit.value = f;
+                document.temperature.kelvin.value = k;
             }
-                
-            function fahrenheit(c){
-                const f=(c*1.8)+32
-                    return f;
-                }
+        }
+    </script>
+</head>
 
-            function kelvin(c){
-                const k=c+273.15
-                    return k;
-                }
-        </script>
-    </head>
+<body>
+    <h2>TEMPERATURE CONVERSION</h2>
+    <h3>Please fill the form below with the correct value:</h3>
+    <img src="temperature.png" />
+    <form name="temperature">
+        <table>
+            <tr>
+                <td>CELCIUS</td>
+                <td>
+                    <input type="text" id="celcius" />
+                </td>
+            </tr>
 
-    <body>
-        <h2>TEMPERATURE CONVERSION</h2>
-        <h3>Please fill the form below with the correct value:</h3>
-        <img src="temperature.png"/>
-        <form name ="temperature">
-            <table>
-                <tr>
-                    <td>CELCIUS</td>
-                    <td><input type="text" name="celcius"value=""/></td>
-                </tr>
+            <tr></tr>
+            <tr></tr>
 
-                <tr></tr>
-                <tr></tr>
+            <tr>
+                <td>
+                    <input type="button" name="convert" value="CONVERT" onclick="convert()" />
+                    <input type="reset" name="clear" value="CLEAR FORM" />
+                </td>
+            </tr>
 
-                <tr>
-                    <td>
-                        <input type="button" name="convert" value="CONVERT" onclick="convert()"/>
-                        <input type="button" name="clear" value="CLEAR FORM" />
-                    </td>
-                </tr>
+            <tr>
+                <td>RESULT</td>
+            </tr>
 
-                <tr>
-                    <td>RESULT</td>
-                </tr>
+            <tr>
+                <td>FAHRENHEIT</td>
+                <td>
+                    <input type="text" id="fahrenheit" value="" />
+                </td>
+            </tr>
 
-                <tr>
-                    <td>FAHRENHEIT</td>
-                    <td><input type="text" name="fahrenheit"value=""/></td>
-                </tr>
+            <tr>
+                <td>KELVIN</td>
+                <td>
+                    <input type="text" id="kelvin" value="" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
 
-                <tr>
-                    <td>KELVIN</td>
-                    <td><input type="text" name="kelvin"value=""/></td>
-                </tr>
-                </tr>
-            </table>
-        </form>
-    </body>
 </html>
