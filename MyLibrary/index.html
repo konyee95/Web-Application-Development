@@ -7,6 +7,10 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="./css/format.css" />
     <link rel="stylesheet" type="text/css" href="./css/navigation-bar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/hamburger-menu.css" />
+
+    <!-- scripts -->
+    <script src="./js/hamburger-menu.js"></script>
 
     <!-- meta -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -30,9 +34,16 @@
                 </li>
             </ul>
 
-            <form class="search-form" action="" method="GET">
-                <input id="search-input" type="text" placeholder="Search" />
-            </form>
+            <div class="search-container">
+                <form class="search-form" action="" method="GET">
+                    <input id="search-input" type="text" placeholder="Search" />
+                </form>
+                <div class="hamburger-container" onclick="hamburgerMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
         </div>
 
         <div id="info-container">

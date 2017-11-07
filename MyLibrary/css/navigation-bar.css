@@ -28,6 +28,16 @@
   text-decoration: none;
 }
 
+/* contain both search field and hamburger menu */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container > * {
+  padding: 0 10px;
+}
+
 .search-form {
   background: #fb8c00;
   border-radius: 2px;
