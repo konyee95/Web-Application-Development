@@ -13,3 +13,20 @@
 /* #availability{
     background-color:#ffa726;
 } */ 
+
+h1{
+    color:orangered;
+}
+
+h2{
+    color:orange;
+}
+
+#about-us-container{
+    margin:20px;
+}
+
+#library-team{
+    display:flex;
+    flex-direction: row;
+}
