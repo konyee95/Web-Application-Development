@@ -1,5 +1,5 @@
 #navigation {
-	height: 60px;
+	height: 55px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -16,18 +16,23 @@
 
 #navigation ul li {
 	list-style-type: none;
-	display: inline;
+  display: inline-block;
+  padding-right: 20px;
 }
 
 #navigation li a {
 	display: block;
 	float: left;
 	padding: 5px 10px;
-	color: tomato;
-	text-decoration: underline;
-	border-right: 1px solid darkblue;
+	color: #fff;
+  text-decoration: none;
 }
 
-#navigation li a:hover {
-	background: yellow;
+#search-input {
+  height: 30px;
+  width: 20%;
+  border: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-left: 10px;
 }
