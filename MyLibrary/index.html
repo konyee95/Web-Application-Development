@@ -2,14 +2,7 @@
 
 <head>
     <title> MyLibrary</title>
-    <link rel="stylesheet" type="text/css" href="format.css" />
-    <style type="text/css">
-        body,
-        td,
-        th {
-            font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/format.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 </head>
@@ -17,7 +10,7 @@
 <body>
     <div id="main">
         <div id="navigation">
-            <ul class="to-left">
+            <ul>
                 <li>
                     <a href="">HOME</a>
                 </li>
@@ -32,13 +25,11 @@
                 </li>
             </ul>
 
-            <ul class="to-right">
-                <input type="text" placeholder="SEARCH">
-            </ul>
+            <input type="text" placeholder="SEARCH" />
         </div>
 
         <div id="content">
-            <div id="library-info" class="test-shit">
+            <div id="library-info">
                 <img class="to-left" src="image/Library.jpg" width="200" height="250" />
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
                     Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
@@ -49,7 +40,7 @@
                 </p>
             </div>
 
-            <div id="user-info" class="test-shit">
+            <div id="user-info">
                 <form name="user-info-form">
                     <table border="1">
                         <tr>
@@ -57,30 +48,31 @@
                         </tr>
 
                         <tr>
-                                <td>User Name</td>
-                                <td><input type="text" name="name" /></td>
-                        </tr>
-                        
-                        <tr>
-                                <td>Image</td>
-                                <td><input type="text" name="image" /></td>
+                            <td>User Name</td>
+                            <td>
+                                <input type="text" name="name" />
+                            </td>
                         </tr>
 
                         <tr>
-                                <td colspan="2">Edit profile</td>
+                            <td>Image</td>
+                            <td>
+                                <input type="text" name="image" />
+                            </td>
                         </tr>
 
                         <tr>
-                                <td colspan="2">Sign out</td>
+                            <td colspan="2">Edit profile</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">Sign out</td>
                         </tr>
                     </table>
-                    
+
                 </form>
             </div>
         </div>
-
-
-
     </div>
 </body>
 
