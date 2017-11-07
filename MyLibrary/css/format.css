@@ -25,39 +25,6 @@ table {
 	height: 100%;
 }
 
-#navigation {
-	height: 50px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0;
-	padding: 0 20px;
-	background-color: rgba(32, 32, 32, 1);
-}
-
-#navigation ul {
-	margin: 0;
-	padding: 0;
-}
-
-#navigation ul li {
-	list-style-type: none;
-	display: inline;
-}
-
-#navigation li a {
-	display: block;
-	float: left;
-	padding: 5px 10px;
-	color: tomato;
-	text-decoration: underline;
-	border-right: 1px solid darkblue;
-}
-
-#navigation li a:hover {
-	background: yellow;
-}
-
 #content {
 	display: flex;
 	flex-direction: row;
