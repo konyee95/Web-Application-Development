@@ -2,11 +2,11 @@
     <head>
         <title>Temperature conversion</title>
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script type="text/javascript">
+        <script type = "text/javascript">
             function convert(){
                 var c = parseFloat(document.temperature.celcius.value);
-                document.temperature.fahrenheit.value=fahrenheit(c);
-                document.temperature.kelvin.value=kelvin(c);
+                document.temperature.fahrenheit.value = fahrenheit(c);
+                document.temperature.kelvin.value = kelvin(c);
                 if(c.value ===""){
                     alert("Please fill in all the textfields.");
                     return false;
@@ -21,12 +21,14 @@
                     return true;
             }
                 
-                fahrenheit(c){
-                    return (c*1.8)+32;
+            function fahrenheit(c){
+                const f=(c*1.8)+32
+                    return f;
                 }
 
-                kelvin(c){
-                    return c+273.15;
+            function kelvin(c){
+                const k=c+273.15
+                    return k;
                 }
         </script>
     </head>
