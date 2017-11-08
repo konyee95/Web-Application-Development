@@ -13,6 +13,35 @@
 /* #availability{
     background-color:#ffa726;
 } */ 
+#navigation-about-us{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 20px;
+    background-color: #ffa726;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+#navigation-about-us ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navigation-about-us ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 20px;
+  }
+  
+  #navigation-about-us li a {
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+  }
 
 h1{
     color:orangered;
@@ -22,9 +51,6 @@ h2{
     color:orange;
 }
 
-#about-us-container{
-    margin:20px;
-}
 
 #library-team{
     display:flex;
