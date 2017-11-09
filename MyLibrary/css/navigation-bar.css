@@ -77,15 +77,15 @@
   color: #000;
 }
 
-#search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #fff;
 }
-#search-input::-moz-placeholder { /* Firefox 19+ */
+.search-input::-moz-placeholder { /* Firefox 19+ */
   color: #fff;
 }
-#search-input:-ms-input-placeholder { /* IE 10+ */
+.search-input:-ms-input-placeholder { /* IE 10+ */
   color: #fff;
 }
-#search-input:-moz-placeholder { /* Firefox 18- */
+.search-input:-moz-placeholder { /* Firefox 18- */
   color: #fff;
 }
