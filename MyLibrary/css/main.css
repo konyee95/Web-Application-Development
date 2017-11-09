@@ -19,6 +19,15 @@ table {
 	border-bottom-right-radius: 5px;
 }
 
+td{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+p{
+	text-align: justify;
+}
+
 #main-container {
 	margin: 0;
 	display: flex;
