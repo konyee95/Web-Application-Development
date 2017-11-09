@@ -10,13 +10,14 @@
     <link rel="stylesheet" type="text/css" href="./css/hamburger-menu.css" />
 
     <!-- scripts -->
+    <script src="./js/main.js"></script>
     <script src="./js/hamburger-menu.js"></script>
 
     <!-- meta -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
-<body>
+<body onload="init()">
     <div id="main-container">
         <div id="navigation" class="some-shadow">
             <ul>
@@ -35,8 +36,8 @@
             </ul>
 
             <div class="search-container">
-                <form class="search-form" action="" method="GET">
-                    <input id="search-input" type="text" placeholder="Search" />
+                <form id="searchForm" class="search-form" action="" method="GET">
+                    <input id="searchInput" class="search-input" type="text" placeholder="Search" />
                 </form>
                 <div class="hamburger-container" onclick="hamburgerMenu(this)">
                     <div class="bar1"></div>

@@ -8,12 +8,17 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css" />
     <link rel="stylesheet" type="text/css" href="../css/about-us.css" />
     <link rel="stylesheet" type="text/css" href="../css/navigation-bar.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hamburger-menu.css" />
+
+    <!-- scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/hamburger-menu.js"></script>
 
     <!-- meta -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
-<body>
+<body onload="init()">
     <div id="main-container">
         <div id="navigation">
             <ul>
@@ -31,9 +36,16 @@
                 </li>
             </ul>
 
-            <form class="search-form" action="" method="GET">
-                <input id="search-input" type="text" placeholder="Search" />
-            </form>
+            <div class="search-container">
+                <form id="searchForm" class="search-form" action="" method="GET">
+                    <input id="searchInput" class="search-input" type="text" placeholder="Search" />
+                </form>
+                <div class="hamburger-container" onclick="hamburgerMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
         </div>
         <div id="navigation-about-us">
             <h3>About the Library</h3>

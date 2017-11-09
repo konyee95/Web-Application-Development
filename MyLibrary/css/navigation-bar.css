@@ -50,8 +50,15 @@
   width: 200px;
   margin: 6px 0 6px 24px;
   opacity: 1;
+  transition: 0.2s;
 }
-#search-input {
+
+.search-form-expanded {
+  width: 300px;
+  background: #fff;
+}
+
+.search-input {
   background: 0;
   border: 0;
   color: #fff;
@@ -64,6 +71,10 @@
   font-size: 16px;
   font-weight: 100;
   letter-spacing: .05em;
+}
+
+.search-input-expanded {
+  color: #000;
 }
 
 #search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
