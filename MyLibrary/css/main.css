@@ -63,3 +63,8 @@ table {
 .some-shadow {
     box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 }
+
+/*add some padding to compensate for the sticky header*/
+.sticky-header-padding {
+    padding-top: 60px;
+}
