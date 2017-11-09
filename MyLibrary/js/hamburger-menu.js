@@ -5,7 +5,7 @@ function hamburgerMenu(x) {
     document.getElementById("side-panel").style.width = "0";
     document.body.style.backgroundColor = "white";
   } else {
-    document.getElementById("side-panel").style.width = "300px";
-    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+    document.getElementById("side-panel").style.width = "350px";
+    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
   }
 }
