@@ -68,3 +68,11 @@ table {
 .sticky-header-padding {
     padding-top: 55px;
 }
+
+/* remove outline width from the following elements */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
