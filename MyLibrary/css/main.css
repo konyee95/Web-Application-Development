@@ -14,6 +14,32 @@ h1{
 	font-family:Impact, Charcoal, sans-serif;
 	color:#ff5722;
 	font-size:300%;
+	font-weight:bolder;
+}
+
+h2{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color:black;
+}
+
+h3{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color:#f4511e;
+	font-size: 15;
+}
+
+p{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	color:#4e342e;
+	font-weight: bold;
+	text-align: justify;
+	font-size: 20;
+}
+
+th{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 200%;
+	text-align: left;
 }
 
 img {
@@ -23,17 +49,15 @@ img {
 }
 
 table {
-	border: 2px solid lightseagreen;
+	border: 2px solid transparent;
 	border-bottom-right-radius: 5px;
+	table-layout: fixed;
 }
 
 td {
 	padding-left: 10px;
 	padding-right: 10px;
-}
-
-p {
-	text-align: justify;
+	width: 60%;
 }
 
 #main-container {
@@ -51,12 +75,6 @@ p {
 	padding: 0 20px;
 }
 
-/* .library-image {
-	width: 50%;
-	height: auto;
-	display: block;
-} */
-
 .to-right {
 	float: right;
 }
@@ -67,6 +85,10 @@ p {
 
 .some-shadow {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.table-color{
+	background-color: #ffe082;
 }
 
 .image-button{
@@ -82,6 +104,10 @@ p {
 	text-align:center;
 	cursor:pointer;
 	white-space:nowrap;
+}
+
+.black-text{
+	color:black;
 }
 
 .black{
@@ -117,6 +143,11 @@ p {
 
 .sticky-header-padding {
 	padding-top: 55px;
+}
+
+.margin{
+	margin-left:20px;
+	margin-right: 20px;
 }
 
 /* remove outline width from the following elements */
