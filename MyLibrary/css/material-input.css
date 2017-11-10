@@ -1,0 +1,106 @@
+/* ===============================================
+ *     <div class="material-input-container">
+ *          <input type="text" class="material-input">
+ *          <span class="material-input-highlight></span>
+ *          <span class="material-input-bar"></span>
+ *          <label class="material-input-label"></label>
+ *     </div>
+ */
+
+.material-input-container {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.material-input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.material-input:focus {
+  outline: none;
+}
+
+.material-input-label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+
+/* label active state */
+
+.material-input:focus~.material-input-label,
+.material-input:valid~.material-input-label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+
+/* bottom bars */
+
+.material-input-bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.material-input-bar:before,
+.material-input-bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.material-input-bar:before {
+  left: 50%;
+}
+
+.material-input-bar:after {
+  right: 50%;
+}
+
+
+/* bottom bars active states */
+
+.material-input:focus~.material-input-bar:before,
+.material-input:focus~.material-input-bar:after {
+  width: 50%;
+}
+
+
+/* highlighter */
+
+.material-input-highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.material-input:focus~.material-input-highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
