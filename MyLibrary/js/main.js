@@ -40,15 +40,15 @@ const onSearchInputLoseFocus = () => {
 const sidePanelListener = e => {
   const hamburgerMenu = document.getElementById("hamburger-menu");
   let i = e.target.parentNode.id;
-  let isHamburgerMenuOpened = hamburgerMenu.classList.contains('change')
-  if (isHamburgerMenuOpened &&
-    (i !== "side-panel" &&
-      i !== "user-account-header" &&
-      i !== "user-account-container" &&
-      i !== "search-container" &&
-      i !== "hamburger-menu")) {
-    closeSidePanel();
-    hamburgerMenu.classList.remove("change");
+  let isHamburgerMenuOpened = hamburgerMenu.classList.contains('change');
+  let elementArray = ["side-panel", "user-account-header", "user-account-container", "search-container", "hamburger-menu"];
+
+  /* test is user clicked area match with elements inside the array */
+  if (isHamburgerMenuOpened) {
+    if (elementArray.indexOf(i) > -1 === false) {
+      closeSidePanel();
+      hamburgerMenu.classList.remove("change");
+    }
   }
 }
 
