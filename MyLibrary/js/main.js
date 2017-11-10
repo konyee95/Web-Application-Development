@@ -1,4 +1,16 @@
-function onSearchInputFocus() {
+/* hamburger menu */
+const hamburgerMenu = x => {
+  x.classList.toggle("change");
+
+  if (!x.classList.contains("change")) {
+    closeSidePanel();
+  } else {
+    openSidePanel();
+  }
+}
+
+/* side panel */
+const onSearchInputFocus = () => {
   const searchForm = document.getElementById("search-form");
   const searchInput = document.getElementById("search-input");
 
@@ -6,7 +18,17 @@ function onSearchInputFocus() {
   searchInput.classList.add("search-input-expanded");
 }
 
-function onSearchInputLoseFocus() {
+const closeSidePanel = () => {
+  document.getElementById("side-panel").style.width = "0";
+  document.body.style.backgroundColor = "white";
+}
+
+const openSidePanel = () => {
+  document.getElementById("side-panel").style.width = "350px";
+  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+}
+
+const onSearchInputLoseFocus = () => {
   const searchForm = document.getElementById("search-form");
   const searchInput = document.getElementById("search-input");
 
@@ -14,21 +36,29 @@ function onSearchInputLoseFocus() {
   searchInput.classList.remove("search-input-expanded")
 }
 
-function hamburgerMenu(x) {
-  x.classList.toggle("change");
-
-  if (!x.classList.contains("change")) {
-    document.getElementById("side-panel").style.width = "0";
-    document.body.style.backgroundColor = "white";
-  } else {
-    document.getElementById("side-panel").style.width = "350px";
-    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+/* check is user clicked area is outside side panel, then close */
+const sidePanelListener = e => {
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  let i = e.target.parentNode.id;
+  let isHamburgerMenuOpened = hamburgerMenu.classList.contains('change')
+  if (isHamburgerMenuOpened &&
+    (i !== "side-panel" &&
+      i !== "user-account-header" &&
+      i !== "user-account-container" &&
+      i !== "search-container" &&
+      i !== "hamburger-menu")) {
+    closeSidePanel();
+    hamburgerMenu.classList.remove("change");
   }
 }
 
-function init() {
+/* init listeners */
+const init = () => {
+  const hamburgerMenu = document.getElementById("hamburger-menu");
   const searchInput = document.getElementById("search-input");
 
   searchInput.addEventListener("focus", onSearchInputFocus);
   searchInput.addEventListener("focusout", onSearchInputLoseFocus);
+
+  window.addEventListener("click", sidePanelListener);
 }
