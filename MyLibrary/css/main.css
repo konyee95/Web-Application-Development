@@ -36,29 +36,12 @@ p{
 	font-size: 20;
 }
 
-th{
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	font-size: 200%;
-	text-align: left;
-}
-
 .image{
 	padding: 10px;
 	width:100%;
 	height:auto;
 }
 
-table {
-	border: 2px solid transparent;
-	border-bottom-right-radius: 5px;
-	table-layout: fixed;
-}
-
-td {
-	padding-left: 10px;
-	padding-right: 10px;
-	width: 60%;
-}
 
 #main-container {
 	margin: 0;
@@ -75,12 +58,11 @@ td {
 	padding: 0 20px;
 }
 
-
 .some-shadow {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 }
 
-.table-color{
+.topic-color{
 	background-color: #ffe082;
 }
 
@@ -107,7 +89,7 @@ td {
 	color:black;
 }
 
-.black,.hover-black:hover{
+.black{
 	color:#fff;
 	background-color:#000;
 }
@@ -130,6 +112,24 @@ td {
 .content{
 	max-width:980px;
 	margin:auto;
+}
+
+.column{
+    display:flex;
+    flex-direction:column;
+}
+
+.row{
+    display:flex;
+    flex-direction:row;
+}
+
+.flex{
+    flex:0.3;
+}
+
+.padding{
+    padding:25px 25px;
 }
 
 .display-container{
