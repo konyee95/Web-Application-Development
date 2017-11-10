@@ -136,6 +136,14 @@ p{
 	position:relative;
 }
 
+.colorbox1{
+	background-color: #fffa88;
+}
+
+.colorbox2{
+	background-color: #fdd865;
+}
+
 /*add some padding to compensate for the sticky header*/
 
 .sticky-header-padding {
