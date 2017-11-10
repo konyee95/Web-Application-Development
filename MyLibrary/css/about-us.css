@@ -22,7 +22,7 @@ p{
     font-family: New Century Schoolbook, TeX Gyre Schola, serif;
     font-weight:bold;
     font-size:20;
-    color:#CD853F;
+    color:#D2691E;
     text-align: justify;
 }
 
@@ -98,6 +98,10 @@ p{
 .textbrown{
     color:#B84507;
 }
+
+.textgrey{
+    color:#544343;
+}
 .navigation-text{
     font-family: "Roboto";
 }
@@ -108,4 +112,39 @@ p{
 
 .block-color{
     background-color:#ffea60;
+}
+
+.blue-block{
+    background-color:#80deea;
+    width:70%;
+}
+
+.margin{
+    margin:0px 20px;
+}
+
+.member-block1{
+    background-color: #ffea60;
+}
+
+.member-block2{
+    background-color: #ffce4f;
+}
+
+.member-block3{
+    background-color: #ffb346;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.center{
+    display: block;
+    margin: auto;
+}
+
+.img-member{
+    width:100;
+    height:110;
 }
