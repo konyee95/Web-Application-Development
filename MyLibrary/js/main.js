@@ -52,6 +52,11 @@ const sidePanelListener = e => {
   }
 }
 
+/* go back to previous page */
+const goBack = () => {
+  window.history.back();
+}
+
 /* init listeners */
 const init = () => {
   const hamburgerMenu = document.getElementById("hamburger-menu");
