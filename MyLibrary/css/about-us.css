@@ -1,21 +1,21 @@
-/* #mission{
-    background-color: #ffee58;
+body {
+	background-color: white;
+	margin: 0;
+	width: 100%;
+	font-family: 'Roboto';
+	transition: 0.2s;
 }
-
-/* #service{
-    background-color:#ffa726;
-} */
-
-
-/* #library-team{
-    background-color:#ffee58;
-} */
-
-
-/* #availability{
-    background-color:#ffa726;
-} */
-
+h2{
+    font-size:150%;
+    color:#fff;
+    font-weight:lighter;
+}
+#main-container {
+	margin: 0;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
 #navigation-about-us {
     height: 108px;
     display: flex;
