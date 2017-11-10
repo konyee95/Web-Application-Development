@@ -84,6 +84,10 @@ p {
 	white-space:nowrap;
 }
 
+.black{
+	color:#fff;
+	background-color:#000}
+
 
 /*add some padding to compensate for the sticky header*/
 
