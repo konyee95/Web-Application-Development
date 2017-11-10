@@ -5,11 +5,42 @@ body {
 	font-family: 'Roboto';
 	transition: 0.2s;
 }
-h2{
+
+h3{
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
     font-size:150%;
-    color:#fff;
+    color:black;
     font-weight:lighter;
 }
+
+h2{
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    color:#A0522D;
+}
+
+p{
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-weight:bold;
+    font-size:20;
+    color:#CD853F;
+    text-align: justify;
+}
+
+table{
+    background-color: #fffa88;
+    table-layout: fixed;
+    width:100%;
+}
+
+td:hover {
+    background-color: #f5f5f5;
+}
+
+td{
+    display:inline-block;
+    width:45%;
+}
+
 #main-container {
 	margin: 0;
 	display: flex;
@@ -50,8 +81,45 @@ h2{
     color: #fff;
     text-decoration: none;
 }
+#library-team ul li{
+    font-family:New Century Schoolbook, TeX Gyre Schola, serif;
+    font-weight:bold;
+    font-size:20;
+    color:#8B4513;
+}
+.column{
+    display:flex;
+    flex-direction:column;
+}
 
-#library-team {
-    display: flex;
-    flex-direction: row;
+.row{
+    display:flex;
+    flex-direction:row;
+}
+
+.flex{
+    flex:0.5;
+}
+
+.textwhite{
+    color:white;
+}
+
+.textblack{
+    color:black;
+}
+
+.textbrown{
+    color:#B84507;
+}
+.navigation-text{
+    font-family: "Roboto";
+}
+
+.padding{
+    padding: 25px 25px;
+}
+
+.block-color{
+    background-color:#ffea60;
 }
