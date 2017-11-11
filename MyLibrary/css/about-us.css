@@ -40,6 +40,7 @@ p{
     margin: 55px 0 0 0;
     padding: 10px 20px;
     background-color: #ffa726;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 }
 
 #navigation-about-us h3 {
