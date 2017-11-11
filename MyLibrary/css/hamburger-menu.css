@@ -40,24 +40,40 @@
   background-color: #FAFAFA;
   overflow-x: hidden;
   transition: 0.3s;
-  box-shadow: 0 20px 0px -20px rgba(0, 0, 0, .6);
+  box-shadow: 0 16px 22px rgba(0,0,0,0.25);
+}
+
+.user-account-header, .user-account-container {
+  padding: 0 35px;
 }
 
 .user-account-header {
   display: flex;
-  flex: 0.2;
-  justify-content: center;
+  flex: 0.25;
+  background: url('../image/tensor.jpg') no-repeat;
+  background-size: 100% 200%;
   align-items: center;
-} 
+  align-items: center;
+}
 
 .user-account-header > p {
   font-size: 30px;
-  color: #212121;
-  font-weight: 700;
+  font-weight: 100;
+  font-family: 'Roboto-Thin';
+  color: #fafafa;
 }
 
 .user-account-container {
   display: flex;
-  flex: 0.8;
-  justify-content: center;
+  flex: 0.75;
+  flex-direction: column;
+  padding-left: 40px;
+  /* justify-content: center; */
+}
+
+.user-account-container > p {
+  font-size: 20px;
+  font-weight: 100;
+  color: grey;
+  font-family: 'Roboto-Thin';
 }
