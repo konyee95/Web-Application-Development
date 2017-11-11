@@ -1,6 +1,9 @@
 .test-shit {
 	border: 3px solid red;
 }
+* {
+  box-sizing: inherit;
+}
 
 body {
 	background-color: white;
