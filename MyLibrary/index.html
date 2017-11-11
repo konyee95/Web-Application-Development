@@ -59,7 +59,7 @@
         </div>
 
         <div id="info-container" class="sticky-header-padding">
-            <div class="content display-container">
+            <div class="slides-container">
                 <center>
                     <img src="image/utem-library.jpg" class="mySlides" />
                     <img src="image/image1.jpg" class="mySlides" />
@@ -74,8 +74,8 @@
                     <img src="image/image10.jpg" class="mySlides" />
                     <img src="image/image11.jpg" class="mySlides" />
                 </center>
-                <button class="image-button black display-left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="image-button black display-right" onclick="plusDivs(1)">&#10095;</button>
+                <button class="image-button display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="image-button display-right" onclick="plusDivs(1)">&#10095;</button>
             </div>
 
             <div id="intro" class="margin">
@@ -86,9 +86,9 @@
                     We provide online resources, professional support and guidance to all our students whenever, and from
                     wherever they have chosen to study.
                 </h3>
-                <h3 class="black-text">This service is available to you any time any where. You can access all resources from any computer with internet
-                    access including your own PC at home. If you have problems accessing the service, please contact the Online
-                    Library enquiry service at
+                <h3 class="black-text">This service is available to you any time any where. You can access all resources from any computer with
+                    internet access including your own PC at home. If you have problems accessing the service, please contact
+                    the Online Library enquiry service at
                     <a href="mailto:webmaster@example.com">webmaster@example.com</a>.
                 </h3>
             </div>
@@ -174,6 +174,8 @@
                 x[i].style.display = "none";
             }
             x[slideIndex - 1].style.display = "block";
+            x[slideIndex - 1].style.width = "980px";
+            x[slideIndex - 1].style.height = "580px";
         }
     </script>
 </body>
