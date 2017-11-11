@@ -1,3 +1,9 @@
+.auth-nav-header {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0 40px 0 0;
+}
 .auth-container-header {
   display: flex;
   height: 30vh;
@@ -44,18 +50,26 @@
 
 .login-form {
   display: flex;
-  flex: .6;
   flex-direction: column;
   justify-content: center;
+  padding-top: 40px;
 }
 
 .button-group {
   display: flex;
-  flex: .4;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.button-group > button {
-  margin-right: 40px;
+.button-group > a {
+  margin: 0 20px;
+}
+
+.user-note {
+  font-family: 'Roboto-Thin';
+  font-weight: 100;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+  font-style: italic;
 }

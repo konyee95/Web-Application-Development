@@ -22,7 +22,10 @@
 
 <body onload="init()">
     <div id="navigation">
-        <a class="site-title" href="./index.html">MyLibrary</a>
+        <div class="auth-nav-header">
+            <a class="site-title" href="./index.html">MyLibrary</a>
+            <a href="#" class="button button-secondary">Need an account?</a>
+        </div>
     </div>
     <div class="auth-container-header some-shadow">
         <p class="auth-title">Login to MyLibrary</p>
@@ -31,7 +34,7 @@
         <div class="auth-form">
             <form id="login-form" class="login-form" action="" method="POST">
                 <div class="material-input-container">
-                    <input type="text" class="material-input" placeholder="email" required>
+                    <input type="text" class="material-input" placeholder="user@gmail.com" required>
                     <span class="material-input-highlight"></span>
                     <span class="material-input-bar"></span>
                     <label class="material-input-label"></label>
@@ -44,9 +47,10 @@
                 </div>
             </form>
             <div class="button-group">
-                <button class="material-button">Login</button>
-                <button class="material-button btn-orange">Register</button>
+                <a href="#" class="button button-primary">&nbsp Login &nbsp</a>
+                <a href="#" class="button button-primary">Forgot Password?</a>
             </div>
+            <p class="user-note">**MyLibrary is only available for UTeM staffs and students.</p>
         </div>
         <div class="auth-form-empty">
 
