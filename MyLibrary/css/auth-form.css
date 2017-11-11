@@ -59,12 +59,10 @@
 .button-group {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  padding-right: 280px;
+  margin-top: -20px;
 }
-
-/* .button-group > a {
-  margin: 0 20px;
-} */
 
 .user-note {
   font-family: 'Roboto-Thin';
