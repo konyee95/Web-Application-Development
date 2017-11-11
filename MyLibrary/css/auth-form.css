@@ -1,56 +1,53 @@
-.gradient-background {
-  background: linear-gradient(270grad, rgb(239, 108, 0) 0%, #eea751 100%);
+.auth-container-header {
+  display: flex;
+  height: 30vh;
+  top: 0px;
+  width: 100%;
+  z-index: 999999;
+  background: url('../image/tensor.jpg') no-repeat;
+  background-size: 100% 220%;
+  align-items: center;
 }
 
-.auth-form-container {
+.auth-title {
+  font-size: 34px;
+  color: #fff;
+  font-family: 'Roboto';
+  font-weight: 100;
+}
+
+.auth-container-body {
+  height: 70vh;
   display: flex;
   flex: 1;
   justify-content: center;
-  align-items: center;
-  height: 85vh;
+  flex-direction: row;
 }
 
-.auth-form {
+.auth-title, .auth-container-body {
+  padding-left: 80px;
+}
+
+.auth-form, .auth-form-empty {
   display: flex;
-  width: 400px;
-  height: 400px;
+  flex: .5;
   flex-direction: column;
-  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex: .6;
+  flex-direction: column;
   justify-content: center;
-  background-color: #fafafa;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  border-radius: 1px;
-}
-
-.back-btn {
-  width: 50px;
-  height: 50px;
-  background-color: #eeeeee;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transition: all 0.3s ease-in-out;
-
-  position: fixed;
-  top: 50px;
-  left: 50px;
-}
-
-.back-btn:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transform: scale(1.02);
-}
-
-.back-btn > span {
-  color: grey;
-  font-size: 30px;
 }
 
 .button-group {
   display: flex;
+  flex: .4;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
-.login-note {
-  padding: 0 0 40px 50px;
+.button-group > button {
+  margin-right: 40px;
 }
