@@ -1,18 +1,18 @@
 .auth-container-header {
   display: flex;
   height: 30vh;
-  top: 0px;
+  padding-top: 55px;
   width: 100%;
   z-index: 999999;
   background: url('../image/tensor.jpg') no-repeat;
-  background-size: 100% 220%;
+  background-size: 100% 210%;
   align-items: center;
 }
 
 .auth-title {
   font-size: 34px;
-  color: #fff;
-  font-family: 'Roboto';
+  color: #fafafa;
+  font-family: 'Roboto-Thin';
   font-weight: 100;
 }
 
@@ -26,6 +26,14 @@
 
 .auth-title, .auth-container-body {
   padding-left: 80px;
+}
+
+.site-title {
+  padding-left: 60px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #fafafa;
+  font-family: 'Roboto';
 }
 
 .auth-form, .auth-form-empty {
