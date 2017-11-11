@@ -1,8 +1,9 @@
 .test-shit {
 	border: 3px solid red;
 }
+
 * {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
@@ -14,36 +15,36 @@ body {
 	transition: 0.2s;
 }
 
-h1{
-	font-family:Impact, Charcoal, sans-serif;
-	color:#ff5722;
-	font-size:300%;
-	font-weight:bolder;
+h1 {
+	font-family: Impact, Charcoal, sans-serif;
+	color: #ff5722;
+	font-size: 300%;
+	font-weight: bolder;
 }
 
-h2{
+h2 {
 	font-family: "Comic Sans MS", cursive, sans-serif;
-	color:black;
+	color: black;
 }
 
-h3{
+h3 {
 	font-family: "Comic Sans MS", cursive, sans-serif;
-	color:#f4511e;
+	color: #f4511e;
 	font-size: 15;
 }
 
-p{
+p {
 	font-family: "Comic Sans MS", cursive, sans-serif;
-	color:#4e342e;
+	color: #4e342e;
 	font-weight: bold;
 	text-align: justify;
 	font-size: 20;
 }
 
-.image{
+.image {
 	padding: 10px;
-	width:100%;
-	height:auto;
+	width: 100%;
+	height: auto;
 }
 
 #main-container {
@@ -64,85 +65,87 @@ p{
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 }
 
-.topic-color{
+.topic-color {
 	background-color: #ffe082;
 }
 
-.image-button{
-	border:none;
-	display:inline-block;
-	outline:0;
-	padding:8px 16px;
-	vertical-align:middle;
-	overflow:hidden;
-	text-decoration:none;
-	color:inherit;
-	background-color:inherit;
-	text-align:center;
-	cursor:pointer;
-	white-space:nowrap;
-	color:#fff;
-	background-color:#000;
+.image-button {
+	border: none;
+	display: inline-block;
+	outline: 0;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	color: #fff;
+	background-color: #000;
 }
 
-.image-button:hover{
-	color:#000;
-	background-color:#ccc;
+.image-button:hover {
+	color: #000;
+	background-color: #ccc;
 }
 
-.display-left{
-	position:absolute;
-	top:50%;
-	left:0%;
-	transform:translate(0%,-50%);
-	-ms-transform:translate(-0%,-50%);
-	transition: .3s;
-}
-.display-right{
-	position:absolute;
-	top:50%;
-	right:0%;
-	transform:translate(0%,-50%);
-	-ms-transform:translate(0%,-50%);
+.display-left {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(-0%, -50%);
 	transition: .3s;
 }
 
-.slides-container{
+.display-right {
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(0%, -50%);
+	-ms-transform: translate(0%, -50%);
+	transition: .3s;
+}
+
+.slides-container {
 	/* margin: 0 -20px; */
 	position: relative;
-	max-width:980px;
-	margin:auto;
+	max-width: 980px;
+	margin: auto;
 }
 
-.black-text{
-	color:black;
+.black-text {
+	color: black;
 }
 
-.column{
-    display:flex;
-    flex-direction:column;
+.column {
+	display: flex;
+	flex-direction: column;
 }
 
-.row{
-    display:flex;
-    flex-direction:row;
+.row {
+	display: flex;
+	flex-direction: row;
 }
 
-.flex{
-    flex:0.3;
+.flex {
+	flex: 0.3;
 }
 
-.padding{
-    padding:25px 25px;
+.padding {
+	padding: 25px 25px;
 }
 
-.colorbox1{
+.colorbox1 {
 	background-color: #fffa88;
 }
 
-.colorbox2{
+.colorbox2 {
 	background-color: #fdd865;
 }
+
 
 /*add some padding to compensate for the sticky header*/
 
@@ -150,15 +153,16 @@ p{
 	padding-top: 55px;
 }
 
-.margin{
-	margin-left:20px;
+.margin {
+	margin-left: 20px;
 	margin-right: 20px;
 }
 
-.hot-topic-img{
-	width:300x;
-	height:400px;
+.hot-topic-img {
+	width: 300x;
+	height: 400px;
 }
+
 
 /* remove outline width from the following elements */
 
