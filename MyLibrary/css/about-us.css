@@ -119,7 +119,7 @@ p{
     width:70%;
 }
 
-.margin{
+.margin-leftright{
     margin:0px 20px;
 }
 
@@ -135,8 +135,32 @@ p{
     background-color: #ffb346;
 }
 
+.mission-block1{
+    background-color:#fff598;
+}
+
+.mission-block2{
+    background-color:#b3ff8d;
+}
+
+.mission-block3{
+    background-color:#a5ffc6;
+}
+
+.service-block1{
+    background-color: #ffd99f;
+}
+
+.service-block2{
+    background-color: #fff598;
+}
+
 .bold{
     font-weight: bold;
+}
+
+.font-larger{
+    font-size:18;
 }
 
 .center{
