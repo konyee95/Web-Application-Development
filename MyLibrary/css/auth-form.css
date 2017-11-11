@@ -2,6 +2,7 @@
   display: flex;
   flex: 1;
   justify-content: space-between;
+  align-items: center;
   padding: 0 40px 0 0;
 }
 .auth-container-header {
@@ -11,7 +12,7 @@
   width: 100%;
   z-index: 999999;
   background: url('../image/tensor.jpg') no-repeat;
-  background-size: 100% 210%;
+  background-size: 100% 200%;
   align-items: center;
 }
 
@@ -61,9 +62,9 @@
   justify-content: flex-start;
 }
 
-.button-group > a {
+/* .button-group > a {
   margin: 0 20px;
-}
+} */
 
 .user-note {
   font-family: 'Roboto-Thin';
