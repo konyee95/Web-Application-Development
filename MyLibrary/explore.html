@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Explore</title>
+
+    <!-- styles -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navigation-bar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/hamburger-menu.css" />
+    <link rel="stylesheet" type="text/css" href="./css/material-button.css" />
+
+    <!-- scripts -->
+    <script src="./js/main.js"></script>
+
+    <!-- meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+</head>
+
+<body onload="init()">
+    <div id="main-container">
+        <div id="side-panel" class="side-panel">
+            <div id="user-account-header" class="user-account-header">
+                <p>Hello Guest!</p>
+            </div>
+            <div id="user-account-container" class="user-account-container">
+                <a class="material-button btn-orange" href="./login.html">Login</a>
+            </div>
+        </div>
+
+        <div id="navigation" class="some-shadow">
+            <ul>
+                <li>
+                    <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./about-us.html">ABOUT US</a>
+                </li>
+                <li>
+                    <a href="">EXPLORE</a>
+                </li>
+                <li>
+                    <a href="">PROFILE</a>
+                </li>
+            </ul>
+
+            <div id="search-container" class="search-container">
+                <form id="search-form" class="search-form" action="" method="GET">
+                    <input id="search-input" class="search-input" type="text" placeholder="Search" />
+                </form>
+                <div id="hamburger-menu" class="hamburger-container" onclick="hamburgerMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="info-container" class="sticky-header-padding">
+            
+        </div>
+    </div>
+</body>
+
+</html>
