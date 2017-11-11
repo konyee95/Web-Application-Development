@@ -155,6 +155,11 @@ p{
 	margin-right: 20px;
 }
 
+.hot-topic-img{
+	width:300x;
+	height:400px;
+}
+
 /* remove outline width from the following elements */
 
 input:focus,
