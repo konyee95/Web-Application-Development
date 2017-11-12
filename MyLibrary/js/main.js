@@ -103,6 +103,7 @@ const submitAuthForm = () => {
       studentID: studentID.toLowerCase(),
       password: password
     }
+
     formAjaxRequest(formName, dataObject);
   }
 }
@@ -112,21 +113,21 @@ const submitAuthForm = () => {
  */
 const formAjaxRequest = (form, dataObject) => {
   var request = new XMLHttpRequest();
-  request.open('POST', `./ajax/${form}.php`);
-  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
-      processAjaxResponse(JSON.parse(request.responseText));
+      processAjaxResponse(request.responseText);
     }
   }
-  request.send('data=' + encodeURIComponent(JSON.stringify(dataObject)));
+  request.open('POST', `./ajax/${form}.php`, true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send('data=' + JSON.stringify(dataObject));
 }
 
 /*
  * Process data returned
  */
 const processAjaxResponse = data => {
-  console.log(data)
+  console.log(JSON.parse(data))
 }
 
 /*
