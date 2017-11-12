@@ -37,7 +37,7 @@
                     </div>
                     <div class="button-group">
                         <button type="submit" name="login_button" class="button button-primary">&nbsp &nbsp &nbsp Login &nbsp &nbsp &nbsp </button>
-                        <button type="submit" name="forgot_password_button" class="button button-primary">Forgot Password?</button>
+                        <a name="forgot_password_button" class="button button-primary">Forgot Password?</a>
                     </div>
                 </form>
                 <p class="user-note">**MyLibrary is only available for UTeM staffs and students.</p>
