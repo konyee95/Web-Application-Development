@@ -10,7 +10,7 @@
         <?php require_once "inc/general-config.php" ?>
     </head>
 
-    <body onload="init()">
+    <body>
         <div id="navigation">
             <div class="auth-nav-header">
                 <a class="site-title" href="./index.php">MyLibrary</a>
@@ -22,7 +22,7 @@
         </div>
         <div class="auth-container-body">
             <div class="auth-form-container">
-                <form id="login-form" class="auth-form">
+                <form id="login-form" class="auth-form" name="login">
                     <div class="material-input-container">
                         <input id="student-id" type="text" class="material-input" placeholder="Student ID" required>
                         <span class="material-input-highlight"></span>
@@ -37,12 +37,12 @@
                         <label class="material-input-label"></label>
                     </div>
 
-                    <div class="error-container">
-                        <p class="error-text"></p>
+                    <div id="error-container" class="error-container hide-auth-form">
+                        <p id="error-text" class="error-text"></p>
                     </div>
-                    
+
                     <div class="button-group">
-                        <button type="submit" name="login_button" class="button button-primary">&nbsp &nbsp &nbsp Login &nbsp &nbsp &nbsp </button>
+                        <button type="button" name="login_button" class="button button-primary" onclick="submitAuthForm()">&nbsp &nbsp &nbsp Login &nbsp &nbsp &nbsp </button>
                         <a name="forgot_password_button" class="button button-primary">Forgot Password?</a>
                     </div>
                 </form>

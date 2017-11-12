@@ -71,7 +71,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 280px;
-  padding: 2px 4px 2px 6px;
+  padding: 2px 6px;
   background-color: #FFF1F0;
   border: 1px solid #F3C0B6;
   border-radius: 3px;
@@ -86,7 +86,6 @@
   font-size: 14px;
   font-weight: lighter;
   color: #D85030;
-  font-style: italic;
 }
 
 .button-group {

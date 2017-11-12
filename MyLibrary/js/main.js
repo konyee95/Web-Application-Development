@@ -52,6 +52,49 @@ const sidePanelListener = e => {
   }
 }
 
+const displayErrorText = text => {
+  const errorContainer = document.getElementById("error-container");
+  const errorText = document.getElementById("error-text");
+
+  errorContainer.classList.remove("hide-auth-form");
+  errorText.innerHTML = text;
+}
+
+const removeErrorText = () => {
+  const errorContainer = document.getElementById("error-container");
+  errorContainer.classList.add("hide-auth-form");
+}
+
+const submitAuthForm = () => {
+  const studentID = document.getElementById("student-id").value;
+  const password = document.getElementById("password").value;
+  const formName = document.forms[0].name;
+
+  if (studentID === "") {
+    displayErrorText("Please make sure student id is entered");
+    return false;
+  } else if (studentID.length !== 10) {
+    displayErrorText("Please make sure student id is correctly entered. Example: b031510000");
+  } else if (password === "") {
+    displayErrorText("Please make sure password is entered");
+    return false;
+  } else if (password.length < 8) {
+    displayErrorText("Please make sure password is more than 8 characters");
+    return false;
+  } else {
+    removeErrorText();
+    formAction(formName);
+  }
+}
+
+const formAction = form => {
+  if (form === "login") {
+
+  } else if (form ==="register") {
+
+  }
+}
+
 /* go back to previous page */
 const goBack = () => {
   window.history.back();
