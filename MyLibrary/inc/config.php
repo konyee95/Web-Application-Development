@@ -7,16 +7,17 @@
     header("Location: ./index.php");
   }
 
-  /*
-   * Always start session
-   */
+  /* Always start session */
   if (!isset($_SESSION)) {
     session_start();
   }
 
-  /*
-   * allow error reporting
-   */
+  /* allow error reporting */
   error_reporting(-1);
   ini_set('display_errors', 'On');
+
+  /* include classes */
+  include_once "classes/DB.php";
+
+  $con = DB::getConnection();
 ?>
