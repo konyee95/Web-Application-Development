@@ -1,4 +1,6 @@
-/* hamburger menu */
+/*
+ * Hamburger menu
+ */
 const hamburgerMenu = x => {
   x.classList.toggle("change");
 
@@ -9,7 +11,9 @@ const hamburgerMenu = x => {
   }
 }
 
-/* side panel */
+/*
+ * Side panel
+ */
 const onSearchInputFocus = () => {
   const searchForm = document.getElementById("search-form");
   const searchInput = document.getElementById("search-input");
@@ -36,7 +40,9 @@ const onSearchInputLoseFocus = () => {
   searchInput.classList.remove("search-input-expanded")
 }
 
-/* check is user clicked area is outside side panel, then close */
+/*
+ * Check is user clicked area is outside side panel, then close
+ */
 const sidePanelListener = e => {
   const hamburgerMenu = document.getElementById("hamburger-menu");
   let i = e.target.parentNode.id;
@@ -52,6 +58,9 @@ const sidePanelListener = e => {
   }
 }
 
+/*
+ * Helper method to display error message
+ */
 const displayErrorText = text => {
   const errorContainer = document.getElementById("error-container");
   const errorText = document.getElementById("error-text");
@@ -60,11 +69,17 @@ const displayErrorText = text => {
   errorText.innerHTML = text;
 }
 
+/*
+ * Remove error container
+ */
 const removeErrorText = () => {
   const errorContainer = document.getElementById("error-container");
   errorContainer.classList.add("hide-auth-form");
 }
 
+/*
+ * Login and register button function
+ */
 const submitAuthForm = () => {
   const studentID = document.getElementById("student-id").value;
   const password = document.getElementById("password").value;
@@ -92,6 +107,9 @@ const submitAuthForm = () => {
   }
 }
 
+/*
+ * Dynamically tunnel data to either login or registration ajax file
+ */
 const formAjaxRequest = (form, dataObject) => {
   var request = new XMLHttpRequest();
   request.open('POST', `./ajax/${form}.php`);
@@ -104,11 +122,16 @@ const formAjaxRequest = (form, dataObject) => {
   request.send('data=' + encodeURIComponent(JSON.stringify(dataObject)));
 }
 
+/*
+ * Process data returned
+ */
 const processAjaxResponse = data => {
   console.log(data)
 }
 
-/* go back to previous page */
+/*
+ * Go back to previous page in the history stack
+ */
 const goBack = () => {
   window.history.back();
 }
