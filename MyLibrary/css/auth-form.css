@@ -43,13 +43,13 @@
   font-family: 'Roboto';
 }
 
-.auth-form, .auth-form-empty {
+.auth-form-container, .auth-form-empty {
   display: flex;
   flex: .5;
   flex-direction: column;
 }
 
-.login-form {
+.auth-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
