@@ -19,11 +19,11 @@ TRUNCATE TABLE `students`;
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
-  ADD PRIMARY KEY (`student_id_index`),
+  ADD PRIMARY KEY (`student_index`),
   ADD UNIQUE KEY `student_id` (`student_id`);
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `student_id_index` int(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Student Id Index';
+  MODIFY `student_index` int(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Student Index';
