@@ -22,3 +22,15 @@
 .profile-content-button-container {
   padding-top: 10px;
 }
+
+.profile-content-body {
+  height: 70vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 80px;
+}
+
+.profile-content-body-item {
+
+}
