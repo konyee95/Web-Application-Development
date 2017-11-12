@@ -94,14 +94,14 @@ const submitAuthForm = () => {
 
 const formAjaxRequest = (form, dataObject) => {
   var request = new XMLHttpRequest();
-  request.open('POST', `./ajax/${form}.php`, true);
-  request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  request.open('POST', `./ajax/${form}.php`);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
-      processAjaxResponse(request.responseText);
+      processAjaxResponse(JSON.parse(request.responseText));
     }
   }
-  request.send(dataObject);
+  request.send('data=' + encodeURIComponent(JSON.stringify(dataObject)));
 }
 
 const processAjaxResponse = data => {

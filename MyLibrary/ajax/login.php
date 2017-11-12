@@ -10,7 +10,10 @@
      */
     $return = [];
 
-    
+    $data = $_POST['data'];
+
+    echo $data;
+
   } else {
     exit('ERROR 404! Something went wrong!');
   }
