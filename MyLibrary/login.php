@@ -30,7 +30,7 @@
                     <label class="material-input-label"></label>
                 </div>
                 <div class="material-input-container">
-                    <input type="text" class="material-input" placeholder="password" required>
+                    <input class="material-input" placeholder="password" type="password" required>
                     <span class="material-input-highlight"></span>
                     <span class="material-input-bar"></span>
                     <label class="material-input-label"></label>
