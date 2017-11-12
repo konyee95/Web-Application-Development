@@ -85,8 +85,8 @@ const submitAuthForm = () => {
     removeErrorText();
 
     const dataObject = {
-      studentID,
-      password
+      studentID: studentID.toLowerCase(),
+      password: password
     }
     formAjaxRequest(formName, dataObject);
   }
