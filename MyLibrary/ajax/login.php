@@ -10,9 +10,9 @@
      */
     $return = [];
 
-    $data = $_POST['data'];
+    $data = json_decode($_POST["data"], false);
 
-    echo $data;
+    echo json_encode($data, JSON_PRETTY_PRINT);
   } else {
     exit('ERROR 404! Something went wrong!');
   }

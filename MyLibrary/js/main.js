@@ -115,7 +115,7 @@ const formAjaxRequest = (form, dataObject) => {
   var request = new XMLHttpRequest();
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
-      processAjaxResponse(request.responseText);
+      processAjaxResponse(JSON.parse(request.responseText));
     }
   }
   request.open('POST', `./ajax/${form}.php`, true);
@@ -126,9 +126,20 @@ const formAjaxRequest = (form, dataObject) => {
 /*
  * Process data returned
  */
-const processAjaxResponse = data => {
-  console.log(JSON.parse(data))
+const processAjaxResponse = data => (data.action === login ? processLoginAjax(data) : processRegistrationAjax(data));
+
+const processRegistrationAjax = data => {
+  if (data.action_result === true) {
+    window.alert("Congratulation! You have created your library account!");
+    window.location = data.redirect;
+  } else {
+    displayErrorText(data.error);
+  }
 }
+
+const processLoginAjax = data => {
+  
+  }
 
 /*
  * Go back to previous page in the history stack
