@@ -12,7 +12,6 @@
         self::$con = new PDO("mysql:charset=utf8mb4;host=localhost;port=3306;dbname=my_library", "root", "");
         self::$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         self::$con->setAttribute(PDO::ATTR_PERSISTENT, false);
-        echo "<script>console.log('Connection to database established');</script>";
       } catch (PDOException $e) {
         echo "Could could not connect to database.\r\n";
         exit;
