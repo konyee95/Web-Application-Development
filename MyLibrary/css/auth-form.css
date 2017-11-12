@@ -71,15 +71,19 @@
   justify-content: flex-end;
   align-items: center;
   margin-right: 280px;
-  padding-right: 5px;
+  padding: 2px 4px 2px 6px;
   background-color: #FFF1F0;
   border: 1px solid #F3C0B6;
   border-radius: 3px;
+}
+
+.hide-auth-form {
   display: none;
 }
 
 .error-text {
   font-family: 'Roboto-Thin', Arial;
+  font-size: 14px;
   font-weight: lighter;
   color: #D85030;
   font-style: italic;
