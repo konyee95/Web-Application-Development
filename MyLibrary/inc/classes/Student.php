@@ -1,5 +1,5 @@
 <?php
-  if (!define('__CONFIG__')) {
+  if (!defined('__CONFIG__')) {
     exit('You do not have a config file');
   }
 
