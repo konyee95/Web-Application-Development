@@ -126,7 +126,7 @@ const formAjaxRequest = (form, dataObject) => {
 /*
  * Process data returned
  */
-const processAjaxResponse = data => (data.action === login ? processLoginAjax(data) : processRegistrationAjax(data));
+const processAjaxResponse = data => (data.action === "login" ? processLoginAjax(data) : processRegistrationAjax(data));
 
 const processRegistrationAjax = data => {
   if (data.action_result === true) {
