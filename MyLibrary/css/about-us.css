@@ -6,7 +6,7 @@ body {
     transition: 0.2s;
 }
 
-h3 {
+/* h3 {
     font-family: New Century Schoolbook, TeX Gyre Schola, serif;
     font-size: 150%;
     color: black;
@@ -24,7 +24,7 @@ p {
     font-size: 20;
     color: #D2691E;
     text-align: justify;
-}
+} */
 
 #main-container {
     margin: 0;
@@ -79,6 +79,10 @@ p {
 .about-us-container {
     display: flex;
     flex-direction: column;
+}
+
+.about-us-container-title {
+    margin-left: 10px;
 }
 
 .about-us-container-row {
