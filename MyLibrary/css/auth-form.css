@@ -56,6 +56,11 @@
   padding-top: 40px;
 }
 
+/* reduce distance between input field */
+.auth-form div:nth-child(2) {
+  margin-top: -20px;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;
