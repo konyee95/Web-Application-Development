@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title> MyLibrary</title>
+    <title>MyLibrary</title>
 
     <!-- styles -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -60,8 +60,8 @@
         </div>
 
         <div id="info-container" class="sticky-header-padding">
-            <div class="slides-container">
-                <center>
+            <div class="intro-container">
+                <div class="slides-container">
                     <img src="image/utem-library.jpg" class="mySlides" />
                     <img src="image/image1.jpg" class="mySlides" />
                     <img src="image/image2.jpg" class="mySlides" />
@@ -74,46 +74,48 @@
                     <img src="image/image9.jpg" class="mySlides" />
                     <img src="image/image10.jpg" class="mySlides" />
                     <img src="image/image11.jpg" class="mySlides" />
-                </center>
-                <button class="image-button display-left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="image-button display-right" onclick="plusDivs(1)">&#10095;</button>
-            </div>
-
-            <div id="intro" class="margin">
-                <marquee>
-                    <h1>Welcome to MyLibrary</h1>
-                </marquee>
-                <h3 class="black-text">A service dedicated to students of the Universiti Teknikal Malaysia Melaka's Distance learning community.
-                    We provide online resources, professional support and guidance to all our students whenever, and from
-                    wherever they have chosen to study.
-                </h3>
-                <h3 class="black-text">This service is available to you any time any where. You can access all resources from any computer with
-                    internet access including your own PC at home. If you have problems accessing the service, please contact
-                    the Online Library enquiry service at
-                    <a href="mailto:webmaster@example.com">webmaster@example.com</a>.
-                </h3>
+                    <button class="image-button display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="image-button display-right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+                <div class="intro-sidebar colorbox1">
+                    <div class="intro-sidebar-header">
+                        <marquee>
+                            <h1>Welcome to MyLibrary</h1>
+                        </marquee>
+                    </div>
+                    <div class="intro-sidebar-content">
+                        <h3>A service dedicated to students of the Universiti Teknikal Malaysia Melaka's Distance learning community.
+                            We provide online resources, professional support and guidance to all our students whenever,
+                            and from wherever they have chosen to study.
+                        </h3>
+                        <h3>This service is available to you any time any where. You can access all resources from any computer
+                            with internet access including your own PC at home. If you have problems accessing the service,
+                            please contact the Online Library enquiry service at
+                            <a href="mailto:webmaster@example.com">webmaster@example.com</a>.
+                        </h3>
+                    </div>
+                </div>
             </div>
 
             <div id="hot-topics">
                 <h2>Hot Topics</h2>
                 <div class="column">
                     <div class="row">
-                        <div id="topic1" class="flex padding colorbox1">
+                        <div id="topic1" class="colorbox1">
                             <h3>Ask a Librarian Live Pilot</h3>
                             <p>11 Oct 2017</p>
                             <p>The Online Library team is pleased to announce that we are piloting a live chat service. Students
                                 are able to ask librarians questions in real time.</p>
-
                         </div>
 
-                        <div id="topic2" class="flex padding colorbox2">
+                        <div id="topic2" class="colorbox2">
                             <h3>Online Library Newsletter Issue 6</h3>
                             <p>18 Oct 2017</p>
                             <p>In this issue we give you an update on what's new with the Online Library, including new resources,
                                 an improvement to Summon search.</p>
                         </div>
 
-                        <div id="topic3" class="flex padding colorbox1">
+                        <div id="topic3" class="colorbox1">
                             <h3>Change to the Dawsons Ebook Collection</h3>
                             <p>24 Oct 2017</p>
                             <p>Please note that ebooks in the Dawsons Ebook Collection cannot currently be downloaded onto Apple
@@ -123,7 +125,7 @@
                     </div>
 
                     <div class="row">
-                        <div id="topic4" class="flex padding colorbox2">
+                        <div id="topic4" class="colorbox2">
                             <h3>New Fine Rates</h3>
                             <p>02 Nov 2017</p>
                             <p>Attention to all users! NEW FINE RATES as mention below. Effective 2nd Nov 2017 (TODAY). Take
@@ -133,15 +135,14 @@
                             </center>
                         </div>
 
-                        <div id="topic5" class="flex padding colorbox1">
+                        <div id="topic5" class="colorbox1">
                             <h3>Turnitin Accessibility</h3>
                             <p>09 Nov 2017</p>
                             <p>Dear users, please be informed that the UTeM Turnitin account is accessible again. Any problems
                                 or questions, please contact Pn Norshahila Che Din, UTeM's Turnitin Administrator.</p>
-
                         </div>
 
-                        <div id="topic6" class="flex padding colorbox2">
+                        <div id="topic6" class="colorbox2">
                             <h3>Journal List 2017</h3>
                             <p>21 Nov 2017</p>
                             <p>The MyLibrary Team has list out the journals available in MyLibrary online library in 2017.The
@@ -175,8 +176,8 @@
                 x[i].style.display = "none";
             }
             x[slideIndex - 1].style.display = "block";
-            x[slideIndex - 1].style.width = "980px";
-            x[slideIndex - 1].style.height = "580px";
+            x[slideIndex - 1].style.width = "880px";
+            x[slideIndex - 1].style.height = "85vh";
         }
     </script>
 </body>
