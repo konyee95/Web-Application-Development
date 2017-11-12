@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS `students`;
 CREATE TABLE `students` (
-  `student_id_index` int(5) UNSIGNED NOT NULL COMMENT 'Student Id Index',
+  `student_index` int(5) UNSIGNED NOT NULL COMMENT 'Student Id Index',
   `student_id` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Student Id',
   `password` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Student password',
   `reg_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'The time and date the student registered'
