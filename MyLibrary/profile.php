@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+    define('__CONFIG__', true);
+    require_once "inc/config.php";
+    Page::checkIfStudentIsLoggedIn();
+
+    /* if student is logged in, pulled student object to access later */
+    $student = new Student($_SESSION['student_index']);
+?>
 <html>
 
 <head>
@@ -17,7 +25,7 @@
         <img src="./image/empty-avatar.png" class="user-avatar" />
         <div class="profile-content-container">
             <h2 class="profile-user-name">John Doe</h2>
-            <h4 class="profile-user-id">B031510000</h4>
+            <h4 class="profile-user-id">Hello <?php echo $student->student_id; ?></h4>
             <div class="profile-content-button-container">
                 <a href="#" class="button button-secondary">Edit Profile</a>
                 <button class="button button-secondary" onclick="logOut()">Sign Out</button>
