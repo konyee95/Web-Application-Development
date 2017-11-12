@@ -148,6 +148,16 @@ const goBack = () => {
   window.history.back();
 }
 
+/*
+ * Log out
+ */
+const logOut = () => {
+  const respond = confirm("Are you sure?");
+  if (respond === true) {
+    window.location = "./logout.php";
+  }
+}
+
 /* init listeners */
 const init = () => {
   const hamburgerMenu = document.getElementById("hamburger-menu");

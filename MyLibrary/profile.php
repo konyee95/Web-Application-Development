@@ -20,7 +20,7 @@
             <h4 class="profile-user-id">B031510000</h4>
             <div class="profile-content-button-container">
                 <a href="#" class="button button-secondary">Edit Profile</a>
-                <a href="./index.php" class="button button-secondary">Sign Out</a>
+                <button class="button button-secondary" onclick="logOut()">Sign Out</button>
             </div>
         </div>
     </div>
