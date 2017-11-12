@@ -6,4 +6,17 @@
    if (!defined('__CONFIG__')) {
     header("Location: ./index.php");
   }
+
+  /*
+   * Always start session
+   */
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+
+  /*
+   * allow error reporting
+   */
+  error_reporting(-1);
+  ini_set('display_errors', 'On');
 ?>

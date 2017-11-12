@@ -83,16 +83,29 @@ const submitAuthForm = () => {
     return false;
   } else {
     removeErrorText();
-    formAction(formName);
+
+    const dataObject = {
+      studentID,
+      password
+    }
+    formAjaxRequest(formName, dataObject);
   }
 }
 
-const formAction = form => {
-  if (form === "login") {
-
-  } else if (form ==="register") {
-
+const formAjaxRequest = (form, dataObject) => {
+  var request = new XMLHttpRequest();
+  request.open('POST', `./ajax/${form}.php`, true);
+  request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  request.onreadystatechange = () => {
+    if (request.readyState === 4 && request.status === 200) {
+      processAjaxResponse(request.responseText);
+    }
   }
+  request.send(dataObject);
+}
+
+const processAjaxResponse = data => {
+  console.log(data)
 }
 
 /* go back to previous page */
