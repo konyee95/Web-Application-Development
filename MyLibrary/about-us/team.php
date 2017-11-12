@@ -26,23 +26,23 @@
             </div>
             <div id="user-account-container" class="user-account-container">
                 <p>Log in your account to save your favourite books and read later!</p>
-                <a class="button button-primary" href="../login.html">Login</a>
+                <a class="button button-primary" href="../login.php">Login</a>
             </div>
         </div>
 
         <div id="navigation">
             <ul>
                 <li>
-                    <a href="../index.html">HOME</a>
+                    <a href="../index.php">HOME</a>
                 </li>
                 <li>
-                    <a href="../about-us.html">ABOUT US</a>
+                    <a href="../about-us.php">ABOUT US</a>
                 </li>
                 <li>
-                    <a href="../explore.html">EXPLORE</a>
+                    <a href="../explore.php">EXPLORE</a>
                 </li>
                 <li>
-                    <a href="../profile.html">PROFILE</a>
+                    <a href="../profile.php">PROFILE</a>
                 </li>
             </ul>
 
@@ -61,16 +61,16 @@
             <h3 class="textwhite navigation-text">About the Library</h3>
             <ul>
                 <li>
-                    <a href="./mission.html">Mission</a>
+                    <a href="./mission.php">Mission</a>
                 </li>
                 <li>
-                    <a href="./services.html">Services</a>
+                    <a href="./services.php">Services</a>
                 </li>
                 <li>
-                    <a href="./team.html">Team</a>
+                    <a href="#">Team</a>
                 </li>
                 <li>
-                    <a href="./facilities.html">Facilities</a>
+                    <a href="./facilities.php">Facilities</a>
                 </li>
             </ul>
         </div>
@@ -104,7 +104,7 @@
         <p>For all enquiries and support, please contact the Online library team at onlinelibrary@shl.lon.ac.uk or by telephone
             on +4420 7862 8478.</p>
         <p>You can also use the
-            <a href="http://onlinelibrary.london.ac.uk/about/contact-us">web-form</a>.</p>
+            <a href="#">web-form</a>.</p>
     </div>
 
 </body>

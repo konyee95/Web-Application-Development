@@ -24,7 +24,7 @@
 <body onload="init()">
     <div id="navigation">
         <div class="auth-nav-header">
-            <a class="site-title" href="./index.html">MyLibrary</a>
+            <a class="site-title" href="./index.php">MyLibrary</a>
         </div>
     </div>
 
@@ -35,7 +35,7 @@
             <h4 class="profile-user-id">B031510000</h4>
             <div class="profile-content-button-container">
                 <a href="#" class="button button-secondary">Edit Profile</a>
-                <a href="./index.html" class="button button-secondary">Sign Out</a>
+                <a href="./index.php" class="button button-secondary">Sign Out</a>
             </div>
         </div>
     </div>

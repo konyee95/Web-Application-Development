@@ -26,23 +26,23 @@
             </div>
             <div id="user-account-container" class="user-account-container">
                 <p>Log in your account to save your favourite books and read later!</p>
-                <a class="button button-primary" href="./login.html">Login</a>
+                <a class="button button-primary" href="./login.php">Login</a>
             </div>
         </div>
 
         <div id="navigation">
             <ul>
                 <li>
-                    <a href="./index.html">HOME</a>
+                    <a href="./index.php">HOME</a>
                 </li>
                 <li>
                     <a href="#">ABOUT US</a>
                 </li>
                 <li>
-                    <a href="./explore.html">EXPLORE</a>
+                    <a href="./explore.php">EXPLORE</a>
                 </li>
                 <li>
-                    <a href="./profile.html">PROFILE</a>
+                    <a href="./profile.php">PROFILE</a>
                 </li>
             </ul>
 
@@ -62,16 +62,16 @@
             <h3 class="textwhite navigation-text">About the Library</h3>
             <ul>
                 <li>
-                    <a href="./about-us/mission.html">Mission</a>
+                    <a href="./about-us/mission.php">Mission</a>
                 </li>
                 <li>
-                    <a href="./about-us/services.html">Services</a>
+                    <a href="./about-us/services.php">Services</a>
                 </li>
                 <li>
-                    <a href="./about-us/team.html">Team</a>
+                    <a href="./about-us/team.php">Team</a>
                 </li>
                 <li>
-                    <a href="./about-us/facilities.html">Facilities</a>
+                    <a href="./about-us/facilities.php">Facilities</a>
                 </li>
             </ul>
         </div>

@@ -28,23 +28,23 @@
       </div>
       <div id="user-account-container" class="user-account-container">
         <p>Log in your account to save your favourite books and read later!</p>
-        <a class="button button-primary" href="./login.html">Login</a>
+        <a class="button button-primary" href="./login.php">Login</a>
       </div>
     </div>
 
     <div id="navigation" class="some-shadow">
       <ul>
         <li>
-          <a href="./index.html">HOME</a>
+          <a href="./index.php">HOME</a>
         </li>
         <li>
-          <a href="./about-us.html">ABOUT US</a>
+          <a href="./about-us.php">ABOUT US</a>
         </li>
         <li>
           <a href="#">EXPLORE</a>
         </li>
         <li>
-          <a href="./profile.html">PROFILE</a>
+          <a href="./profile.php">PROFILE</a>
         </li>
       </ul>
 
