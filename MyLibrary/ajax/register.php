@@ -15,9 +15,9 @@
     $student_id = $data->studentID;
 
     /* check if user exist */
-    $user_found = Student::Find($student_id);
+    $student_found = Student::Find($student_id);
 
-    if ($user_found) {
+    if ($student_found) {
       $return['error'] = "You already have an account";
       $return['is_logged_in'] = false;
       $return['action_result'] = false;

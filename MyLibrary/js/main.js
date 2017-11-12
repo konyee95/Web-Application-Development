@@ -116,6 +116,7 @@ const formAjaxRequest = (form, dataObject) => {
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
       processAjaxResponse(JSON.parse(request.responseText));
+      console.log(JSON.parse(request.responseText))
     }
   }
   request.open('POST', `./ajax/${form}.php`, true);
@@ -138,8 +139,12 @@ const processRegistrationAjax = data => {
 }
 
 const processLoginAjax = data => {
-  
+  if (data.action_result === true) {
+    window.location = data.redirect;
+  } else {
+    displayErrorText(data.error);
   }
+}
 
 /*
  * Go back to previous page in the history stack
