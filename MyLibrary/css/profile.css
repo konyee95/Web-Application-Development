@@ -1,0 +1,24 @@
+.user-avatar {
+  width: auto;
+  height: 55%;
+  border: none;
+  padding-left: 80px;
+}
+
+.profile-content-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-left: 40px;
+}
+
+.profile-user-name, .profile-user-id {
+  color: #fff;
+  margin: 1px 0 0 10px;
+  font-family: 'Roboto';
+  font-weight: lighter;
+}
+
+.profile-content-button-container {
+  padding-top: 10px;
+}
