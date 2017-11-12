@@ -4,6 +4,6 @@
   </div>
   <div id="user-account-container" class="user-account-container">
     <p>Log in your account to save your favourite books and read later!</p>
-    <a class="button button-primary" href="../login.php">Login</a>
+    <a class="button button-primary" href="./login.php">Login</a>
   </div>
 </div>
