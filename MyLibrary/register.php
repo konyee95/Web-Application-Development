@@ -29,12 +29,18 @@
                         <span class="material-input-bar"></span>
                         <label class="material-input-label"></label>
                     </div>
+                    
                     <div class="material-input-container">
                         <input class="material-input" placeholder="password" type="password" required>
                         <span class="material-input-highlight"></span>
                         <span class="material-input-bar"></span>
                         <label class="material-input-label"></label>
                     </div>
+
+                    <div class="error-container">
+                        <p class="error-text"></p>
+                    </div>
+                    
                     <div class="button-group">
                         <button type="submit" name="register-button" class="button button-primary"> &nbsp &nbsp Register &nbsp &nbsp </button>
                     </div>

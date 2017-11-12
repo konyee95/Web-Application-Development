@@ -24,17 +24,23 @@
             <div class="auth-form-container">
                 <form id="login-form" class="auth-form">
                     <div class="material-input-container">
-                        <input type="text" class="material-input" placeholder="Student ID" required>
+                        <input id="student-id" type="text" class="material-input" placeholder="Student ID" required>
                         <span class="material-input-highlight"></span>
                         <span class="material-input-bar"></span>
                         <label class="material-input-label"></label>
                     </div>
+                    
                     <div class="material-input-container">
-                        <input class="material-input" placeholder="password" type="password" required>
+                        <input id="password" class="material-input" placeholder="password" type="password" required>
                         <span class="material-input-highlight"></span>
                         <span class="material-input-bar"></span>
                         <label class="material-input-label"></label>
                     </div>
+
+                    <div class="error-container">
+                        <p class="error-text"></p>
+                    </div>
+                    
                     <div class="button-group">
                         <button type="submit" name="login_button" class="button button-primary">&nbsp &nbsp &nbsp Login &nbsp &nbsp &nbsp </button>
                         <a name="forgot_password_button" class="button button-primary">Forgot Password?</a>

@@ -61,6 +61,30 @@
   margin-top: -20px;
 }
 
+/* display error when validation fails */
+.error-container {
+  height: 40px;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 280px;
+  padding-right: 5px;
+  background-color: #FFF1F0;
+  border: 1px solid #F3C0B6;
+  border-radius: 3px;
+  display: none;
+}
+
+.error-text {
+  font-family: 'Roboto-Thin', Arial;
+  font-weight: lighter;
+  color: #D85030;
+  font-style: italic;
+}
+
 .button-group {
   display: flex;
   flex-direction: row;
