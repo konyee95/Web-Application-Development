@@ -19,6 +19,7 @@
   /* include classes */
   include_once "classes/Filter.php";
   include_once "classes/DB.php";
+  include_once "classes/Student.php";
 
   $con = DB::getConnection();
 ?>
