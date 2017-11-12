@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+    define('__CONFIG__', true);
+    require_once "inc/config.php";
+?>
 <html>
 
 <head>
