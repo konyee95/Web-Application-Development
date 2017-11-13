@@ -64,20 +64,17 @@
         <div class="about-us-container">
             <div class="about-us-container-row">
                 <div id="mission" class="about-us-row-item">
-                    <h2>Mission of the Online Library</h2>
-                    <p>The Online Library's mission is to develop and maintain online resources and services in support of the
+                    <h2>Mission of MyLibrary</h2>
+                    <p>The MyLibrary's mission is to develop and maintain online resources and services in support of the
                         present and future teaching, learning and research needs of the University of London's Distance learning
                         Community.
                     </p>
                 </div>
                 <div id="service" class="about-us-row-item block-color">
                     <h2 class="textbrown">Eligibility for Services</h2>
-                    <p class="textblack">To use the services, you must be enrolled with the University's International Programmes or a member
-                        of staff involved in delivering and supporting the International Programmes and directly employed
-                        by the University of London.</p>
-                    <p class="textblack">To access many of the online resources, you must have an Athens Account. Athens is a national authentication
-                        service. To give the Online Library the necessary details to register you for an Athens account,
-                        <a href="http://onlinelibrary.london.ac.uk/resources/register-athens">click here</a>
+                    <p class="textblack">To use the services, you must be a student of Universiti Teknikal Malaysia Melaka.</p>
+                    <p class="textblack">To access many of the online resources, you must have an MyLibrary Account.To register an account,
+                        <a href="./register.php">click here</a>.
                     </p>
                 </div>
             </div>
@@ -90,10 +87,8 @@
                         <li>Law Librarian</li>
                         <li>Head of Library Services</li>
                     </ul>
-                    <p class="textblack">For all enquiries and support, please contact the Online library team at onlinelibrary@shl.lon.ac.uk
+                    <p class="textblack">For all enquiries and support, please contact the MyLibrary team at webmaster@example.com<
                         or by telephone on +4420 7862 8478.</p>
-                    <p class="textblack">You can also use the
-                        <a href="http://onlinelibrary.london.ac.uk/about/contact-us">web-form</a>.</p>
                 </div>
                 <div id="availability" class="about-us-row-item">
                     <h2>Availability</h2>
