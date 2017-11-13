@@ -13,6 +13,7 @@
 
     $data = json_decode($_POST["data"], false);
     $student_id = $data->studentID;
+    $student_name = $data->studentName;
 
     /* check if user exist */
     $student_found = Student::Find($student_id);
@@ -24,8 +25,9 @@
     } else {
       $password = password_hash($data->password, PASSWORD_DEFAULT);
 
-      $addStudent = $con->prepare("INSERT INTO students(student_id, password) VALUES(LOWER(:student_id), :password)");
+      $addStudent = $con->prepare("INSERT INTO students(student_id, student_name, password) VALUES(LOWER(:student_id), :student_name, :password)");
       $addStudent->bindParam(':student_id', $student_id, PDO::PARAM_STR);
+      $addStudent->bindParam(':student_name', $student_name, PDO::PARAM_STR);
       $addStudent->bindParam(':password', $password, PDO::PARAM_STR);
       $addStudent->execute();
 

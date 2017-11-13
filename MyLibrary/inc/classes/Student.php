@@ -8,13 +8,14 @@
 
     public $student_index;
     public $student_id;
+    public $student_name;
     public $reg_time;
 
     public function __construct(int $student_index) {
       $this->con = DB::getConnection();
       $student_index = Filter::Int($student_index);
 
-      $student = $this->con->prepare("SELECT student_index, student_id, reg_time FROM students WHERE student_index = :student_index LIMIT 1");
+      $student = $this->con->prepare("SELECT student_index, student_id, student_name, reg_time FROM students WHERE student_index = :student_index LIMIT 1");
       $student->bindParam(':student_index', $student_index, PDO::PARAM_INT);
       $student->execute();
 
@@ -28,6 +29,7 @@
 
         $this->student_index = (string) $student->student_index;
         $this->student_id    = (string) $student->student_id;
+        $this->student_name  = (string) $student->student_name;
         $this->reg_time      = (string) $student->reg_time;
       } else {
         header("Location: ./logout.php");
