@@ -24,8 +24,8 @@
     <div class="auth-container-header some-shadow">
         <img src="./image/empty-avatar.png" class="user-avatar" />
         <div class="profile-content-container">
-            <h2 class="profile-user-name">John Doe</h2>
-            <h4 class="profile-user-id">Hello <?php echo $student->student_id; ?></h4>
+            <h2 class="profile-user-name"><?php echo $student->student_name; ?></h2>
+            <h4 class="profile-user-id">Matric No: <?php echo $student->student_id; ?></h4>
             <div class="profile-content-button-container">
                 <a href="#" class="button button-secondary">Edit Profile</a>
                 <button class="button button-secondary" onclick="logOut()">Sign Out</button>

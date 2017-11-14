@@ -44,7 +44,7 @@
       public static function Find($student_id, $return_assoc = false) {
         $con = DB::getConnection();
 
-        $findStudent = $con->prepare("SELECT student_index, password FROM students WHERE student_id = LOWER(:student_id) LIMIT 1");
+        $findStudent = $con->prepare("SELECT student_index, student_name, password FROM students WHERE student_id = LOWER(:student_id) LIMIT 1");
         $findStudent->bindParam(':student_id', $student_id, PDO::PARAM_STR);
         $findStudent->execute();
 
