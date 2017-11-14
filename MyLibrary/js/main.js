@@ -48,10 +48,8 @@ const dynamicPath = () => {
   const parentPath = window.location.pathname.split("/")[pathLength - 2];
   
   if (parentPath === "about-us") {
-    console.log('yes')
     window.location = "../login.php";
   } else {
-    console.log('yno')
     window.location = "./login.php";
   }
 }
