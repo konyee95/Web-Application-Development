@@ -79,8 +79,8 @@
                 <div class="material-card-container">
                     <div class="material-card-container-row">
 
-                        <div class="material-card material-card-large">
-                            <div class="material-card-header material-card-item-padding card-image-1">
+                        <div class="material-card material-card-large material-card-item-margin-right">
+                            <div class="material-card-header card-image-1">
 
                             </div>
                             <div class="material-card-content">
@@ -100,7 +100,7 @@
                         </div>
 
                         <div class="material-card-compound-container material-card-item-padding-left">
-                            <div class="material-card material-card-small">
+                            <div class="material-card material-card-small material-card-item-margin-bottom">
                                 <div class="material-card-header material-card-container-row card-center">
                                     <img src="image/dictionary.png" class="dictionary-image" />
                                     <div class="material-card-item-padding-left">

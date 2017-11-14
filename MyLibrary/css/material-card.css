@@ -16,7 +16,7 @@
 .material-card-container {
   display: flex;
   flex: 1;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .material-card-container-row {
@@ -76,13 +76,23 @@
   padding-right: 10px;
 }
 
+.material-card-item-padding-bottom {
+  padding-bottom: 10px;
+}
+
 .material-card-item-margin-top {
   margin-top: 5px;
 }
 
-.material-card-item-padding-bottom {
-  padding-bottom: 10px;
+.material-card-item-margin-right {
+  margin-right: 5px;
 }
+
+.material-card-item-margin-bottom {
+  margin-bottom: 5px;
+}
+
+
 /* make padding optional, images header need not to have padding */
 
 /* misc */
