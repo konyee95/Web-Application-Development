@@ -41,6 +41,22 @@ const onSearchInputLoseFocus = () => {
 }
 
 /*
+ * Dynamic side panel to select correct path (for about page)
+ */
+const dynamicPath = () => {
+  const pathLength = window.location.pathname.split("/").length;
+  const parentPath = window.location.pathname.split("/")[pathLength - 2];
+  
+  if (parentPath === "about-us") {
+    console.log('yes')
+    window.location = "../login.php";
+  } else {
+    console.log('yno')
+    window.location = "./login.php";
+  }
+}
+
+/*
  * Slider helper function
  */
 this.slideIndex = 9;
