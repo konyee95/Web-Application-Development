@@ -1,0 +1,98 @@
+.material-card-large {
+  flex: .5;
+  height: 500px;
+}
+
+.material-card-medium {
+  flex: .65;
+  height: 340px;
+}
+
+.material-card-small {
+  flex: .35;
+  height: 140px;
+}
+
+.material-card-container {
+  display: flex;
+  flex: 1;
+  margin: 10px 0;
+}
+
+.material-card-container-row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.material-card-compound-container {
+  display: flex;
+  flex: .5;
+  flex-direction: column;
+}
+
+.material-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  border-radius: 3px;
+}
+
+.material-card-header {
+  display: flex;
+  flex: .4;
+  align-items: center;
+}
+
+.material-card-content {
+  flex: .5;
+  padding: 0 20px;
+}
+
+.material-card-action-container {
+  flex: .1;
+}
+
+.material-card-action-button-text {
+  text-decoration: none;
+  color: grey;
+}
+
+/* make padding optional, images header need not to have padding */
+.material-card-item-padding {
+  padding: 0 20px;
+}
+
+.material-card-item-padding-left {
+  padding-left: 5px;
+}
+
+.material-card-item-padding-right {
+  padding-right: 10px;
+}
+
+.material-card-item-margin-top {
+  margin-top: 5px;
+}
+
+.material-card-item-padding-bottom {
+  padding-bottom: 10px;
+}
+/* make padding optional, images header need not to have padding */
+
+/* misc */
+.card-center {
+  align-items: center;
+}
+.card-image-1 {
+  background: url('../image/study.jpg') no-repeat;
+  background-size: 100% 180%;
+}
+
+.dictionary-image {
+  width: 20%;
+  height: auto;
+}
+/* misc */
