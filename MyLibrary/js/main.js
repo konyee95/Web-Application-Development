@@ -234,7 +234,7 @@ const init = () => {
   window.addEventListener("click", sidePanelListener);
 
   /* only activate slider at homepage */
-  if (checkPathName() === "index.php") {
+  if (checkPathName() === "index.php" || "MyLibrary") {
     imageSlider(9);
   }
 }
