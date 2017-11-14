@@ -70,7 +70,8 @@
                                 community. We provide online resources, professional support and guidance to all our students
                                 whenever, and from wherever they have chosen to study.
                             </h5>
-                            <h5>Operation Hour: 10am - 10pm</h5>
+                            <h5>Operation Day: Everyday</h5>
+                            <h5>Operation Hour: 8am - 10pm</h5>
                         </div>
                     </div>
                 </div>
