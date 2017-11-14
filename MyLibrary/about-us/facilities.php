@@ -90,7 +90,7 @@
                         </div>
                         <div class="material-card-content">
                             <h3>Leisure Area</h3>
-                            <p>Users can take a break at leisure area while playing games provided by the library</p>
+                            <p>Students can take a break at leisure area while playing games provided by the library</p>
                         </div>
                         <div class="material-card-action-container">
                             <a href="#" class="material-card-action-button-text material-card-item-padding">LEARN MORE</a>
@@ -98,13 +98,13 @@
                     </div>
 
                     <div class="facility-item material-card">
-                        <div id="facility-item-1"  class="material-card-header">
+                        <div id="facility-item-3"  class="material-card-header">
 
                         </div>
                         <div class="material-card-content">
-                            <h3>Hoverboard</h3>
-                            <p>Hoverboard is a new service that gives a new experience for more leisure, fascinating, and interest
-                                to the users in the library.</p>
+                            <h3>Printer</h3>
+                            <p>Students can use photocopying service by using topup (Minimum RM5) at the Circulation Counter or
+                            PPP</p>
                         </div>
                         <div class="material-card-action-container">
                             <a href="#" class="material-card-action-button-text material-card-item-padding">LEARN MORE</a>

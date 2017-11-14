@@ -92,3 +92,8 @@
     background: url("../image/facilities/leisure-area.jpg") no-repeat;
     background-size: 100% 200%;
 }
+
+#facility-item-3 {
+    background: url("../image/facilities/printer.jpg") no-repeat;
+    background-size: 100% 200%;
+}
