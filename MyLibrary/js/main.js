@@ -41,6 +41,33 @@ const onSearchInputLoseFocus = () => {
 }
 
 /*
+ * Slider helper function
+ */
+this.slideIndex = 9;
+
+const plusDivs = x => imageSlider(this.slideIndex += x);
+
+ const imageSlider = n => {
+   const mySlides = document.getElementsByClassName("mySlides");
+
+   if (n > mySlides.length) {
+     this.slideIndex = 1;
+   }
+
+   if (n < 1) {
+     this.slideIndex = mySlides.length;
+   }
+
+   for (i=0; i<mySlides.length; i++) {
+     mySlides[i].style.display = "none";
+   }
+
+   mySlides[slideIndex - 1].style.display = "block";
+   mySlides[slideIndex - 1].style.width = "750px";
+   mySlides[slideIndex - 1].style.height = "65vh";
+ }
+
+/*
  * Check is user clicked area is outside side panel, then close
  */
 const sidePanelListener = e => {
@@ -177,6 +204,11 @@ const logOut = () => {
   }
 }
 
+/*
+ * check path name
+ */
+const checkPathName = () => window.location.pathname.split("/").pop();
+
 /* init listeners */
 const init = () => {
   const hamburgerMenu = document.getElementById("hamburger-menu");
@@ -186,4 +218,9 @@ const init = () => {
   searchInput.addEventListener("focusout", onSearchInputLoseFocus);
 
   window.addEventListener("click", sidePanelListener);
+
+  /* only activate slider at homepage */
+  if (checkPathName() === "index.php") {
+    imageSlider(9);
+  }
 }
