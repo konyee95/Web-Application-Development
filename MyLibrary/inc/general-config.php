@@ -13,6 +13,7 @@
 <link rel="stylesheet" type="text/css" href="./css/material-card.css" />
 <link rel="stylesheet" type="text/css" href="./css/navigation-bar.css" />
 <link rel="stylesheet" type="text/css" href="./css/profile.css" />
+<link rel="stylesheet" type="text/css" href="./css/footer.css" />
 
 
 <!-- scripts -->

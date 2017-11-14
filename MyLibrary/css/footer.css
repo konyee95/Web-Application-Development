@@ -1,0 +1,23 @@
+.footer-container {
+  height: 200px;
+  display: flex;
+  margin: 0;
+  padding: 20px;
+  background-color: #455962;
+  width: 100%;
+}
+
+.footer-logo {
+  background: url('../image/utem-logo.jpg') no-repeat;
+  width: 25%;
+  background-size: 100% 100%;
+  border-radius: 4px;
+}
+
+.footer-content {
+  padding-left: 20px;
+}
+
+.footer-content > h3, .footer-content  p {
+  color: #fafafa;
+}

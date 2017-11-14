@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="../css/navigation-bar.css" />
 <link rel="stylesheet" type="text/css" href="../css/hamburger-menu.css" />
 <link rel="stylesheet" type="text/css" href="../css/material-button.css" />
+<link rel="stylesheet" type="text/css" href="../css/footer.css" />
 
 <!-- scripts -->
 <script src="../js/main.js"></script>
