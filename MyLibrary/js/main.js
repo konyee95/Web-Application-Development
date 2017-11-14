@@ -82,14 +82,27 @@ const removeErrorText = () => {
  */
 const submitAuthForm = () => {
   const studentID = document.getElementById("student-id").value;
+  var studentName;
   const password = document.getElementById("password").value;
   const formName = document.forms[0].name;
+
+  if (formName === "registration") {
+    studentName = document.getElementById("student-name").value;
+  }
+
+  if (formName === "registration") {
+    if (studentName === "") {
+      displayErrorText("Please make sure student name is entered");
+      return false;
+    } 
+  }
 
   if (studentID === "") {
     displayErrorText("Please make sure student id is entered");
     return false;
   } else if (studentID.length !== 10) {
     displayErrorText("Please make sure student id is correctly entered. Example: b031510000");
+    return false;
   } else if (password === "") {
     displayErrorText("Please make sure password is entered");
     return false;
@@ -101,6 +114,7 @@ const submitAuthForm = () => {
 
     const dataObject = {
       studentID: studentID.toLowerCase(),
+      studentName: studentName,
       password: password
     }
 

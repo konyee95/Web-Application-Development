@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS `students`;
 CREATE TABLE `students` (
   `student_index` int(5) UNSIGNED NOT NULL COMMENT 'Student Id Index',
   `student_id` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Student Id',
+  `student_name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Student Name',
   `password` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Student password',
   `reg_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'The time and date the student registered'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Student table';
