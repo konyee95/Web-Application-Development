@@ -11,7 +11,7 @@
         <?php require_once "inc/general-config.php" ?>
     </head>
 
-    <body>
+    <body class="white-bg">
         <div id="navigation">
             <div class="auth-nav-header">
                 <a class="site-title" href="./index.php">MyLibrary</a>
