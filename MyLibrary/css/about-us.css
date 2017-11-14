@@ -62,6 +62,7 @@
 .about-us-content {
     display: flex;
     flex: 1;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 20px;
 }
@@ -71,6 +72,60 @@
     font-weight: 200;
 }
 
+/*
+ * About us general starts
+ */
+#about-us-background {
+    flex-direction: row;
+    background-color: #448aff;
+}
+
+#about-us-background-image {
+    flex: .5;
+    background: url('../image/perpustakaanraya.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+#about-us-background-text {
+    flex: .5;
+    padding: 0 30px 20px 30px;
+    color: #fafafa;
+}
+
+.about-us-content-item {
+    display: flex;
+    width: 24%;
+    height: 420px;
+    margin: 5px 10px 10px 0;
+}
+
+#about-us-item-1 {
+    background: url("../image/material-artwork/material-1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#about-us-item-2 {
+    background: url("../image/material-artwork/material-2.png") no-repeat;
+    background-size: 100% 120%;
+}
+
+#about-us-item-3 {
+    background: url("../image/material-artwork/material-3.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#about-us-item-4 {
+    background: url("../image/material-artwork/material-4.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+/*
+ * About us general starts
+ */
+
+ 
+/*
+ * facility starts 
+ */
 .facility-item {
     display: flex;
     /* flex: 0.25; */
@@ -97,3 +152,6 @@
     background: url("../image/facilities/printer.jpg") no-repeat;
     background-size: 100% 200%;
 }
+/*
+ * facility ends 
+ */
