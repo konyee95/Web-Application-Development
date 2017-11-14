@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="./css/main.css" />
 <link rel="stylesheet" type="text/css" href="./css/material-button.css" />
 <link rel="stylesheet" type="text/css" href="./css/material-input.css" />
+<link rel="stylesheet" type="text/css" href="./css/material-card.css" />
 <link rel="stylesheet" type="text/css" href="./css/navigation-bar.css" />
 <link rel="stylesheet" type="text/css" href="./css/profile.css" />
 
