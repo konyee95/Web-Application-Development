@@ -21,6 +21,7 @@
   include_once "classes/DB.php";
   include_once "classes/Student.php";
   include_once "classes/Page.php";
+  include_once "functions/main.php";
 
   $con = DB::getConnection();
 ?>

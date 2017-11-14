@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <?php
-    // define('__CONFIG__', true);
-    require_once "inc/config.php";
-    Page::checkIfStudentIsLoggedIn();
-
-    /* if student is logged in, pulled student object to access later */
-    $student = new Student($_SESSION['student_index']);
+    getSidePanelUsername();
 ?>
 
 <div id="side-panel" class="side-panel">
   <div id="user-account-header" class="user-account-header">
-    <p>User Account<?php echo $student->student_name; ?></p>
+    <p><?php echo __NAME__; ?></p>
   </div>
   <div id="user-account-container" class="user-account-container">
     <p>Log in your account to save your favourite books and read later!</p>
