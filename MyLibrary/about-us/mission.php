@@ -60,27 +60,32 @@
             </div>
         </div>
 
-        <div id="about-us-container" class="margin-leftright">
-            <h2 class="about-us-container-title">Mission, Vision & Client's Charter</h2>
+        <div class="about-us-container">
+            <div class="about-us-header material-card">
+                <h3>Mission, Vision & Client's Charter</h3>
+                <p>UTeM Library with MyLibrary Online Portal is dedicated to free and equal access to information, knowledge, independent learning and the joys of reading for our diverse community.
+                </p>
+            </div>
+
             <div class="row">
-                <div id="mission" class="flex padding mission-block1">
+                <div id="mission" class="flex padding mission-block">
                     <h2>Mission</h2>
                     <p>To provide excellent information resources and references, as well as to deliver quality services using
                         the latest technology in tandem with the vision and mission of the university.</p>
                 </div>
-                <div id="vision" class="flex padding mission-block2">
+                <div id="vision" class="flex padding mission-block">
                     <h2>Vision</h2>
                     <p>To be a renowned, comprehensive and competitive centre for information in technical fields</p>
                 </div>
 
-                <div id="client-charter" class="flex padding mission-block3">
+                <div id="client-charter" class="flex padding mission-block">
                     <h2>Client's Charter</h2>
                     <p>We, the staff of UTeM Library, pledge that we are to deliver efficient, accurate and quality services
                         by putting emphasis on the clients' satisfaction.</p>
                 </div>
             </div>
         </div>
-
+        <?php include_once "../footer.php" ?>
     </body>
 
     </html>
