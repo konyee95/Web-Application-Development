@@ -61,7 +61,13 @@
         </div>
 
         <div class="about-us-container margin-leftright">
-            <h2 class="about-us-container-title">Services</h2>
+            <div class="about-us-header material-card">
+                <h3>Services</h3>
+                <p>Library Services is responsible for managing information resources for learning, teaching and research and
+                    providing support on their use.
+                </p>
+            </div>
+
             <div class="about-us-container-row">
                 <div id="borrowing" class="about-us-row-item service-block1">
                     <h2 class="textblack">Borrowing</h2>
