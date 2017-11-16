@@ -67,14 +67,17 @@
     margin-top: 20px;
 }
 
-.about-us-header > h3, .about-us-header > p {
+.about-us-header>h3,
+.about-us-header>p {
     color: #fafafa;
     font-weight: 200;
 }
 
+
 /*
  * About us general starts
  */
+
 #about-us-background {
     flex-direction: row;
     background-color: #448aff;
@@ -118,18 +121,57 @@
     background: url("../image/material-artwork/material-4.jpg") no-repeat;
     background-size: 100% 100%;
 }
+
+
 /*
  * About us general starts
  */
 
- .mission-block {
-     background-color: #fff;
- }
+.mission-block {
+    background-color: #fff;
+}
 
- 
+
+/*
+ * About us general
+ */
+
+
+/*
+ * services starts
+ */
+
+.services-content {
+    margin: 20px 0;
+}
+
+.services-item {
+    background-color: #fff;
+    margin: 20px 0;
+    min-height: 250px;
+}
+
+.service-item-text {
+    flex: .8;
+    padding: 0 30px 20px 30px;
+}
+
+#service-item-1 {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#services-image-1 {
+    flex: .4;
+    background: url('../image/perpustakaanraya.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+
+
 /*
  * facility starts 
  */
+
 .facility-item {
     display: flex;
     /* flex: 0.25; */
@@ -156,6 +198,8 @@
     background: url("../image/facilities/printer.jpg") no-repeat;
     background-size: 100% 200%;
 }
+
+
 /*
  * facility ends 
  */
