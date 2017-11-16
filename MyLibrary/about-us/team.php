@@ -58,39 +58,64 @@
                     </li>
                 </ul>
             </div>
-        </div>
 
-        <div id="about-us-container" class="margin-leftright">
-            <h2 class="about-us-container-title">The Online Library Team</h2>
-            <div id="library-team" class="row">
-                <div id="member1" class="flex padding member-block1">
-                    <img src="../image/member1.PNG" class="center" />
-                    <h3 class="bold">Sarah Southwood: Enquiries Librarian</h3>
-                    <p class="textgrey">Sarah is responsible for co-ordinating the Online library Enquiry Service. This includes providing help
-                        and support at the point of need as well as helping learners to discover and make effective use of
-                        all Online Library’s collections.</p>
+            <div class="about-us-container">
+                <div class="about-us-header material-card">
+                    <h3>MyLibrary Team</h3>
+                    <p>UTem MyLibrary offers a range of employee engagement opportunities, perfect for team-building and fullfilling
+                        Corporate Social Responsibility objectives. Depending on your company’s level of membership, the
+                        Library can facilitate group volunteer projects, diversity and inclusion workshops, as well as behind-the-scenes
+                        tours of our world-renowned collections of books and research materials.
+                    </p>
                 </div>
 
-                <div id="member2" class="flex padding member-block2">
-                    <img src="../image/member2.PNG" class="center" />
-                    <h3 class="bold">Angela Boots: Law Librarian</h3>
-                    <p class="textgrey">Angela is responsible for the development and management of the Online Library’s law collection and for
+                <div class="team-content">
+                    <div class="team-item material-card">
+                        <div id="team-item-1"  class="material-card-header">
+
+                        </div>
+                        <div class="material-card-content">
+                            <h3>Sarah Southwood: Enquiries Librarian</h3>
+                            <p>Sarah is responsible for co-ordinating the Online library Enquiry Service. This includes providing help
+                            and support at the point of need as well as helping learners to discover and make effective use of
+                            all Online Library’s collections.</p>
+                        </div>
+                        <div class="material-card-action-container">
+                            
+                        </div>
+                    </div>
+
+                    <div class="team-item material-card">
+                        <div id="team-item-2"  class="material-card-header">
+
+                        </div>
+                        <div class="material-card-content">
+                            <h3>Angela Boots: Law Librarian</h3>
+                            <p>Angela is responsible for the development and management of the Online Library’s law collection and for
                         offering specialist training and support to all laws programme students and faculty.</p>
-                </div>
+                        </div>
+                        <div class="material-card-action-container">
+                            
+                        </div>
+                    </div>
 
-                <div id="member3" class="flex padding member-block3">
-                    <img src="../image/member3.PNG" class="center" />
-                    <h3 class="bold">Dr. Sandra Tury: Head of Library Services, University of London International Programmes</h3>
-                    <p class="textgrey">Sandra is responsible for providing leadership and overall development of a user-focused Library and
-                        Information service that meets the University's learning, teaching and research requirements.</p>
+                    <div class="team-item material-card">
+                        <div id="team-item-3"  class="material-card-header">
+
+                        </div>
+                        <div class="material-card-content">
+                            <h3>Dr. Sandra Tury</h3>
+                            <p>Sandra is responsible for providing leadership and overall development of a user-focused Library and
+                            Information service that meets the University's learning, teaching and research requirements.</p>
+                        </div>
+                        <div class="material-card-action-container">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p>For all enquiries and support, please contact the Online library team at onlinelibrary@shl.lon.ac.uk or by telephone
-                on +4420 7862 8478.</p>
-            <p>You can also use the
-                <a href="#">web-form</a>.</p>
         </div>
-
+        <?php include_once "../footer.php" ?>
     </body>
 
     </html>

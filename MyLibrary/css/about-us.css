@@ -166,6 +166,45 @@
     background: url('../image/perpustakaanraya.jpg') no-repeat;
     background-size: 100% 100%;
 }
+/*
+ * services ends
+ */
+
+/*
+ * team starts
+ */
+.team-content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-item {
+    display: flex;
+    width: 350px;
+    height: 450px;
+    margin: 5px 10px 10px 0;
+}
+
+#team-item-1 {
+    background: url("../image/team-member/1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#team-item-2 {
+    background: url("../image/team-member/2.jpg") no-repeat;
+    background-size: 100% 110%;
+}
+
+#team-item-3 {
+    background: url("../image/team-member/3.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+/*
+ * team ends
+ */
 
 
 /*
