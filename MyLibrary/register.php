@@ -55,6 +55,7 @@
                 </form>
 
                 <p class="user-note">**MyLibrary is only available for UTeM staffs and students.</p>
+                <p class="user-note user-note-2">**MyLibrary staff login <a href="./staff-login.php">here</a></p>
             </div>
             <div class="auth-form-empty">
 
