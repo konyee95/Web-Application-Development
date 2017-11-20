@@ -21,6 +21,14 @@
       }
     }
 
+    static function checkIfStaffIsLoggedIn() {
+      if (isset($_SESSION['staff_index'])) {
+
+      } else {
+        header("Location: ./staff-login.php");
+      }
+    }
+
     static function ifStaffIsLoggedIn() {
       if (isset($_SESSION['staff_index'])) {
         header("Location: ./staff-portal.php");

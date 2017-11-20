@@ -2,6 +2,7 @@
 <?php
     define('__CONFIG__', true);
     require_once "inc/config.php";
+    Page::checkIfStaffIsLoggedIn();
 
     /* if staff is logged in, pulled student object to access later */
     $staff = new Staffs($_SESSION['staff_index']);
