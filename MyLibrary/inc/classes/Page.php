@@ -20,5 +20,11 @@
         header("Location: ./profile.php");
       }
     }
+
+    static function ifStaffIsLoggedIn() {
+      if (isset($_SESSION['staff_index'])) {
+        header("Location: ./staff-portal.php");
+      }
+    }
   }
 ?>
