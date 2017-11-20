@@ -164,6 +164,26 @@ const submitAuthForm = () => {
 }
 
 /*
+ * Edit profile
+ */
+const editProfileHelper = () => {
+  const respond = confirm("Save changes?");
+  if (respond === true) {
+    editProfile()
+  }
+}
+
+const editProfile = () => {
+  const studentName = document.getElementById("student-name").value;
+  const oldPassword = document.getElementById("old-password").value;
+  const newPassword = document.getElementById("new-password").value;
+
+  console.log(studentName)
+  console.log(oldPassword)
+  console.log(newPassword)  
+}
+
+/*
  * Dynamically tunnel data to either login or registration ajax file
  */
 const formAjaxRequest = (form, dataObject) => {
@@ -215,6 +235,13 @@ const logOut = () => {
   const respond = confirm("Are you sure?");
   if (respond === true) {
     window.location = "./logout.php";
+  }
+}
+
+const cancelEditProfile = () => {
+  const respond = confirm("Are you sure?");
+  if (respond === true) {
+    goBack()
   }
 }
 

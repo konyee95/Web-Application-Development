@@ -57,7 +57,7 @@
 }
 
 /* reduce distance between input field */
-.auth-form div:nth-child(2) {
+.auth-form div:not(:first-child) {
   margin-top: -20px;
 }
 
@@ -103,4 +103,9 @@
   bottom: 10px;
   left: 80px;
   font-style: italic;
+  padding-top: 5px;
+}
+
+.user-note-2 {
+  bottom: -15px;
 }
