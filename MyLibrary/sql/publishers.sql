@@ -1,7 +1,7 @@
 CREATE TABLE `publishers`(
     `publisher_index` int(5) UNSIGNED NOT NULL COMMENT 'Publisher Index',
-    `publisher_id` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Publisher Id',
-    `publisher_name` varchar(200) DEFAULT NULL COMMENT 'Publisher Name'
+    `publisher_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Publisher Id',
+    `publisher_name` varchar(200) NOT NULL COMMENT 'Publisher Name'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Publisher table';
 
 TRUNCATE TABLE `publishers`;
