@@ -195,6 +195,31 @@ const editProfile = studentID => {
   }
 }
 
+const staffLogin = () => {
+  const staffId = document.getElementById("staff-id").value;
+  const password = document.getElementById("password").value;
+
+  if (staffId === "") {
+    displayErrorText("Please enter Staff ID!");
+    return false;
+  } else if (password === "") {
+    displayErrorText("Please enter password!");
+    return false;
+  } else if (password.length < 8) {
+    displayErrorText("Please make sure password is more than 8 characters");
+    return false;
+  } else {
+    removeErrorText();
+
+    const dataObject = {
+      staffId,
+      password
+    }
+
+    formAjaxRequest("staffLogin", dataObject);
+  }
+}
+
 /*
  * Dynamically tunnel data to either login or registration ajax file
  */
@@ -221,8 +246,10 @@ const processAjaxResponse = data => {
       break;
     case "registration":
       processRegistrationAjax(data);
+      break;
     case "editProfile":
       processEditProfileAjax(data);
+      break;
     default:
       break;
   }
