@@ -166,21 +166,27 @@ const submitAuthForm = () => {
 /*
  * Edit profile
  */
-const editProfileHelper = () => {
-  const respond = confirm("Save changes?");
-  if (respond === true) {
-    editProfile()
-  }
-}
-
-const editProfile = () => {
+const editProfile = studentID => {
   const studentName = document.getElementById("student-name").value;
   const oldPassword = document.getElementById("old-password").value;
   const newPassword = document.getElementById("new-password").value;
 
-  console.log(studentName)
-  console.log(oldPassword)
-  console.log(newPassword)  
+  const dataObject = {
+    studentID,
+    studentName,
+    oldPassword,
+    newPassword
+  }
+  
+  if (oldPassword !== "" && newPassword === "") {
+    displayErrorText("Forget to enter your new password?");
+    return false
+  } else {
+    const respond = confirm("Save changes?");
+    if (respond === true) {
+      formAjaxRequest("editProfile", dataObject);
+    }
+  }
 }
 
 /*
@@ -202,10 +208,30 @@ const formAjaxRequest = (form, dataObject) => {
 /*
  * Process data returned
  */
-const processAjaxResponse = data => (data.action === "login" ? processLoginAjax(data) : processRegistrationAjax(data));
+const processAjaxResponse = data => {
+  switch (data.action) {
+    case "login":
+      processLoginAjax(data);
+      break;
+    case "registration":
+      processRegistrationAjax(data);
+    case "editProfile":
+      processEditProfileAjax(data);
+    default:
+      break;
+  }
+}
+
+const processLoginAjax = data => {
+  if (data.action_result === true) {
+    window.location = data.redirect;
+  } else {
+    displayErrorText(data.error);
+  }
+}
 
 const processRegistrationAjax = data => {
-  if (data.action_result === true) {
+  if (data.action_result === true) { 
     window.alert("Congratulation! You have created your library account!");
     window.location = data.redirect;
   } else {
@@ -213,8 +239,9 @@ const processRegistrationAjax = data => {
   }
 }
 
-const processLoginAjax = data => {
+const processEditProfileAjax = data => {
   if (data.action_result === true) {
+    window.alert("Account updated");
     window.location = data.redirect;
   } else {
     displayErrorText(data.error);

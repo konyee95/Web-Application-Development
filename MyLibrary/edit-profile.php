@@ -31,7 +31,7 @@
                     <?php echo $student->student_id; ?>
                 </h4>
                 <div class="profile-content-button-container">
-                    <button class="button button-secondary" onclick="editProfileHelper()">Save Changes</button>
+                    <button class="button button-secondary" onclick="editProfile('<?php echo $student->student_id; ?>')">Save Changes</button>
                     <button class="button button-secondary" onclick="cancelEditProfile()">Cancel</button>
                 </div>
             </div>
