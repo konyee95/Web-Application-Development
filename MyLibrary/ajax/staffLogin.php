@@ -28,8 +28,6 @@
       } else {
         $return['action_result'] = false;
         $return['error'] = "Invalid staff id/password combination";
-        $return['p1'] = $store_password;
-        $return['p2'] = $password;
       }
     } else {
       $return['action_result'] = false;
