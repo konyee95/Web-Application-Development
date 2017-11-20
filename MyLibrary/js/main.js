@@ -181,6 +181,12 @@ const editProfile = studentID => {
   if (oldPassword !== "" && newPassword === "") {
     displayErrorText("Forget to enter your new password?");
     return false
+  } else if (oldPassword === "" && newPassword !== "") {
+    displayErrorText("Forget to enter your old password?");
+    return false
+  } else if (oldPassword !== "" && newPassword.length < 8) {
+    displayErrorText("Please make sure password is more than 8 characters");
+    return false;
   } else {
     const respond = confirm("Save changes?");
     if (respond === true) {
