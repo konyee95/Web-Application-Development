@@ -32,13 +32,13 @@
 .book-block {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 0 20px 10px 10px;
   align-items: center;
 }
 
 .book-image-container {
   display: flex;
-  width: 120px;
+  width: 100px;
   height: 140px;
   flex-direction: column;
   align-items: center;
