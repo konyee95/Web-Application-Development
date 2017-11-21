@@ -224,7 +224,7 @@
 }
 
 #facility-item-1 {
-    background: url("../image/facilities/hoverboard.jpg") no-repeat;
+    background: url("../image/facilities/pc.JPG") no-repeat;
     background-size: 100% 100%;
 }
 
@@ -236,6 +236,16 @@
 #facility-item-3 {
     background: url("../image/facilities/printer.jpg") no-repeat;
     background-size: 100% 200%;
+}
+
+#facility-item-4 {
+    background: url("../image/facilities/loker1.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#facility-item-5 {
+    background: url("../image/facilities/hoverboard.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 
 

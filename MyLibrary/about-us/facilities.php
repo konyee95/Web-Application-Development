@@ -75,9 +75,8 @@
 
                         </div>
                         <div class="material-card-content">
-                            <h3>Hoverboard</h3>
-                            <p>Hoverboard is a new service that gives a new experience for more leisure, fascinating, and interest
-                                to the users in the library.</p>
+                            <h3>Assignment/Internet Computer</h3>
+                            <p>There are 32 computers available for user to access the Internet as well as to complete the task.</p>
                         </div>
                         <div class="material-card-action-container">
                             <a href="#" class="material-card-action-button-text material-card-item-padding">LEARN MORE</a>
@@ -112,13 +111,12 @@
                     </div>
 
                     <div class="facility-item material-card">
-                        <div id="facility-item-1"  class="material-card-header">
+                        <div id="facility-item-4"  class="material-card-header">
 
                         </div>
                         <div class="material-card-content">
-                            <h3>Hoverboard</h3>
-                            <p>Hoverboard is a new service that gives a new experience for more leisure, fascinating, and interest
-                                to the users in the library.</p>
+                            <h3>Lockers</h3>
+                            <p>There are 308 lockers units available at the Main Campus and 36 units at the City Campus.</p>
                         </div>
                         <div class="material-card-action-container">
                             <a href="#" class="material-card-action-button-text material-card-item-padding">LEARN MORE</a>
@@ -126,7 +124,7 @@
                     </div>
 
                     <div class="facility-item material-card">
-                        <div id="facility-item-1"  class="material-card-header">
+                        <div id="facility-item-5"  class="material-card-header">
 
                         </div>
                         <div class="material-card-content">
