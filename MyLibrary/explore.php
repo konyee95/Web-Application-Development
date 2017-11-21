@@ -45,7 +45,7 @@
     <div id="info-container" class="explore-container sticky-header-padding">
       <div id="explore-content-row-1" class="explore-content-row ">
         <div class="explore-content-row-header">
-          <h2 class="explore-row-title">Handpicked by MyLibrary</h2>
+          <h3 class="explore-row-title">Handpicked by MyLibrary</h3>
           <a href="" class="see-all">See all &rarr;</a>
         </div>
         <div class="explore-content-row-body">
@@ -88,7 +88,7 @@
 
       <div id="explore-content-row-2" class="explore-content-row">
         <div class="explore-content-row-header">
-          <h2 class="explore-row-title">By Category</h2>
+          <h3 class="explore-row-title">By Category</h3>
           <a href="" class="see-all">See all &rarr;</a>
         </div>
         <div class="explore-content-row-body">
@@ -144,7 +144,7 @@
       </div>
       <div id="explore-content-row-3" class="explore-content-row">
         <div class="explore-content-row-header">
-          <h2 class="explore-row-title">Most Popular</h2>
+          <h3 class="explore-row-title">Most Popular</h3>
           <a href="" class="see-all">See all &rarr;</a>
         </div>
         <div class="explore-content-row-body">
