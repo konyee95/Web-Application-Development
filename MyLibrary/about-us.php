@@ -31,9 +31,7 @@
                 </ul>
 
                 <div id="search-container" class="search-container">
-                    <form id="search-form" class="search-form" action="" method="GET">
-                        <input id="search-input" class="search-input" type="text" placeholder="Search" />
-                    </form>
+                    <?php include_once "./widget/search-form.php" ?>
                     <div id="hamburger-menu" class="hamburger-container" onclick="hamburgerMenu(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
