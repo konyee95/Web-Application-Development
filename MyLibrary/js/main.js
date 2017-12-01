@@ -221,6 +221,17 @@ const staffLogin = () => {
 }
 
 /*
+ * Search function
+ */
+const searchBooks = () => {
+  const searchInput = document.getElementById("search-input").value;
+
+  const dataObject = { keyword: searchInput }
+
+  formAjaxRequest("search", dataObject)
+}
+
+/*
  * Dynamically tunnel data to either login or registration ajax file
  */
 const formAjaxRequest = (form, dataObject) => {
@@ -250,6 +261,9 @@ const processAjaxResponse = data => {
     case "editProfile":
       processEditProfileAjax(data);
       break;
+    case "searchBook":
+      processSearchBookAjax(data);
+      break;
     default:
       break;
   }
@@ -278,6 +292,18 @@ const processEditProfileAjax = data => {
     window.location = data.redirect;
   } else {
     displayErrorText(data.error);
+  }
+}
+
+const processSearchBookAjax = data => {
+  console.log(data)
+  const pathLength = window.location.pathname.split("/").length;
+  const parentPath = window.location.pathname.split("/")[pathLength - 2];
+  
+  if (parentPath === "about-us") {
+    window.location = "../search.php?data=" + btoa(JSON.stringify(data));
+  } else {
+    window.location = "./search.php?data=" + btoa(JSON.stringify(data));
   }
 }
 
