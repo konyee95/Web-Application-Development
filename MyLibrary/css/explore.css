@@ -29,14 +29,14 @@
   text-decoration: none;
 }
 
-.book-block {
+.small-book-block {
   display: flex;
   flex-direction: column;
   margin: 0 20px 10px 10px;
   align-items: center;
 }
 
-.book-image-container {
+.small-book-image-container {
   display: flex;
   width: 100px;
   height: 140px;
@@ -48,14 +48,14 @@
   border-radius: 1px;
 }
 
-.book-title-container {
+.small-book-title-container {
   display: flex;
   flex: 1;
   flex-wrap: wrap;
   width: 100px;
 }
 
-.book-title {
+.small-book-title {
   font-size: 12px;
   text-align: center;
 }
