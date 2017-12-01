@@ -7,6 +7,8 @@
   $base64Data = $_GET['data'];
   $decodedData = base64_decode($base64Data);
   $data = json_decode($decodedData, true);
+  $book = $data['data'][0];
+  $bookStatus = $book['availability'];
 ?>
   <html>
 
@@ -45,30 +47,35 @@
         </div>
       </div>
 
-      <div id="info-container" class="explore-container sticky-header-padding">
-        <div id="explore-content-row-1" class="explore-content-row ">
-          <div class="explore-content-row-header">
-            <h2 class="explore-row-title">Search Results for <?php echo $data['search_keyword']; ?></h2><br/>
+      <div class="book-container sticky-header-padding">
+        <div class="book-image-container">
+          <?php echo "<img src={$book['image_url']} height='100%'>"; ?>
+        </div>
+        <div class="book-content-container">
+          <div class="book-title-container ">
+            <h1>
+              <?php echo $book['title']; ?>
+            </h1>
+            <p>by
+              <?php echo $book['author']; ?>
+            </p>
+            <p>
+              <?php echo $book['category']; ?> /
+              <?php echo $book['rating']; ?>
+            </p>
+            <p>[Floor / Rack / Row]
+              <?php echo $book['physical_location'] ?>
+            </p>
+            <p>
+              <?php echo $book['description']; ?>
+            </p>
           </div>
-          <div class="explore-content-row-body">
-            <!-- <h2><?php print_r($data); ?></h2> -->
 
-            <?php
-              if ($data['action_result'] === false) {
-                echo "<h3 style='padding-left: 10px;'>No results found. Try again?</h3>";
-              } else {
-                foreach ($data['data'] as $book) {
-                  echo "<div id='{$book['book_id']}' class='small-book-block' onClick='loadBook(\"" . $book['book_id'] . "\")'>";
-                  echo "<div class='small-book-image-container'>";
-                  echo "<img src={$book['image_url']} height='100%'>";
-                  echo "</div>";
-                  echo "<div class='small-book-title-container'>";
-                  echo "<p class='small-book-title'>{$book['title']} by {$book['author']}</p>";
-                  echo "</div>";
-                  echo "</div>";
-                }
-              }
-            ?>
+          <div class="book-action-container">
+            <div class="book-button-container">
+              <button type="button" name="login_button" class="button button-primary"><?php echo ($bookStatus !== '0' ? "Reserve Online" : "Not available") ?></button>
+              <a href="<?php echo $book['online_reading_url'] ?>" class="button button-secondary">Read Online</a>
+            </div>
           </div>
         </div>
       </div>

@@ -47,39 +47,39 @@
           <a href="" class="see-all">See all &rarr;</a>
         </div>
         <div class="explore-content-row-body">
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
         </div>
       </div>
@@ -90,53 +90,53 @@
           <a href="" class="see-all">See all &rarr;</a>
         </div>
         <div class="explore-content-row-body">
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Action</p>
+            <p class="small-book-title">Action</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Bibliography</p>
+            <p class="small-book-title">Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Educational</p>
+            <p class="small-book-title">Educational</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Fiction</p>
+            <p class="small-book-title">Fiction</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Non-Fiction</p>
+            <p class="small-book-title">Non-Fiction</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Sports</p>
+            <p class="small-book-title">Sports</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Engineering</p>
+            <p class="small-book-title">Engineering</p>
           </div>
         </div>
       </div>
@@ -146,39 +146,39 @@
           <a href="" class="see-all">See all &rarr;</a>
         </div>
         <div class="explore-content-row-body">
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
 
-          <div class="book-block">
-            <div class="book-image-container">
+          <div class="small-book-block">
+            <div class="small-book-image-container">
               <img>
             </div>
-            <p class="book-title">Kelsey Bibliography</p>
+            <p class="small-book-title">Kelsey Bibliography</p>
           </div>
         </div>
       </div>

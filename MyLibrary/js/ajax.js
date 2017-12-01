@@ -130,6 +130,12 @@ const searchBooks = () => {
   formAjaxRequest("search", dataObject)
 }
 
+const loadBook = bookID => {
+  const dataObject = { bookID }
+
+  formAjaxRequest("loadBook", dataObject)
+}
+
 /*
  * Dynamically tunnel data to either login or registration ajax file
  */
@@ -163,6 +169,9 @@ const processAjaxResponse = data => {
     case "searchBook":
       processSearchBookAjax(data);
       break;
+    case "loadBook":
+      processLoadBookAjax(data);
+      break;
     default:
       break;
   }
@@ -195,13 +204,16 @@ const processEditProfileAjax = data => {
 }
 
 const processSearchBookAjax = data => {
-  console.log(data)
   const pathLength = window.location.pathname.split("/").length;
   const parentPath = window.location.pathname.split("/")[pathLength - 2];
   
   if (parentPath === "about-us") {
-    window.location = "../search.php?data=" + btoa(JSON.stringify(data));
+    window.location = "../search.php?data=" + btoa(unescape(encodeURIComponent(JSON.stringify(data))));
   } else {
-    window.location = "./search.php?data=" + btoa(JSON.stringify(data));
+    window.location = "./search.php?data=" + btoa(unescape(encodeURIComponent(JSON.stringify(data))));
   }
+}
+
+const processLoadBookAjax = data => {
+  window.location = "./book.php?data=" + btoa(unescape(encodeURIComponent(JSON.stringify(data))));
 }
