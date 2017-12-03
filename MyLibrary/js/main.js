@@ -61,25 +61,25 @@ this.slideIndex = 9;
 
 const plusDivs = x => imageSlider(this.slideIndex += x);
 
- const imageSlider = n => {
-   const mySlides = document.getElementsByClassName("mySlides");
+const imageSlider = n => {
+  const mySlides = document.getElementsByClassName("mySlides");
 
-   if (n > mySlides.length) {
-     this.slideIndex = 1;
-   }
+  if (n > mySlides.length) {
+    this.slideIndex = 1;
+  }
 
-   if (n < 1) {
-     this.slideIndex = mySlides.length;
-   }
+  if (n < 1) {
+    this.slideIndex = mySlides.length;
+  }
 
-   for (i=0; i<mySlides.length; i++) {
-     mySlides[i].style.display = "none";
-   }
+  for (i=0; i<mySlides.length; i++) {
+    mySlides[i].style.display = "none";
+  }
 
-   mySlides[slideIndex - 1].style.display = "block";
-   mySlides[slideIndex - 1].style.width = "750px";
-   mySlides[slideIndex - 1].style.height = "65vh";
- }
+  mySlides[slideIndex - 1].style.display = "block";
+  mySlides[slideIndex - 1].style.width = "750px";
+  mySlides[slideIndex - 1].style.height = "65vh";
+}
 
 /*
  * Check is user clicked area is outside side panel, then close
