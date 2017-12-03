@@ -18,3 +18,6 @@ INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) V
 INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub002', 'Pottermore');
 INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub003', 'MIT Press');
 INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub004', 'O Reilly Media, Inc');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub005', 'Dearborn Trade Publishing');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub006', 'Cengage Learning');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub007', 'Abrams');

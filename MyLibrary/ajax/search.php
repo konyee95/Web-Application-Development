@@ -10,7 +10,7 @@
     $data = json_decode($_POST["data"], false);
     $keyword = $data->keyword;
 
-    $searchQuery = $con->prepare("SELECT book_id, title, author, image_url FROM books WHERE title LIKE '%$keyword%' OR author LIKE '%$keyword%' LIMIT 0 , 10");
+    $searchQuery = $con->prepare("SELECT book_id, title, author, image_url FROM books WHERE title LIKE '%$keyword%' OR author LIKE '%$keyword%' OR category LIKE '%$keyword%' LIMIT 0 , 10");
     $searchQuery->bindValue(1, '%$keyword%', PDO::PARAM_STR);
     $searchQuery->execute();
 
