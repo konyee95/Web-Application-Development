@@ -127,14 +127,12 @@ const searchBooks = () => {
 
   const dataObject = { keyword: searchInput }
 
-  formAjaxRequest("search", dataObject)
+  formAjaxRequest("search", { keyword })
 }
 
-const loadBook = bookID => {
-  const dataObject = { bookID }
+const loadBook = bookID => formAjaxRequest("loadBook", { bookID })
 
-  formAjaxRequest("loadBook", dataObject)
-}
+const loadBookCategory = category => formAjaxRequest("loadBookCategory", { category })
 
 /*
  * Dynamically tunnel data to either login or registration ajax file
@@ -170,7 +168,10 @@ const processAjaxResponse = data => {
       processSearchBookAjax(data);
       break;
     case "loadBook":
-      processLoadBookAjax(data);
+      processLoadBookAjax(data, 'book');
+      break;
+    case "loadBookCategory":
+      processLoadBookAjax(data, 'category');
       break;
     default:
       break;
@@ -214,6 +215,6 @@ const processSearchBookAjax = data => {
   }
 }
 
-const processLoadBookAjax = data => {
-  window.location = "./book.php?data=" + btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+const processLoadBookAjax = (data, location) => {
+  window.location = `./${location}.php?data=` + btoa(unescape(encodeURIComponent(JSON.stringify(data))));
 }
