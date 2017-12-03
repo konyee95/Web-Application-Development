@@ -85,7 +85,23 @@
                 name="reserve_book_button" 
                 class="button button-favourite"
                 onclick="favouriteBook('<?php echo $book['book_id'] ?>')">
-                Favourite Book
+                <?php
+                  if (isset($_SESSION['student_index'])) {
+                    $student = new Student($_SESSION['student_index']);
+                    $findIfExist = $con->prepare("SELECT * FROM favourite WHERE student_id_fk=:studentID AND book_id=:bookID");
+                    $findIfExist->bindParam(':studentID', $student->student_id, PDO::PARAM_STR);
+                    $findIfExist->bindParam(':bookID', $book['book_id'], PDO::PARAM_STR);
+                    $findIfExist->execute();
+
+                    if ($findIfExist->rowCount() == 0) {
+                      echo "Favourite Book";
+                    } else {
+                      echo "Unfavourite Book";
+                    }
+                  } else {
+                    echo "Login to Favourite Book";
+                  }
+                ?>
               </button>
               <a href="<?php echo $book['online_reading_url'] ?>" class="button button-secondary">Read Online</a>
             </div>

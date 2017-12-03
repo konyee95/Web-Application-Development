@@ -244,5 +244,6 @@ const favouriteBookAjax = data => {
     }
   } else if (data.action_result === true) {
     window.alert("Congratulation! You have favourite this book!");
+    location.reload(true);
   }
 }

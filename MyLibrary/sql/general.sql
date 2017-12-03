@@ -15,3 +15,6 @@ SELECT * FROM books ORDER BY rating desc
 
 -- randomly select books with limit
 SELECT book_id, title, image_url FROM books ORDER BY RAND() LIMIT 7
+
+-- select all books that is favor by one user
+SELECT * FROM books AS b JOIN favourite AS f ON f.student_id_fk='b031510127' WHERE b.book_id=f.book_id
