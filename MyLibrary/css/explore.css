@@ -48,6 +48,11 @@
   border-radius: 1px;
 }
 
+.small-book-image {
+  height: 100%;
+  width: 100%;
+}
+
 .small-book-title-container {
   display: flex;
   flex: 1;

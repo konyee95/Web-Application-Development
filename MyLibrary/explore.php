@@ -90,54 +90,42 @@
           <a href="" class="see-all">See all &rarr;</a>
         </div>
         <div class="explore-content-row-body">
+
           <div class="small-book-block">
             <div class="small-book-image-container">
-              <img>
+              <img class="small-book-image" src="./image/category/business.jpg">
             </div>
-            <p class="small-book-title">Action</p>
+            <p class="small-book-title">Business</p>
           </div>
 
           <div class="small-book-block">
             <div class="small-book-image-container">
-              <img>
+              <img class="small-book-image" src="./image/category/computer.png">
             </div>
-            <p class="small-book-title">Bibliography</p>
+            <p class="small-book-title">Computer</p>
           </div>
 
           <div class="small-book-block">
             <div class="small-book-image-container">
-              <img>
+              <img class="small-book-image" src="./image/category/engineering.jpg">
             </div>
-            <p class="small-book-title">Educational</p>
+            <p class="small-book-title">Engineering</p>
           </div>
 
           <div class="small-book-block">
             <div class="small-book-image-container">
-              <img>
+              <img class="small-book-image" src="./image/category/fiction.jpg">
             </div>
             <p class="small-book-title">Fiction</p>
           </div>
 
           <div class="small-book-block">
             <div class="small-book-image-container">
-              <img>
+              <img class="small-book-image" src="./image/category/literacy.png">
             </div>
-            <p class="small-book-title">Non-Fiction</p>
+            <p class="small-book-title">Literacy</p>
           </div>
 
-          <div class="small-book-block">
-            <div class="small-book-image-container">
-              <img>
-            </div>
-            <p class="small-book-title">Sports</p>
-          </div>
-
-          <div class="small-book-block">
-            <div class="small-book-image-container">
-              <img>
-            </div>
-            <p class="small-book-title">Engineering</p>
-          </div>
         </div>
       </div>
       <div id="explore-content-row-3" class="explore-content-row">
