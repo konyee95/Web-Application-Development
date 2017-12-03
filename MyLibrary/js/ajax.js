@@ -26,11 +26,11 @@ const submitAuthForm = () => {
   const password = document.getElementById("password").value;
   const formName = document.forms[0].name;
 
-  if (formName === "registration") {
+  if (formName === "register") {
     studentName = document.getElementById("student-name").value;
   }
 
-  if (formName === "registration") {
+  if (formName === "register") {
     if (studentName === "") {
       displayErrorText("Please make sure student name is entered");
       return false;
