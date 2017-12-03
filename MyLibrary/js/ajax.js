@@ -134,6 +134,10 @@ const loadBook = bookID => formAjaxRequest("loadBook", { bookID })
 
 const loadBookCategory = category => formAjaxRequest("loadBookCategory", { category })
 
+const reserveBook = bookID => formAjaxRequest("reserveBook", { bookID })
+
+const favouriteBook = bookID => formAjaxRequest("favouriteBook", { bookID })
+
 /*
  * Dynamically tunnel data to either login or registration ajax file
  */
@@ -172,6 +176,12 @@ const processAjaxResponse = data => {
       break;
     case "loadBookCategory":
       processLoadBookAjax(data, 'category');
+      break;
+    case "reserveBook":
+      reserveBookAjax(data);
+      break;
+    case "favouriteBook":
+      favouriteBookAjax(data);
       break;
     default:
       break;
@@ -217,4 +227,22 @@ const processSearchBookAjax = data => {
 
 const processLoadBookAjax = (data, location) => {
   window.location = `./${location}.php?data=` + btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+}
+
+const reserveBookAjax = data => {
+  if (data.action_result === false) {
+    if (data.action_result_code === 0) {
+      window.location = data.redirect;
+    }
+  }
+}
+
+const favouriteBookAjax = data => {
+  if (data.action_result === false) {
+    if (data.action_result_code === 0) {
+      window.location = data.redirect;
+    }
+  } else if (data.action_result === true) {
+    window.alert("Congratulation! You have favourite this book!");
+  }
 }

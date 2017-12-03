@@ -1,31 +1,36 @@
 .button {
-    margin: 4px 4px 4px 12px;
-    padding: 8px 16px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-    border: 0;
-    border-radius: 2px;
-    cursor: pointer;
-    display: inline-block;
-    font: 500 14px/20px Roboto,sans-serif;
-    height: 20px;
-    min-width: 36px;
-    outline: 0;
-    overflow: hidden;
-    text-align: center;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    transition: background-color .2s,box-shadow .2s;
-    vertical-align: middle;
-    white-space: nowrap;
-  }
-  
-  .button-primary {
-    background-color: #039be5;
-    color: #fff;
-  }
+  margin: 4px 4px 4px 12px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font: 500 14px/20px Roboto, sans-serif;
+  height: 20px;
+  min-width: 36px;
+  outline: 0;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  transition: background-color .2s, box-shadow .2s;
+  vertical-align: middle;
+  white-space: nowrap;
+}
 
-  .button-secondary {
-    background-color: #fff;
-    color: #039be5;
-  }
+.button-primary {
+  background-color: #039be5;
+  color: #fff;
+}
+
+.button-secondary {
+  background-color: #fff;
+  color: #039be5;
+}
+
+.button-favourite {
+  background-color: #e91e63;
+  color: #fff;
+}

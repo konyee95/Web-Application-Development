@@ -73,7 +73,20 @@
 
           <div class="book-action-container">
             <div class="book-button-container">
-              <button type="button" name="reserve_book_button" class="button button-primary"><?php echo ($bookStatus !== '0' ? "Reserve Online" : "Not available") ?></button>
+              <button 
+                type="button" 
+                name="reserve_book_button" 
+                class="button button-primary"
+                onclick="reserveBook('<?php echo $book['book_id'] ?>')">
+                <?php echo ($bookStatus !== '0' ? "Reserve Online" : "Not available") ?>
+              </button>
+              <button
+                type="button" 
+                name="reserve_book_button" 
+                class="button button-favourite"
+                onclick="favouriteBook('<?php echo $book['book_id'] ?>')">
+                Favourite Book
+              </button>
               <a href="<?php echo $book['online_reading_url'] ?>" class="button button-secondary">Read Online</a>
             </div>
           </div>

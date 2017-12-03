@@ -35,41 +35,41 @@
 
     <div class="profile-content-body">
         <div class="profile-content-body-item">
-            <h2 class="">Saved Books</h2>
+            <h2 class="">Favourite Books</h2>
             <div class="explore-content-row-body">
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
             </div>
         </div>
@@ -77,39 +77,39 @@
         <div class="profile-content-body-item">
             <h2 class="">Borrowed Books</h2>
             <div class="explore-content-row-body">
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
 
-                <div class="book-block">
-                    <div class="book-image-container">
+                <div class="small-book-block">
+                    <div class="small-book-image-container">
                         <img>
                     </div>
-                    <p class="book-title">Kelsey Bibliography</p>
+                    <p class="small-book-title">Kelsey Bibliography</p>
                 </div>
             </div>
         </div>
