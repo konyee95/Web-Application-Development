@@ -122,13 +122,7 @@ const staffLogin = () => {
 /*
  * Search function
  */
-const searchBooks = () => {
-  const searchInput = document.getElementById("search-input").value;
-
-  const dataObject = { keyword: searchInput }
-
-  formAjaxRequest("search", { keyword })
-}
+const searchBooks = () => formAjaxRequest("search", { keyword: document.getElementById("search-input").value })
 
 const loadBook = bookID => formAjaxRequest("loadBook", { bookID })
 

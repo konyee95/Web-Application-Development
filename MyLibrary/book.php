@@ -26,6 +26,9 @@
   } else {
     $favStatus = false;
   }
+
+  // check whether book is available for reservation
+  
 ?>
   <html>
 
