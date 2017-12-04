@@ -23,7 +23,7 @@
           <a href="./about-us.php">ABOUT US</a>
         </li>
         <li>
-          <a href="#">EXPLORE</a>
+          <a href="./explore.php">EXPLORE</a>
         </li>
         <li>
           <a href="./profile.php">PROFILE</a>
