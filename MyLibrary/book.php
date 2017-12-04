@@ -9,6 +9,23 @@
   $data = json_decode($decodedData, true);
   $book = $data['data'][0];
   $bookStatus = $book['availability'];
+
+  // check whether student has favourite this book or now
+  if (isset($_SESSION['student_index'])) {
+    $student = new Student($_SESSION['student_index']);
+    $findIfExist = $con->prepare("SELECT * FROM favourite WHERE student_id_fk=:studentID AND book_id=:bookID");
+    $findIfExist->bindParam(':studentID', $student->student_id, PDO::PARAM_STR);
+    $findIfExist->bindParam(':bookID', $book['book_id'], PDO::PARAM_STR);
+    $findIfExist->execute();
+
+    if ($findIfExist->rowCount() == 0) {
+      $favStatus = false;
+    } else {
+      $favStatus = true;
+    }
+  } else {
+    $favStatus = false;
+  }
 ?>
   <html>
 
@@ -73,33 +90,19 @@
 
           <div class="book-action-container">
             <div class="book-button-container">
+              <button type="button" name="reserve_book_button" class="button button-primary" onclick="reserveBook('<?php echo $book['book_id'] ?>')">
+                <?php echo ($bookStatus !== '0' ? "Reserve Online" : "Not available") ?>
+              </button>
               <button 
                 type="button" 
                 name="reserve_book_button" 
-                class="button button-primary"
-                onclick="reserveBook('<?php echo $book['book_id'] ?>')">
-                <?php echo ($bookStatus !== '0' ? "Reserve Online" : "Not available") ?>
-              </button>
-              <button
-                type="button" 
-                name="reserve_book_button" 
-                class="button button-favourite"
-                onclick="favouriteBook('<?php echo $book['book_id'] ?>')">
+                class="button button-favourite" 
+                onclick="favouriteBook('<?php echo $book['book_id'] ?>', '<?php echo $favStatus ?>')">
                 <?php
-                  if (isset($_SESSION['student_index'])) {
-                    $student = new Student($_SESSION['student_index']);
-                    $findIfExist = $con->prepare("SELECT * FROM favourite WHERE student_id_fk=:studentID AND book_id=:bookID");
-                    $findIfExist->bindParam(':studentID', $student->student_id, PDO::PARAM_STR);
-                    $findIfExist->bindParam(':bookID', $book['book_id'], PDO::PARAM_STR);
-                    $findIfExist->execute();
-
-                    if ($findIfExist->rowCount() == 0) {
-                      echo "Favourite Book";
-                    } else {
-                      echo "Unfavourite Book";
-                    }
+                  if ($favStatus === true) {
+                    echo "Unfavourite Book";
                   } else {
-                    echo "Login to Favourite Book";
+                    echo "Favourite Book";
                   }
                 ?>
               </button>

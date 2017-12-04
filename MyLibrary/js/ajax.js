@@ -136,7 +136,7 @@ const loadBookCategory = category => formAjaxRequest("loadBookCategory", { categ
 
 const reserveBook = bookID => formAjaxRequest("reserveBook", { bookID })
 
-const favouriteBook = bookID => formAjaxRequest("favouriteBook", { bookID })
+const favouriteBook = (bookID, favStatus) => formAjaxRequest("favouriteBook", { bookID, favStatus })
 
 /*
  * Dynamically tunnel data to either login or registration ajax file
@@ -243,7 +243,7 @@ const favouriteBookAjax = data => {
       window.location = data.redirect;
     }
   } else if (data.action_result === true) {
-    window.alert("Congratulation! You have favourite this book!");
+    window.alert("Favourite book list updated!");
     location.reload(true);
   }
 }

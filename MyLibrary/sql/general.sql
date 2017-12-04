@@ -18,3 +18,6 @@ SELECT book_id, title, image_url FROM books ORDER BY RAND() LIMIT 7
 
 -- select all books that is favor by one user
 SELECT * FROM books AS b JOIN favourite AS f ON f.student_id_fk='b031510127' WHERE b.book_id=f.book_id
+
+-- delete a favourite book
+DELETE FROM favourite WHERE student_id_fk='b031510363' AND book_id='book002' LIMIT 1
