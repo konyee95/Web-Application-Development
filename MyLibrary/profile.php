@@ -6,6 +6,7 @@
 
     /* if student is logged in, pulled student object to access later */
     $student = new Student($_SESSION['student_index']);
+
 ?>
     <html>
 
@@ -40,11 +41,23 @@
         <div class="profile-content-body">
             <div class="profile-content-body-item">
                 <h2 class="">Favourite Books</h2>
-                <div class="explore-content-row-body">
-                    <?php
+                <?php
+                    $hasFav = $con->prepare("SELECT EXISTS (SELECT * FROM favourite WHERE student_id_fk='{$student->student_id}')");
+                    $hasFav->execute();
+                    $hasFavBool = $hasFav->fetch()[0];
+
+                    if (!$hasFavBool) {
+                        echo "<br/>";
+                        echo "You have not favourite any book yet!";
+                        echo "<br/>";
+                        echo "<br/>";
+                    } else {
                         $selectBook = $con->prepare("SELECT * FROM books AS b JOIN favourite AS f ON f.student_id_fk='{$student->student_id}' WHERE b.book_id=f.book_id");
                         $selectBook->execute();
                         $result = $selectBook->fetchAll(PDO::FETCH_ASSOC);
+
+                        echo "<div class='explore-content-row-body'>";
+                        
                         foreach($result as $book) {
                             echo "<div class='small-book-block' onClick='loadBook(\"" . $book['book_id'] . "\")'>";
                             echo "<div class='small-book-image-container'>";
@@ -55,8 +68,9 @@
                             echo "</div>";
                             echo "</div>";
                         }
-                    ?>
-                </div>
+                        echo "</div>";
+                    }
+                ?>
             </div>
 
             <div class="profile-content-body-item">
