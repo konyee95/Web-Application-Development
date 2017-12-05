@@ -22,10 +22,10 @@
     public $no_of_times;
     public $reg_time;
 
-    public function __construct(int $book_id) {
+    public function __construct(string $book_id) {
       $this->con = DB::getConnection();
 
-      $book = $this->con->prepare("SELECT book_index, book_id, title, author, description, availability, category, rating, image_url, publisher_id, published_year, online_reading_url, physical_location, no_of_times, reg_time FROM books WHERE book_id = :book_id LIMIT 1");
+      $book = $this->con->prepare("SELECT book_index, book_id, title, author, description, availability, category, rating, image_url, publisher_id, published_year, online_reading_url, physical_location, no_of_times, reg_time FROM books WHERE book_id=:book_id LIMIT 1");
       $book->bindParam(':book_id', $book_id, PDO::PARAM_STR);
       $book->execute();
 
@@ -37,7 +37,7 @@
         $this->title               = (string) $book->title;
         $this->author              = (string) $book->author;
         $this->description         = (string) $book->description;
-        $this->availability        = (int) $book->availability;
+        $this->availability        = (int)    $book->availability;
         $this->category            = (string) $book->category;
         $this->rating              = (string) $book->rating;
         $this->image_url           = (string) $book->image_url;
@@ -45,7 +45,7 @@
         $this->published_year      = (string) $book->published_year;
         $this->online_reading_url  = (string) $book->online_reading_url;
         $this->physical_location   = (string) $book->physical_location;
-        $this->no_of_times         = (int) $book->no_of_times;
+        $this->no_of_times         = (int)    $book->no_of_times;
         $this->reg_time            = (string) $book->reg_time;
       }
     }

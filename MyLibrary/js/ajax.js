@@ -227,6 +227,8 @@ const reserveBookAjax = data => {
   if (data.action_result === false) {
     if (data.action_result_code === 0) {
       window.location = data.redirect;
+    } else if (data.action_result_code === 1) {
+      window.alert("This book is not available for reservation");
     }
   }
 }
@@ -239,5 +241,7 @@ const favouriteBookAjax = data => {
   } else if (data.action_result === true) {
     window.alert("Favourite book list updated!");
     location.reload(true);
+  } else if (data.action_result === true) {
+    window.alert("Book reserved! You may collect your book at main counter");
   }
 }

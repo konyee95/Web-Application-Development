@@ -94,7 +94,25 @@
                 name="reserve_book_button" 
                 class="button button-primary" 
                 onclick="reserveBook('<?php echo $book['book_id'] ?>')">
-                <?php echo (Book::IsBookAvailable($book['book_id']) === true ? "Reserve Online" : "Not available for reservation") ?>
+                <?php
+                  if (Book::IsBookAvailable($book['book_id'])) {
+                    $hasReserved = $con->prepare("SELECT EXISTS (SELECT * FROM reserve WHERE book_id=:book_id AND student_id_fk='{}')");
+                    $hasReserved->bindParam(':book_id', $book['book_id'], PDO::PARAM_STR);
+                    $hasReserved->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
+                    $hasReserved->execute();
+
+                    $hasReservedResult = $hasReserved->fetch()[0];
+
+                    if ($hasReservedResult) {
+                      echo "Reserved";
+                    } else {
+                      echo "Reserve Online";
+                    }
+                    
+                  } else {
+                    echo "Not available for reservation";
+                  }
+                ?>
               </button>
               <button 
                 type="button" 
