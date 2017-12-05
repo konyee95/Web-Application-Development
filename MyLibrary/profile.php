@@ -42,7 +42,8 @@
             <div class="profile-content-body-item">
                 <h2 class="">Favourite Books</h2>
                 <?php
-                    $hasFav = $con->prepare("SELECT EXISTS (SELECT * FROM favourite WHERE student_id_fk='{$student->student_id}')");
+                    $hasFav = $con->prepare("SELECT EXISTS (SELECT * FROM favourite WHERE student_id_fk=:student_id_fk)");
+                    $hasFav->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
                     $hasFav->execute();
                     $hasFavBool = $hasFav->fetch()[0];
 
@@ -52,7 +53,8 @@
                         echo "<br/>";
                         echo "<br/>";
                     } else {
-                        $selectBook = $con->prepare("SELECT * FROM books AS b JOIN favourite AS f ON f.student_id_fk='{$student->student_id}' WHERE b.book_id=f.book_id");
+                        $selectBook = $con->prepare("SELECT * FROM books AS b JOIN favourite AS f ON f.student_id_fk=:student_id_fk WHERE b.book_id=f.book_id");
+                        $selectBook->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
                         $selectBook->execute();
                         $result = $selectBook->fetchAll(PDO::FETCH_ASSOC);
 
@@ -74,43 +76,40 @@
             </div>
 
             <div class="profile-content-body-item">
-                <h2 class="">Borrowed Books</h2>
-                <div class="explore-content-row-body">
-                    <div class="small-book-block">
-                        <div class="small-book-image-container">
-                            <img>
-                        </div>
-                        <p class="small-book-title">Kelsey Bibliography</p>
-                    </div>
+                <h2 class="">Reserved Books</h2>
+                <?php
+                    $reservedBook = $con->prepare("SELECT DISTINCT * FROM reserve WHERE student_id_fk=:student_id_fk");
+                    $reservedBook->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
+                    $reservedBook->execute();
+                    $hasReserved = $reservedBook->fetch()[0];
 
-                    <div class="small-book-block">
-                        <div class="small-book-image-container">
-                            <img>
-                        </div>
-                        <p class="small-book-title">Kelsey Bibliography</p>
-                    </div>
+                    if (!$hasReserved) {
+                        echo "<br/>";
+                        echo "You have not reserved any book yet!";
+                        echo "<br/>";
+                        echo "<br/>";
+                    } else {
+                        $selectReservedBook = $con->prepare("SELECT * FROM books AS b JOIN reserve AS r on r.student_id_fk=:student_id_fk WHERE b.book_id=r.book_id");
+                        $selectReservedBook->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
+                        $selectReservedBook->execute();
 
-                    <div class="small-book-block">
-                        <div class="small-book-image-container">
-                            <img>
-                        </div>
-                        <p class="small-book-title">Kelsey Bibliography</p>
-                    </div>
+                        $reserveResult = $selectReservedBook->fetchAll(PDO::FETCH_ASSOC);
 
-                    <div class="small-book-block">
-                        <div class="small-book-image-container">
-                            <img>
-                        </div>
-                        <p class="small-book-title">Kelsey Bibliography</p>
-                    </div>
-
-                    <div class="small-book-block">
-                        <div class="small-book-image-container">
-                            <img>
-                        </div>
-                        <p class="small-book-title">Kelsey Bibliography</p>
-                    </div>
-                </div>
+                        echo "<div class='explore-content-row-body'>";
+                        
+                        foreach($reserveResult as $book) {
+                            echo "<div class='small-book-block' onClick='loadBook(\"" . $book['book_id'] . "\")'>";
+                            echo "<div class='small-book-image-container'>";
+                            echo "<img class='small-book-image' src={$book['image_url']} />";
+                            echo "</div>";
+                            echo "<div class='small-book-title-container'>";
+                            echo "<p class='small-book-title'>{$book['title']}</p>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                        echo "</div>";
+                    }
+                ?>
             </div>
         </div>
     </body>

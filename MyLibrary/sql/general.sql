@@ -24,3 +24,7 @@ SELECT EXISTS (SELECT * FROM favourite WHERE student_id_fk='b031510128')
 
 -- delete a favourite book
 DELETE FROM favourite WHERE student_id_fk='b031510363' AND book_id='book002' LIMIT 1
+
+-- select all reserved books
+SELECT DISTINCT * FROM reserve WHERE student_id_fk='b031510127'
+
