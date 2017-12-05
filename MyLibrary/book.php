@@ -8,7 +8,6 @@
   $decodedData = base64_decode($base64Data);
   $data = json_decode($decodedData, true);
   $book = $data['data'][0];
-  $bookStatus = $book['availability'];
 
   // check whether student has favourite this book or now
   if (isset($_SESSION['student_index'])) {
@@ -26,9 +25,6 @@
   } else {
     $favStatus = false;
   }
-
-  // check whether book is available for reservation
-  
 ?>
   <html>
 
@@ -93,8 +89,12 @@
 
           <div class="book-action-container">
             <div class="book-button-container">
-              <button type="button" name="reserve_book_button" class="button button-primary" onclick="reserveBook('<?php echo $book['book_id'] ?>')">
-                <?php echo ($bookStatus !== '0' ? "Reserve Online" : "Not available") ?>
+              <button 
+                type="button" 
+                name="reserve_book_button" 
+                class="button button-primary" 
+                onclick="reserveBook('<?php echo $book['book_id'] ?>')">
+                <?php echo (Book::IsBookAvailable($book['book_id']) === true ? "Reserve Online" : "Not available for reservation") ?>
               </button>
               <button 
                 type="button" 
