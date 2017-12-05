@@ -29,14 +29,14 @@
   text-decoration: none;
 }
 
-.book-block {
+.small-book-block {
   display: flex;
   flex-direction: column;
   margin: 0 20px 10px 10px;
   align-items: center;
 }
 
-.book-image-container {
+.small-book-image-container {
   display: flex;
   width: 100px;
   height: 140px;
@@ -46,9 +46,21 @@
   background-color: #fafafa;
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
   border-radius: 1px;
-  
 }
 
-.book-title {
+.small-book-image {
+  height: 100%;
+  width: 100%;
+}
+
+.small-book-title-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 100px;
+}
+
+.small-book-title {
   font-size: 12px;
+  text-align: center;
 }

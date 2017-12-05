@@ -1,0 +1,31 @@
+.book-container {
+  display: flex;
+  margin-top: 55px;
+	padding: 40px 60px;
+}
+
+.book-image-container {
+  flex: .25;
+  height: 70vh;
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px rgba(27, 5, 5, 0.25);
+  border-radius: 1px;
+}
+
+.book-content-container {
+  flex: .75;
+  margin-left: 60px;
+}
+
+.book-title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title-container > h1 {
+  margin: 0;
+}
+
+.book-title-container > p {
+  margin-top: 0;
+}

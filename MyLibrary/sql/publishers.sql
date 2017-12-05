@@ -12,3 +12,12 @@ ALTER TABLE `publishers`
 
 ALTER TABLE `publishers`
   MODIFY `publisher_index` int(5) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Publisher Index';
+
+-- Example Query
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub001', 'University of Missouri Press');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub002', 'Pottermore');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub003', 'MIT Press');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub004', 'O Reilly Media, Inc');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub005', 'Dearborn Trade Publishing');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub006', 'Cengage Learning');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub007', 'Abrams');
