@@ -96,7 +96,7 @@
                 onclick="reserveBook('<?php echo $book['book_id'] ?>')">
                 <?php
                   if (Book::IsBookAvailable($book['book_id'])) {
-                    $hasReserved = $con->prepare("SELECT EXISTS (SELECT * FROM reserve WHERE book_id=:book_id AND student_id_fk='{}')");
+                    $hasReserved = $con->prepare("SELECT EXISTS (SELECT * FROM reserve WHERE book_id=:book_id AND student_id_fk=:student_id_fk)");
                     $hasReserved->bindParam(':book_id', $book['book_id'], PDO::PARAM_STR);
                     $hasReserved->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
                     $hasReserved->execute();
