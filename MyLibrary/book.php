@@ -9,9 +9,17 @@
   $data = json_decode($decodedData, true);
   $book = $data['data'][0];
 
-  // check whether student has favourite this book or now
   if (isset($_SESSION['student_index'])) {
     $student = new Student($_SESSION['student_index']);
+
+    // check whether this book has been reserved by current user
+    $checkUserHasReserved = $con->prepare("SELECT EXISTS (SELECT * FROM reserve WHERE student_id_fk=:student_id_fk AND book_id=:bookID)");
+    $checkUserHasReserved->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
+    $checkUserHasReserved->bindParam(':bookID', $book['book_id'], PDO::PARAM_STR);
+    $checkUserHasReserved->execute();
+    $hasUserReserved = $checkUserHasReserved->fetch()[0];
+
+    // check whether student has favourite this book or now
     $findIfExist = $con->prepare("SELECT * FROM favourite WHERE student_id_fk=:studentID AND book_id=:bookID");
     $findIfExist->bindParam(':studentID', $student->student_id, PDO::PARAM_STR);
     $findIfExist->bindParam(':bookID', $book['book_id'], PDO::PARAM_STR);
@@ -93,24 +101,16 @@
                 type="button" 
                 name="reserve_book_button" 
                 class="button button-primary" 
-                onclick="reserveBook('<?php echo $book['book_id'] ?>')">
+                onclick="reservationHandler('<?php echo $book['book_id'] ?>', '<?php echo $hasUserReserved ?>')">
                 <?php
-                  if (Book::IsBookAvailable($book['book_id'])) {
-                    $hasReserved = $con->prepare("SELECT EXISTS (SELECT * FROM reserve WHERE book_id=:book_id AND student_id_fk=:student_id_fk)");
-                    $hasReserved->bindParam(':book_id', $book['book_id'], PDO::PARAM_STR);
-                    $hasReserved->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
-                    $hasReserved->execute();
-
-                    $hasReservedResult = $hasReserved->fetch()[0];
-
-                    if ($hasReservedResult) {
-                      echo "Reserved";
-                    } else {
-                      echo "Reserve Online";
-                    }
-                    
+                  if ($hasUserReserved) {
+                    echo "Reserved";
                   } else {
-                    echo "Not available for reservation";
+                    if (Book::IsBookAvailable($book['book_id'])) {
+                      echo "Reserve Online";
+                    } else {
+                      echo "Not available for reservation";
+                    }
                   }
                 ?>
               </button>

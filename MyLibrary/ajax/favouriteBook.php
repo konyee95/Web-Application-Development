@@ -9,7 +9,6 @@
 
     $data = json_decode($_POST["data"], false);
     $bookID = $data->bookID;
-    $favStatus = ($data->favStatus) ? 'true' : 'false'; // cast boolean to string
     $return['book_id'] = $bookID;
 
     if (!isset($_SESSION['student_index'])) {

@@ -128,7 +128,22 @@ const loadBook = bookID => formAjaxRequest("loadBook", { bookID })
 
 const loadBookCategory = category => formAjaxRequest("loadBookCategory", { category })
 
+const reservationHandler = (bookID, reserveStatus) => {
+  if (reserveStatus === "0") {
+    reserveBook(bookID)
+  } else {
+    cancelReserveBook(bookID)
+  }
+}
+
 const reserveBook = bookID => formAjaxRequest("reserveBook", { bookID })
+
+const cancelReserveBook = bookID => {
+  const respond = confirm("Cancel your reservation?");
+  if (respond === true) {
+    formAjaxRequest("cancelReserveBook", { bookID })
+  }
+}
 
 const favouriteBook = (bookID, favStatus) => formAjaxRequest("favouriteBook", { bookID, favStatus })
 
@@ -173,6 +188,9 @@ const processAjaxResponse = data => {
       break;
     case "reserveBook":
       reserveBookAjax(data);
+      break;
+    case "cancelReserveBook":
+      cancelReserveBookAjax(data);
       break;
     case "favouriteBook":
       favouriteBookAjax(data);
@@ -232,6 +250,13 @@ const reserveBookAjax = data => {
     }
   } else if (data.action_result === true) {
     window.alert("Book reserved! You may collect your book at main counter");
+    location.reload(true);
+  }
+}
+
+const cancelReserveBookAjax = data => {
+  if (data.action_result === true) {
+    window.alert("Book reservation canceled!");
     location.reload(true);
   }
 }
