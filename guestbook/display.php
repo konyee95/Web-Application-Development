@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {color: #FFFFFF; font-weight: bold; }
+.style7 {	color: #000066;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: x-large;
+}
+.style8 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 24px;
+	font-family: "Monotype Corsiva";
+}
+.style10 {
+	font-family: "Monotype Corsiva";
+	font-size: 24px;
+}
+.style11 {font-size: 24px}
+-->
+</style>
+</head>
+
+<body>
+<table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="377" align="center" valign="middle" bgcolor="#72634e"><p class="style7"><span class="style1"><strong>WELCOME TO </strong><strong>GUESTBOOK</strong></span></p></td>
+    <td width="501" bgcolor="#72634E"><div align="right"><img src="hotel_banner.jpg" alt="banner" width="500" height="120" /></div></td>
+  </tr>
+</table>
+<table width="80%" border="3" align="center" cellpadding="0" cellspacing="0" bordercolor="#333333">
+<?php
+include('connect.php');
+
+$sql= "SELECT * FROM tblcomment";
+$result = $conn->query($sql);
+
+if($result->num_rows>0){
+    //output data of each register_shutdown_function
+
+    echo "<table border='1'>";
+    echo "<tr><th>Username</th><th>Email</th>";
+    echo "<th>Gender</th><th>Comment</th></tr>";
+    while($row = $result->fetch_assoc()){
+        echo "<tr>";
+        echo "<td>".$row['userName']."</td>";
+        echo "<td>".$row['email']."</td>";
+        echo "<td>".$row['gender']."</td>";
+        echo "<td>".$row['comment']."</td>";
+        echo "</tr>";
+    }
+}
+
+?>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
