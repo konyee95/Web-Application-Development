@@ -34,3 +34,45 @@
 .profile-content-body-item {
 
 }
+
+#staff-item-1 {
+  background: url("../image/staffs/insert-book.jpg") no-repeat;
+  background-size: 100% 115%;
+}
+
+#staff-item-2 {
+  background: url("../image/staffs/update-book.jpg") no-repeat;
+  background-size: 100% 115%;
+}
+
+#staff-item-3 {
+  background: url("../image/staffs/delete-book.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+#book-artwork {
+  flex: .6;
+  background: url("../image/staffs/book-artwork.jpg") no-repeat;
+  background-size: 130% 100%;
+}
+
+.insert-book-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+/* reduce distance between input field */
+.insert-book-form  div {
+  margin-top: -35px;
+}
+
+.book-form-child-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 45px;
+}
+
+.book-form-child-container > div {
+  padding-left: 10px;
+}
