@@ -32,6 +32,7 @@
     }
   } else {
     $favStatus = false;
+    $hasUserReserved = 0;
   }
 ?>
   <html>
