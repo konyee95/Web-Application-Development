@@ -28,7 +28,7 @@
                     <?php echo $student->student_name; ?>
                 </h2>
                 <h4 class="profile-user-id">Matric No:
-                    <?php echo $student->student_id; ?>
+                    <?php echo strtoupper($student->student_id); ?>
                 </h4>
                 <div class="profile-content-button-container">
                     <button class="button button-secondary" onclick="editProfile('<?php echo $student->student_id; ?>')">Save Changes</button>

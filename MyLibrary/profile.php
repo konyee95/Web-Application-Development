@@ -29,7 +29,7 @@
                     <?php echo $student->student_name; ?>
                 </h2>
                 <h4 class="profile-user-id">Matric No:
-                    <?php echo $student->student_id; ?>
+                    <?php echo strtoupper($student->student_id); ?>
                 </h4>
                 <div class="profile-content-button-container">
                     <a href="./edit-profile.php" class="button button-secondary">Edit Profile</a>

@@ -25,7 +25,7 @@
         <img src="./image/empty-avatar.png" class="user-avatar" />
         <div class="profile-content-container">
             <h2 class="profile-user-name"><?php echo $staff->staff_name; ?></h2>
-            <h4 class="profile-user-id">Staff Id: <?php echo $staff->staff_id; ?></h4>
+            <h4 class="profile-user-id">Staff Id: <?php echo strtoupper($staff->staff_id); ?></h4>
             <div class="profile-content-button-container">
                 <button class="button button-secondary" onclick="logOut()">Sign Out</button>
             </div>
