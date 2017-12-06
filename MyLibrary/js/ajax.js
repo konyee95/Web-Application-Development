@@ -124,6 +124,10 @@ const staffLogin = () => {
  */
 const searchBooks = () => formAjaxRequest("search", { keyword: document.getElementById("search-input").value })
 
+
+/*
+ * Load and display books
+ */
 const loadBook = bookID => formAjaxRequest("loadBook", { bookID })
 
 const loadBookCategory = category => formAjaxRequest("loadBookCategory", { category })
@@ -148,6 +152,42 @@ const cancelReserveBook = bookID => {
 const favouriteBook = (bookID, favStatus) => formAjaxRequest("favouriteBook", { bookID, favStatus })
 
 /*
+ * Use encodeURIComponent on url because `&` separates strings, ajax x happy with that
+ */
+const insertBook = () => {
+  const dataObject = {
+    bookID: document.getElementById("book-id").value,
+    bookTitle: document.getElementById("book-title").value,
+    bookAuthor: document.getElementById("book-author").value,
+    bookAvailability: document.getElementById("book-availability").value,
+    bookCategory: document.getElementById("book-category").value,
+    bookRating: document.getElementById("book-rating").value,
+    bookImageUrl: encodeURIComponent(document.getElementById("book-image-url").value),
+    bookPublisherID: document.getElementById("book-publisher-id").value,
+    bookPublishedYear: document.getElementById("book-published-year").value,
+    bookOnlineReadingUrl: encodeURIComponent(document.getElementById("book-online-reading-url").value),
+    bookDescription: encodeURIComponent(document.getElementById("book-description").value),
+    bookPhysicalLocation: document.getElementById("book-physical-location").value,
+  }
+
+  for (let key in dataObject) {
+    if (dataObject[key] === "") {
+      window.alert('Make sure all fields are occupied!');
+      return false;
+    }
+  }
+
+  formAjaxRequest("insertBook", dataObject)
+}
+
+const cancelInsertBook = () => {
+  const respond = confirm("Are you sure?");
+  if (respond === true) {
+    goBack();
+  }
+}
+
+/*
  * Dynamically tunnel data to either login or registration ajax file
  */
 const formAjaxRequest = (form, dataObject) => {
@@ -155,7 +195,6 @@ const formAjaxRequest = (form, dataObject) => {
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status === 200) {
       processAjaxResponse(JSON.parse(request.responseText));
-      console.log(JSON.parse(request.responseText))
     }
   }
   request.open('POST', `./ajax/${form}.php`, true);
@@ -194,6 +233,9 @@ const processAjaxResponse = data => {
       break;
     case "favouriteBook":
       favouriteBookAjax(data);
+      break;
+    case "insertBook":
+      insertBookAjax(data);
       break;
     default:
       break;
@@ -269,5 +311,16 @@ const favouriteBookAjax = data => {
   } else if (data.action_result === true) {
     window.alert("Favourite book list updated!");
     location.reload(true);
+  }
+}
+
+const insertBookAjax = data => {
+  if (data.action_result === true) {
+    const respond = confirm("Book inserted! Insert another one?");
+    if (respond === true) {
+      location.reload(true);
+    } else {
+      window.location = './staff-portal.php';
+    }
   }
 }

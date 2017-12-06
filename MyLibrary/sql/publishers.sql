@@ -21,3 +21,4 @@ INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) V
 INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub005', 'Dearborn Trade Publishing');
 INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub006', 'Cengage Learning');
 INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub007', 'Abrams');
+INSERT INTO `publishers` (`publisher_index`, `publisher_id`, `publisher_name`) VALUES (NULL, 'pub008', 'Simon and Schuster');

@@ -60,7 +60,7 @@
                 </div>
 
                 <div class="material-input-container">
-                  <input id="title" class="material-input" placeholder="Title" required>
+                  <input id="book-title" type="text" class="material-input" placeholder="Title" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="material-input-container">
-                  <input id="book-availability" class="material-input" placeholder="How many units?" required>
+                  <input id="book-availability" type="number" class="material-input" placeholder="How many units?" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="material-input-container">
-                  <input id="book-rating" class="material-input" placeholder="Overall Rating" required>
+                  <input id="book-rating" type="number" class="material-input" placeholder="Overall Rating" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
@@ -101,30 +101,14 @@
 
               <div class="book-form-child-container">
                 <div class="material-input-container">
-                  <input id="book-image-url" class="material-input" placeholder="Image URL" required>
+                  <input id="book-publisher-id" type="text" class="material-input" placeholder="Publisher ID" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
                 </div>
 
                 <div class="material-input-container">
-                  <input id="book-publisher-id" class="material-input" placeholder="Publisher ID" required>
-                  <span class="material-input-highlight"></span>
-                  <span class="material-input-bar"></span>
-                  <label class="material-input-label"></label>
-                </div>
-              </div>
-
-              <div class="book-form-child-container">
-                <div class="material-input-container">
-                  <input id="book-published-year" class="material-input" placeholder="Published Year" required>
-                  <span class="material-input-highlight"></span>
-                  <span class="material-input-bar"></span>
-                  <label class="material-input-label"></label>
-                </div>
-
-                <div class="material-input-container">
-                  <input id="book-online-reading-url" class="material-input" placeholder="Online Reading URL" required>
+                  <input id="book-published-year" type="number" class="material-input" placeholder="Published Year" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
@@ -133,14 +117,30 @@
 
               <div class="book-form-child-container">
                 <div class="material-input-container">
-                  <textarea class="material-input" rows="1" placeholder="Description"></textarea>
+                  <input id="book-image-url" type="text" class="material-input" placeholder="Image URL" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
                 </div>
 
                 <div class="material-input-container">
-                  <input id="book-physical-location" class="material-input" placeholder="Book Location" required>
+                  <input id="book-online-reading-url" type="text" class="material-input" placeholder="Online Reading URL" required>
+                  <span class="material-input-highlight"></span>
+                  <span class="material-input-bar"></span>
+                  <label class="material-input-label"></label>
+                </div>
+              </div>
+
+              <div class="book-form-child-container">
+                <div class="material-input-container">
+                  <textarea id="book-description" type="text" class="material-input" rows="1" placeholder="Description"></textarea>
+                  <span class="material-input-highlight"></span>
+                  <span class="material-input-bar"></span>
+                  <label class="material-input-label"></label>
+                </div>
+
+                <div class="material-input-container">
+                  <input id="book-physical-location" type="text" class="material-input" placeholder="Book Location" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
@@ -148,8 +148,8 @@
               </div>
 
               <div class="button-group">
-                <button type="button" name="login_button" class="button button-primary" onclick="submitAuthForm()">Submit Book</button>
-                <button type="button" name="login_button" class="button button-primary" onclick="submitAuthForm()">Cancel</button>
+                <button type="button" name="login_button" class="button button-primary" onclick="insertBook()">Submit Book</button>
+                <button type="button" name="login_button" class="button button-primary" onclick="cancelInsertBook()">Cancel</button>
               </div>
             </form>
           </div>
