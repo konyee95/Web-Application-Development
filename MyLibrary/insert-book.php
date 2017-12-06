@@ -2,6 +2,8 @@
 <?php
     define('__CONFIG__', true);
     require_once "inc/config.php";
+
+    // make sure staff is logged in first, otherwise anonymous user can do shit
     Page::checkIfStaffIsLoggedIn();
 
     /* if staff is logged in, pulled student object to access later */
@@ -58,7 +60,7 @@
                 </div>
 
                 <div class="material-input-container">
-                  <input id="title" class="material-input" placeholder="Book Title" required>
+                  <input id="title" class="material-input" placeholder="Title" required>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>
@@ -131,7 +133,7 @@
 
               <div class="book-form-child-container">
                 <div class="material-input-container">
-                  <textarea class="material-input" rows="5" cols="10" placeholder="Description"></textarea>
+                  <textarea class="material-input" rows="1" placeholder="Description"></textarea>
                   <span class="material-input-highlight"></span>
                   <span class="material-input-bar"></span>
                   <label class="material-input-label"></label>

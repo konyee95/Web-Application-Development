@@ -59,7 +59,7 @@
 .insert-book-form {
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 /* reduce distance between input field */
@@ -74,5 +74,5 @@
 }
 
 .book-form-child-container > div {
-  padding-left: 10px;
+  padding-right: 20px;
 }
