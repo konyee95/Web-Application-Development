@@ -59,7 +59,7 @@
                             <p>View, update or delete books from the library database in one place</p>
                         </div>
                         <div class="material-card-action-container">
-                            <a href="#" class="material-card-action-button-text material-card-item-padding">Display books</a>
+                            <a href="./display-book.php" class="material-card-action-button-text material-card-item-padding">Display books</a>
                         </div>
                     </div>
                 </div>
