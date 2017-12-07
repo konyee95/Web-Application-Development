@@ -187,6 +187,45 @@ const cancelInsertBook = () => {
   }
 }
 
+/* Helper method to pass bookID to updateBook page */
+const updateBookHelper = bookID => processAjaxResponse({ action: 'updateBookHelper', bookID });
+
+const updateBook = () => {
+  const dataObject = {
+    bookID: document.getElementById("book-id").value,
+    bookTitle: document.getElementById("book-title").value,
+    bookAuthor: document.getElementById("book-author").value,
+    bookAvailability: document.getElementById("book-availability").value,
+    bookCategory: document.getElementById("book-category").value,
+    bookRating: document.getElementById("book-rating").value,
+    bookImageUrl: encodeURIComponent(document.getElementById("book-image-url").value),
+    bookPublisherID: document.getElementById("book-publisher-id").value,
+    bookPublishedYear: document.getElementById("book-published-year").value,
+    bookOnlineReadingUrl: encodeURIComponent(document.getElementById("book-online-reading-url").value),
+    bookNoOfTimes: document.getElementById("book-no-of-times").value,
+    bookDescription: encodeURIComponent(document.getElementById("book-description").value),
+    bookPhysicalLocation: document.getElementById("book-physical-location").value,
+  }
+
+  for (let key in dataObject) {
+    if (dataObject[key] === "") {
+      window.alert('Make sure all fields are occupied!');
+      return false;
+    }
+  }
+
+  formAjaxRequest("updateBook", dataObject)
+}
+
+const deleteBookHelper = bookID => {
+  const respond = confirm(`Delete book record ${bookID} ?`);
+  if (respond === true) {
+    deleteBook(bookID)
+  }
+}
+
+const deleteBook = bookID => formAjaxRequest("deleteBook", { bookID })
+
 /*
  * Dynamically tunnel data to either login or registration ajax file
  */
@@ -236,6 +275,15 @@ const processAjaxResponse = data => {
       break;
     case "insertBook":
       insertBookAjax(data);
+      break;
+    case "updateBookHelper":
+      updateBookHelperAjax(data);
+      break;
+    case "updateBook":
+      updateBookAjax(data);
+      break;
+    case "deleteBook":
+      deleteBookAjax(data);
       break;
     default:
       break;
@@ -322,5 +370,23 @@ const insertBookAjax = data => {
     } else {
       window.location = './staff-portal.php';
     }
+  }
+}
+
+const updateBookHelperAjax = data => {
+  window.location = `./update-book.php?data=` + btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+}
+
+const updateBookAjax = data => {
+  if (data.action_result === true) {
+    window.alert("Book record updated!");
+    goBack();
+  }
+}
+
+const deleteBookAjax = data => {
+  if (data.action_result === true) {
+    window.alert("Book record removed from database!");
+    location.reload(true);
   }
 }

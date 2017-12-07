@@ -41,7 +41,38 @@
     <div class="about-us-container margin-leftright">
       <div class="about-us-header material-card">
         <h3>Library books</h3>
-        <p>All books in the library database are displayed here.</p>
+        <p>All books in the library database are displayed here. Click on the Update or Delete button to manipulate the book records.</p>
+      </div>
+
+      <div class="service-content">
+        <table class="display-book-table">
+          <tr class="display-book-table-row">
+            <th>BookID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th class="display-row-item-center">Availability</th>
+            <th class="display-row-item-center">Update</th>
+            <th class="display-row-item-center">Delete</th>
+          </tr>
+
+          <?php
+            $selectBook = $con->prepare("SELECT book_id, title, author, category, availability FROM books ORDER BY book_id asc");
+            $selectBook->execute();
+            $result = $selectBook->fetchAll(PDO::FETCH_ASSOC);
+            foreach($result as $book) {
+              echo "<tr class='display-book-table-row'>";
+              echo "<td>{$book['book_id']}</td>";
+              echo "<td>{$book['title']}</td>";
+              echo "<td>{$book['author']}</td>";
+              echo "<td>{$book['category']}</td>";
+              echo "<td class='display-row-item-center'>{$book['availability']}</td>";
+              echo "<td class='display-row-item-center'><button class='button button-update' onclick='updateBookHelper(\"" . $book['book_id'] . "\")'>Update</button></td>";
+              echo "<td class='display-row-item-center'><button class='button button-delete' onclick='deleteBookHelper(\"" . $book['book_id'] . "\")'>Delete</button></td>";
+              echo "</tr>";
+            }
+          ?>
+        </table>
       </div>
     </div>
   </body>
