@@ -40,6 +40,7 @@
           <?php echo strtoupper($staff->staff_id); ?>
         </h4>
         <div class="profile-content-button-container">
+          <a class="button button-secondary" href="./staff-portal.php">Staff Portal</a>
           <button class="button button-secondary" onclick="logOut()">Sign Out</button>
         </div>
       </div>
@@ -47,7 +48,7 @@
 
     <div class="about-us-container margin-leftright">
       <div class="about-us-header material-card">
-        <h3>Update book records <?php echo $bookID ?></h3>
+        <h3><?php echo $book->title ?></h3>
         <p>Updated book records will be reflected to the library database immediately.</p>
       </div>
 

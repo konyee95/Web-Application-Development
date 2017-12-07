@@ -33,6 +33,7 @@
           <?php echo strtoupper($staff->staff_id); ?>
         </h4>
         <div class="profile-content-button-container">
+          <a class="button button-secondary" href="./staff-portal.php">Staff Portal</a>
           <button class="button button-secondary" onclick="logOut()">Sign Out</button>
         </div>
       </div>
