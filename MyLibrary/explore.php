@@ -71,6 +71,12 @@
           <!-- <a href="" class="see-all">See all &rarr;</a> -->
         </div>
         <div class="explore-content-row-body">
+        <div class="small-book-block" onClick="loadBookCategory('Architecture')">
+            <div class="small-book-image-container">
+              <img class="small-book-image" src="./image/category/architecture.jpg">
+            </div>
+            <p class="small-book-title">Architecture</p>
+          </div>
 
           <div class="small-book-block" onClick="loadBookCategory('Business')">
             <div class="small-book-image-container">
