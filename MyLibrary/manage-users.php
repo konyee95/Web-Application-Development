@@ -43,6 +43,7 @@
       <div class="about-us-header material-card">
         <h3>Manage MyLibrary Users</h3>
         <p>Sometimes our users forget their password and that's okay. Click on the reset password button to let them access their account back.</p>
+        <p>Also, it is easy to remove users from database. But, make sure they have no reserved book before removing them.</p>
       </div>
 
       <div class="service-content">
@@ -66,7 +67,7 @@
               echo "<td>{$student['student_name']}</td>";
               echo "<td>{$memberSince->format('g:ia \o\n l jS F Y')}</td>";
               echo "<td class='display-row-item-center'><button class='button button-update' onclick='resetPasswordHelper(\"" . $student['student_id'] . "\")'>Reset</button></td>";
-              echo "<td class='display-row-item-center'><button class='button button-delete' onclick='deleteStudentHelper(\"" . $student['student_id'] . "\")'>Delete</button></td>";
+              echo "<td class='display-row-item-center'><button class='button button-delete' onclick='deleteUserHelper(\"" . $student['student_id'] . "\")'>Delete</button></td>";
               echo "</tr>";
             }
           ?>

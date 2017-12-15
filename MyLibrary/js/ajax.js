@@ -260,10 +260,10 @@ const resetPassword = studentID => {
   }
 }
 
-const deleteStudentHelper = studentID => {
+const deleteUserHelper = studentID => {
   const respond = confirm(`Delete user ${studentID} from MyLibrary ?`);
   if (respond === true) {
-    
+    formAjaxRequest("deleteUser", { studentID })
   }
 }
 
@@ -328,6 +328,9 @@ const processAjaxResponse = data => {
       break;
     case "resetPassword":
       resetPasswordAjax(data);
+      break;
+    case "deleteUser":
+      deleteUserAjax(data);
       break;
     default:
       break;
@@ -439,5 +442,15 @@ const resetPasswordAjax = data => {
   if (data.action_result === true) {
     window.alert("Password reset successfully!");
     goBack();
+  }
+}
+
+const deleteUserAjax = data => {
+  if (data.action_result === true) {
+    window.alert("User removed successfully!");
+    location.reload(true);
+  } else if (data.action_result === false) {
+    window.alert("User has reserved a book! Cancel reservation before removing user!");
+    location.reload(true);
   }
 }
