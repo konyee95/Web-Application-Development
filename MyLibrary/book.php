@@ -20,16 +20,11 @@
     $hasUserReserved = $checkUserHasReserved->fetch()[0];
 
     // check whether student has favourite this book or now
-    $findIfExist = $con->prepare("SELECT * FROM favourite WHERE student_id_fk=:studentID AND book_id=:bookID");
-    $findIfExist->bindParam(':studentID', $student->student_id, PDO::PARAM_STR);
-    $findIfExist->bindParam(':bookID', $book['book_id'], PDO::PARAM_STR);
-    $findIfExist->execute();
-
-    if ($findIfExist->rowCount() == 0) {
-      $favStatus = false;
-    } else {
-      $favStatus = true;
-    }
+    $checkUserHasFavourite = $con->prepare("SELECT EXISTS (SELECT * FROM favourite WHERE student_id_fk=:studentID AND book_id=:bookID)");
+    $checkUserHasFavourite->bindParam(':studentID', $student->student_id, PDO::PARAM_STR);
+    $checkUserHasFavourite->bindParam(':bookID', $book['book_id'], PDO::PARAM_STR);
+    $checkUserHasFavourite->execute();
+    $favStatus = $checkUserHasFavourite->fetch()[0];
   } else {
     $favStatus = false;
     $hasUserReserved = 0;
@@ -121,7 +116,7 @@
                 class="button button-favourite" 
                 onclick="favouriteBook('<?php echo $book['book_id'] ?>', '<?php echo $favStatus ?>')">
                 <?php
-                  if ($favStatus === true) {
+                  if ($favStatus === '1') {
                     echo "Unfavourite Book";
                   } else {
                     echo "Favourite Book";

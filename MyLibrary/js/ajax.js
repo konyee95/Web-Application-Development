@@ -149,7 +149,14 @@ const cancelReserveBook = bookID => {
   }
 }
 
-const favouriteBook = (bookID, favStatus) => formAjaxRequest("favouriteBook", { bookID, favStatus })
+const favouriteBook = (bookID, favStatus) => {
+  console.log(bookID)
+  console.log(favStatus)
+  if (favStatus === "0") {
+    console.log('sd')
+  }
+  formAjaxRequest("favouriteBook", { bookID, favStatus })
+}
 
 /*
  * Use encodeURIComponent on url because `&` separates strings, ajax x happy with that
