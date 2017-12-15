@@ -48,7 +48,7 @@
         </div>
         <div class="explore-content-row-body">
           <?php
-            $selectBook = $con->prepare("SELECT book_id, title, image_url FROM books ORDER BY RAND() LIMIT 7");
+            $selectBook = $con->prepare("SELECT book_id, title, image_url FROM books ORDER BY RAND() LIMIT 9");
             $selectBook->execute();
             $result = $selectBook->fetchAll(PDO::FETCH_ASSOC);
             foreach($result as $book) {
@@ -122,7 +122,7 @@
         </div>
         <div class="explore-content-row-body">
           <?php
-            $selectBook = $con->prepare("SELECT book_id, title, image_url FROM books ORDER BY rating desc");
+            $selectBook = $con->prepare("SELECT book_id, title, image_url FROM books ORDER BY rating desc LIMIT 9");
             $selectBook->execute();
             $result = $selectBook->fetchAll(PDO::FETCH_ASSOC);
             foreach($result as $book) {
