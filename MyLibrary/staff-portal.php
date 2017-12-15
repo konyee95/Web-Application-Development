@@ -10,7 +10,7 @@
     <html>
 
     <head>
-        <title>Profile</title>
+        <title>Staff Portal</title>
         <?php require_once "inc/general-config.php" ?>
     </head>
 
@@ -44,8 +44,19 @@
                     <div class="facility-item material-card">
                         <div id="staff-item-1" class="material-card-header"></div>
                         <div class="material-card-content">
+                            <h3>Reserve List</h3>
+                            <p>Students who reserve a book will appear in this list. Clear them off the list as they collect their book.</p>
+                        </div>
+                        <div class="material-card-action-container">
+                            <a href="./reserve-book.php" class="material-card-action-button-text material-card-item-padding">Reserve List</a>
+                        </div>
+                    </div>
+
+                    <div class="facility-item material-card">
+                        <div id="staff-item-2" class="material-card-header"></div>
+                        <div class="material-card-content">
                             <h3>Insert Books</h3>
-                            <p>Insert new books with style</p>
+                            <p>Insert new books with ease</p>
                         </div>
                         <div class="material-card-action-container">
                             <a href="./insert-book.php" class="material-card-action-button-text material-card-item-padding">Insert Books</a>
@@ -53,15 +64,16 @@
                     </div>
 
                     <div class="facility-item material-card">
-                        <div id="staff-item-2" class="material-card-header"></div>
+                        <div id="staff-item-3" class="material-card-header"></div>
                         <div class="material-card-content">
                             <h3>Display Book List</h3>
                             <p>View, update or delete books from the library database in one place</p>
                         </div>
                         <div class="material-card-action-container">
-                            <a href="./display-book.php" class="material-card-action-button-text material-card-item-padding">Display books</a>
+                            <a href="./display-book.php" class="material-card-action-button-text material-card-item-padding">Display Books</a>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 
@@ -72,33 +84,11 @@
                     <div class="facility-item material-card">
                         <div id="staff-item-1" class="material-card-header"></div>
                         <div class="material-card-content">
-                            <h3>Insert Books</h3>
-                            <p>Insert new books with style</p>
+                            <h3>View Users</h3>
+                            <p>View users lists and help them to reset password</p>
                         </div>
                         <div class="material-card-action-container">
-                            <a href="#" class="material-card-action-button-text material-card-item-padding">Insert Books</a>
-                        </div>
-                    </div>
-
-                    <div class="facility-item material-card">
-                        <div id="staff-item-2" class="material-card-header"></div>
-                        <div class="material-card-content">
-                            <h3>Update Books</h3>
-                            <p>Update existing book records</p>
-                        </div>
-                        <div class="material-card-action-container">
-                            <a href="#" class="material-card-action-button-text material-card-item-padding">Update Books</a>
-                        </div>
-                    </div>
-
-                    <div class="facility-item material-card">
-                        <div id="staff-item-3" class="material-card-header"></div>
-                        <div class="material-card-content">
-                            <h3>Delete Books</h3>
-                            <p>Remove selected book records from library database</p>
-                        </div>
-                        <div class="material-card-action-container">
-                            <a href="#" class="material-card-action-button-text material-card-item-padding">Delete Books</a>
+                            <a href="./manage-users.php" class="material-card-action-button-text material-card-item-padding">Manage Users</a>
                         </div>
                     </div>
 

@@ -143,3 +143,5 @@ const init = () => {
     imageSlider(9);
   }
 }
+
+const forgotPassword = () => window.alert("Please approach our library admin to reset password!")

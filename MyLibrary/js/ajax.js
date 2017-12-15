@@ -150,8 +150,6 @@ const cancelReserveBook = bookID => {
 }
 
 const favouriteBook = (bookID, favStatus) => {
-  console.log(bookID)
-  console.log(favStatus)
   if (favStatus === "0") {
     console.log('sd')
   }
@@ -233,6 +231,42 @@ const deleteBookHelper = bookID => {
 
 const deleteBook = bookID => formAjaxRequest("deleteBook", { bookID })
 
+const resetPasswordHelper = studentID => {
+  const respond = confirm(`Reset password for user ${studentID} ?`);
+  if (respond === true) {
+    window.location = `./reset-password.php?data=` + studentID;
+  }
+}
+
+const resetPassword = studentID => {
+  const passwordA = document.getElementById("new-password-1").value;
+  const passwordB = document.getElementById("new-password-2").value;
+
+  if (passwordA === "" || passwordB === "") {
+    displayErrorText("Please make sure both fields are entered!");
+    return false
+  } else if (passwordA.length < 8 || passwordB.length < 8) {
+    displayErrorText("Please make sure password is more than 8 characters");
+    return false
+  } else if (passwordA !== passwordB) {
+    displayErrorText("Please make suer both passwords entered are the same");
+    return false
+  } else {
+    removeErrorText()
+    const respond = confirm("Reset password?");
+    if (respond === true) {
+      formAjaxRequest("resetPassword", { studentID, newPassword: passwordA })
+    }
+  }
+}
+
+const deleteStudentHelper = studentID => {
+  const respond = confirm(`Delete user ${studentID} from MyLibrary ?`);
+  if (respond === true) {
+    
+  }
+}
+
 /*
  * Dynamically tunnel data to either login or registration ajax file
  */
@@ -291,6 +325,9 @@ const processAjaxResponse = data => {
       break;
     case "deleteBook":
       deleteBookAjax(data);
+      break;
+    case "resetPassword":
+      resetPasswordAjax(data);
       break;
     default:
       break;
@@ -395,5 +432,12 @@ const deleteBookAjax = data => {
   if (data.action_result === true) {
     window.alert("Book record removed from database!");
     location.reload(true);
+  }
+}
+
+const resetPasswordAjax = data => {
+  if (data.action_result === true) {
+    window.alert("Password reset successfully!");
+    goBack();
   }
 }

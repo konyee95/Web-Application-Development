@@ -2,12 +2,14 @@
 <?php
     define('__CONFIG__', true);
     require_once "inc/config.php";
-    Page::ifStudentIsLoggedIn();
+    Page::checkIfStaffIsLoggedIn();
+
+    $studentID = $_GET['data'];
 ?>
     <html>
 
     <head>
-        <title>Login</title>
+        <title>Reset Password</title>
         <?php require_once "inc/general-config.php" ?>
     </head>
 
@@ -15,24 +17,23 @@
         <div id="navigation">
             <div class="auth-nav-header">
                 <a class="site-title" href="./index.php">MyLibrary</a>
-                <a href="./register.php" class="button button-secondary">Need an account?</a>
             </div>
         </div>
         <div class="auth-container-header some-shadow">
-            <p class="auth-title">Login to MyLibrary</p>
+            <p class="auth-title">Reset Password for User <?php echo strtoupper($studentID) ?></p>
         </div>
         <div class="auth-container-body">
             <div class="auth-form-container">
                 <form id="login-form" class="auth-form" name="login">
                     <div class="material-input-container">
-                        <input id="student-id" type="text" class="material-input" placeholder="Student ID" required>
+                        <input id="new-password-1" class="material-input" placeholder="New Password" type="password" required>
                         <span class="material-input-highlight"></span>
                         <span class="material-input-bar"></span>
                         <label class="material-input-label"></label>
                     </div>
                     
                     <div class="material-input-container">
-                        <input id="password" class="material-input" placeholder="password" type="password" required>
+                        <input id="new-password-2" class="material-input" placeholder="New Password Again" type="password" required>
                         <span class="material-input-highlight"></span>
                         <span class="material-input-bar"></span>
                         <label class="material-input-label"></label>
@@ -43,12 +44,10 @@
                     </div>
 
                     <div class="button-group">
-                        <button type="button" name="login_button" class="button button-primary" onclick="submitAuthForm()">&nbsp &nbsp &nbsp Login &nbsp &nbsp &nbsp </button>
-                        <button type="button" name="forgot_password_button" class="button button-primary" onclick="forgotPassword()">Forgot Password?</button>
+                        <button type="button" name="reset_button" class="button button-primary" onclick="resetPassword('<?php echo $studentID; ?>')">Reset Password</button>
+                        <butoon type="button" class="button button-secondary" onclick="goBack()">&nbsp &nbsp Cancel &nbsp &nbsp</button>
                     </div>
                 </form>
-                <p class="user-note">**MyLibrary is only available for UTeM staffs and students.</p>
-                <p class="user-note user-note-2">**MyLibrary staff login <a href="./staff-login.php">here</a></p>
             </div>
             <div class="auth-form-empty">
 

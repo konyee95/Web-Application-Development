@@ -3,6 +3,7 @@
     <div id="footer-item-1" class="footer-item">
       <a href="#">
         <h3>MyLibrary Online Portal</h3>
+        <a href="./staff-login.php">Staff Login Here</a>
       </a>
     </div>
 
