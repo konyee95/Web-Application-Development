@@ -48,8 +48,11 @@
                     $hasFavBool = $hasFav->fetch()[0];
 
                     if (!$hasFavBool) {
+                        echo "One of the neat befinites of being a MyLibrary user is that you can favourite book and always have them in your account 🌟";
                         echo "<br/>";
-                        echo "You have not favourite any book yet!";
+                        echo "<br/>";
+                        echo "<a href='./explore.php' class='button button-primary'>Favourite a book</a>";
+                        echo "<br/>";
                         echo "<br/>";
                         echo "<br/>";
                     } else {
@@ -84,8 +87,11 @@
                     $hasReserved = $reservedBook->fetch()[0];
 
                     if (!$hasReserved) {
+                        echo "Reserve a book and collect at UTeM Library main counter at no cost 😃";
                         echo "<br/>";
-                        echo "You have not reserved any book yet!";
+                        echo "<br/>";
+                        echo "<a href='./explore.php' class='button button-primary'>Reserve a book</a>";
+                        echo "<br/>";
                         echo "<br/>";
                         echo "<br/>";
                     } else {
@@ -121,8 +127,11 @@
                     $hasReadBool = $hasRead->fetch()[0];
 
                     if (!$hasReadBool) {
+                        echo "Yes! We keep your book reading record intelligently so that you can always read them back! You're welcomed! 😉";
                         echo "<br/>";
-                        echo "You have not read any book yet!";
+                        echo "<br/>";
+                        echo "<a href='./explore.php' class='button button-primary'>Read a book</a>";
+                        echo "<br/>";
                         echo "<br/>";
                         echo "<br/>";
                     } else {
