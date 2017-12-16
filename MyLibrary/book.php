@@ -95,7 +95,7 @@
               ?>
             </p>
             <p>
-              <?php echo $book['description']; ?>
+              <?php echo preg_replace("/[^a-zA-Z0-9\s,.]/", "", $book['description']); ?>
             </p>
           </div>
 
