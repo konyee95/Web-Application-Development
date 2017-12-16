@@ -149,12 +149,9 @@ const cancelReserveBook = bookID => {
   }
 }
 
-const favouriteBook = (bookID, favStatus) => {
-  if (favStatus === "0") {
-    console.log('sd')
-  }
-  formAjaxRequest("favouriteBook", { bookID, favStatus })
-}
+const favouriteBook = (bookID, favStatus) => formAjaxRequest("favouriteBook", { bookID, favStatus })
+
+const readBook = bookID => formAjaxRequest("readBook", { bookID })
 
 /*
  * Use encodeURIComponent on url because `&` separates strings, ajax x happy with that
@@ -314,6 +311,9 @@ const processAjaxResponse = data => {
     case "favouriteBook":
       favouriteBookAjax(data);
       break;
+    case "readBook":
+      readBookAjax(data);
+      break;
     case "insertBook":
       insertBookAjax(data);
       break;
@@ -406,6 +406,14 @@ const favouriteBookAjax = data => {
   } else if (data.action_result === true) {
     window.alert("Favourite book list updated!");
     location.reload(true);
+  }
+}
+
+const readBookAjax = data => {
+  if (data.action_result === true) {
+    window.location = data.redirect;
+  } else {
+    window.location = data.redirect;
   }
 }
 

@@ -131,7 +131,10 @@
                   }
                 ?>
               </button>
-              <a href="<?php echo $book['online_reading_url'] ?>" class="button button-secondary">Read Online</a>
+              <button
+                type="button"
+                class="button button-secondary"
+                onclick="readBook('<?php echo $book['book_id'] ?>')">Read Online</button>
             </div>
           </div>
         </div>
