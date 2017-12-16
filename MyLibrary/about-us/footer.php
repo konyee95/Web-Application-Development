@@ -8,12 +8,12 @@
 
     <div id="footer-item-2" class="footer-item">
       <h3>Directories</h3>
-      <a href="./index.php">Home</a>
-      <a href="./about-us.php">About Us</a>
-      <a href="./explore.php">Explore</a>
-      <a href="./profile.php">Profile</a>
+      <a href="../index.php">Home</a>
+      <a href="../about-us.php">About Us</a>
+      <a href="../explore.php">Explore</a>
+      <a href="../profile.php">Profile</a>
       <br/>
-      <a href="./staff-login.php">Staff Portal</a>
+      <a href="../staff-login.php">Staff Portal</a>
     </div>
 
     <div id="footer-item-3" class="footer-item">

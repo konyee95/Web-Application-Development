@@ -50,6 +50,11 @@
   background-size: 100% 120%;
 }
 
+#staff-item-4 {
+  background: url("../image/staffs/student.jpg") no-repeat;
+  background-size: 100% 130%;
+}
+
 #book-artwork {
   flex: .6;
   background: url("../image/staffs/book-artwork.jpg") no-repeat;
