@@ -80,11 +80,19 @@
               <?php echo $book['author']; ?>
             </p>
             <p>
-              <?php echo $book['category']; ?> /
-              <?php echo $book['rating']; ?>
+              <?php 
+                echo $book['category'];
+                echo "&nbsp";
+                for ($x = 0; $x < intval($book['rating']); $x++) {
+                  echo "<img src='./image/star.svg' alt='rating-star' style='position:relative;top:4px;'>";
+                }
+              ?>
             </p>
-            <p>[Floor / Rack / Row]
-              <?php echo $book['physical_location'] ?>
+            <p>
+              <?php 
+                $location = explode(" ", $book['physical_location']);
+                echo "Located at Floor {$location[0]}, Rack {$location[1]}, Row {$location[2]}";
+              ?>
             </p>
             <p>
               <?php echo $book['description']; ?>
