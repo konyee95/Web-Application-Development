@@ -111,6 +111,42 @@
                     }
                 ?>
             </div>
+
+            <div class="profile-content-body-item">
+                <h2 class="">Books You've Read Before, Read Again?</h2>
+                <?php
+                    $hasRead = $con->prepare("SELECT EXISTS (SELECT * FROM history WHERE student_id_fk=:student_id_fk)");
+                    $hasRead->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
+                    $hasRead->execute();
+                    $hasReadBool = $hasRead->fetch()[0];
+
+                    if (!$hasReadBool) {
+                        echo "<br/>";
+                        echo "You have not read any book yet!";
+                        echo "<br/>";
+                        echo "<br/>";
+                    } else {
+                        $selectBook = $con->prepare("SELECT * FROM books AS b JOIN history AS h ON h.student_id_fk=:student_id_fk WHERE b.book_id=h.book_id ORDER BY h.reg_time desc LIMIT 8");
+                        $selectBook->bindParam(':student_id_fk', $student->student_id, PDO::PARAM_STR);
+                        $selectBook->execute();
+                        $result = $selectBook->fetchAll(PDO::FETCH_ASSOC);
+
+                        echo "<div class='explore-content-row-body'>";
+                        
+                        foreach($result as $book) {
+                            echo "<div class='small-book-block' onClick='loadBook(\"" . $book['book_id'] . "\")'>";
+                            echo "<div class='small-book-image-container'>";
+                            echo "<img class='small-book-image' src={$book['image_url']} />";
+                            echo "</div>";
+                            echo "<div class='small-book-title-container'>";
+                            echo "<p class='small-book-title'>{$book['title']}</p>";
+                            echo "</div>";
+                            echo "</div>";
+                        }
+                        echo "</div>";
+                    }
+                ?>
+            </div>
         </div>
     </body>
 
