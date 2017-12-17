@@ -124,7 +124,6 @@ const staffLogin = () => {
  */
 const searchBooks = () => formAjaxRequest("search", { keyword: document.getElementById("search-input").value })
 
-
 /*
  * Load and display books
  */
@@ -150,6 +149,8 @@ const cancelReserveBook = bookID => {
 }
 
 const favouriteBook = (bookID, favStatus) => formAjaxRequest("favouriteBook", { bookID, favStatus })
+
+const approveBookReservation = reserveIndex => formAjaxRequest("approveBookReservation", { reserveIndex })
 
 const readBook = bookID => formAjaxRequest("readBook", { bookID })
 
@@ -246,7 +247,7 @@ const resetPassword = studentID => {
     displayErrorText("Please make sure password is more than 8 characters");
     return false
   } else if (passwordA !== passwordB) {
-    displayErrorText("Please make suer both passwords entered are the same");
+    displayErrorText("Please make sure both passwords entered are the same");
     return false
   } else {
     removeErrorText()
@@ -310,6 +311,9 @@ const processAjaxResponse = data => {
       break;
     case "favouriteBook":
       favouriteBookAjax(data);
+      break;
+    case "approveBookReservation":
+      approveBookReservationAjax(data);
       break;
     case "readBook":
       readBookAjax(data);
@@ -406,6 +410,19 @@ const favouriteBookAjax = data => {
   } else if (data.action_result === true) {
     window.alert("Favourite book list updated!");
     location.reload(true);
+  }
+}
+
+const approveBookReservationAjax = data => {
+  if (data.action_result === true) {
+    window.alert("Reservation approved! Student may borrow the book!");
+    location.reload(true);
+  } else if (data.action_result === false) {
+    if (data.action_result_code === 0) {
+      window.location = data.redirect;
+    } else if (data.action_result_code === 1) {
+      window.alert("Reservation does not exists. Please contact library admin.");
+    }
   }
 }
 
