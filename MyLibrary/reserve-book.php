@@ -73,7 +73,7 @@
               echo "<td>{$reserve['student_name']}</td>";
               echo "<td>{$reserve['reg_time']}</td>";
               echo "<td class='display-row-item-center'><button class='button button-update' onclick='approveBookReservation(\"" . $reserve['reserve_index'] . "\")'>Approve</button></td>";
-              echo "<td class='display-row-item-center'><button class='button button-delete' onclick='approveBookReservation(\"" . $reserve['reserve_index'] . "\")'>Delete</button></td>";
+              echo "<td class='display-row-item-center'><button class='button button-delete' onclick='deleteBookReservation(\"" . $reserve['reserve_index'] . "\")'>Delete</button></td>";
               echo "</tr>";
             }
           ?>

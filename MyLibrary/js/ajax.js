@@ -152,6 +152,8 @@ const favouriteBook = (bookID, favStatus) => formAjaxRequest("favouriteBook", { 
 
 const approveBookReservation = reserveIndex => formAjaxRequest("approveBookReservation", { reserveIndex })
 
+const deleteBookReservation = reserveIndex => formAjaxRequest("deleteBookReservation", { reserveIndex })
+
 const readBook = bookID => formAjaxRequest("readBook", { bookID })
 
 /*
@@ -315,6 +317,9 @@ const processAjaxResponse = data => {
     case "approveBookReservation":
       approveBookReservationAjax(data);
       break;
+    case "deleteBookReservation":
+      deleteBookReservationAjax(data);
+      break;
     case "readBook":
       readBookAjax(data);
       break;
@@ -416,6 +421,19 @@ const favouriteBookAjax = data => {
 const approveBookReservationAjax = data => {
   if (data.action_result === true) {
     window.alert("Reservation approved! Student may borrow the book!");
+    location.reload(true);
+  } else if (data.action_result === false) {
+    if (data.action_result_code === 0) {
+      window.location = data.redirect;
+    } else if (data.action_result_code === 1) {
+      window.alert("Reservation does not exists. Please contact library admin.");
+    }
+  }
+}
+
+const deleteBookReservationAjax = data => {
+  if (data.action_result === true) {
+    window.alert("Reservation deleted!");
     location.reload(true);
   } else if (data.action_result === false) {
     if (data.action_result_code === 0) {
