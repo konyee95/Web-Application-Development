@@ -46,18 +46,27 @@
       </div>
 
       <div class="service-content">
-        <table class="display-book-table">
-          <tr class="display-book-table-row">
-            <th>BookID</th>
-            <th>BookTitle</th>
-            <th>StudentID</th>
-            <th>StudentName</th>
-            <th>Date & Time </th>
-            <th class="display-row-item-center">Approval</th>
-            <th class="display-row-item-center">Delete</th>
-          </tr>
+        <?php
+          $checkReserveList = $con->prepare("SELECT COUNT(reserve_index) FROM reserve");
+          $checkReserveList->execute();
 
-          <?php
+          $reserveListRow = $checkReserveList->fetch();
+          if ($reserveListRow[0] === "0") {
+            echo "<div style='padding: 20px;'>";
+            echo "<h3>Reserve list is empty</h3>";
+            echo "</div>";
+          } else {
+            echo "<table class='display-book-table'>";
+              echo "<tr class='display-book-table-row'>";
+              echo "<th>BookID</th>";
+              echo "<th>BookTitle</th>";
+              echo "<th>StudentID</th>";
+              echo "<th>StudentName</th>";
+              echo "<th>Date & Time </th>";
+              echo "<th class='display-row-item-center'>Approval</th>";
+              echo "<th class='display-row-item-center'>Delete</th>";
+              echo "</tr>";
+
             $selectBook = $con->prepare("SELECT reserve.reserve_index, reserve.book_id, reserve.student_id_fk, reserve.reg_time, students.student_name, books.title
             FROM reserve INNER JOIN books
             ON reserve.book_id = books.book_id INNER JOIN students
@@ -65,6 +74,7 @@
             ORDER BY reserve.book_id asc;");
             $selectBook->execute();
             $result = $selectBook->fetchAll(PDO::FETCH_ASSOC);
+
             foreach($result as $reserve) {
               echo "<tr class='display-book-table-row'>";
               echo "<td>{$reserve['book_id']}</td>";
@@ -76,8 +86,9 @@
               echo "<td class='display-row-item-center'><button class='button button-delete' onclick='deleteBookReservation(\"" . $reserve['reserve_index'] . "\")'>Delete</button></td>";
               echo "</tr>";
             }
-          ?>
-        </table>
+            echo "</table>";
+          }
+        ?>
       </div>
     </div>
   </body>
