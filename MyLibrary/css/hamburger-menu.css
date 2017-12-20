@@ -53,7 +53,6 @@
   background: url('../image/tensor.jpg') no-repeat;
   background-size: 100% 200%;
   align-items: center;
-  align-items: center;
 }
 
 .user-account-header > p {
@@ -68,7 +67,6 @@
   flex: 0.75;
   flex-direction: column;
   padding-left: 40px;
-  /* justify-content: center; */
 }
 
 .user-account-container > p {
@@ -76,4 +74,28 @@
   font-weight: 100;
   color: grey;
   font-family: 'Roboto-Thin';
+}
+
+.user-account-container > a {
+  margin-top: 50px;
+}
+
+.side-panel-item {
+  padding-bottom: 10px;
+}
+
+.side-panel-item > img {
+  position: relative;
+  top: 6px;
+  height: 24px;
+  width: 24px;
+}
+
+.side-panel-item > a {
+  font-size: 18px;
+  font-weight: 100;
+  color: grey;
+  font-family: 'Roboto-Thin';
+  text-decoration: none;
+  padding-left: 10px;
 }

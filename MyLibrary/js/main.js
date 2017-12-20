@@ -54,6 +54,43 @@ const dynamicPath = () => {
   }
 }
 
+const dynamicExploreBookPath = () => {
+  const pathLength = window.location.pathname.split("/").length;
+  const parentPath = window.location.pathname.split("/")[pathLength - 2];
+  
+  if (parentPath === "about-us") {
+    window.location = "../explore.php";
+  } else {
+    window.location = "./explore.php";
+  }
+}
+
+const renderFavouriteIconPath = () => {
+  const favouriteIcon = document.getElementById("favourite-icon");
+
+  const pathLength = window.location.pathname.split("/").length;
+  const parentPath = window.location.pathname.split("/")[pathLength - 2];
+
+  if (parentPath === "about-us") {
+    favouriteIcon.src = "../image/side-panel/favourite.svg";
+  } else {
+    favouriteIcon.src = "./image/side-panel/favourite.svg";
+  }
+}
+
+const renderHeartIconPath = () => {
+  const heartIcon = document.getElementById("heart-icon");
+
+  const pathLength = window.location.pathname.split("/").length;
+  const parentPath = window.location.pathname.split("/")[pathLength - 2];
+
+  if (parentPath === "about-us") {
+    heartIcon.src = "../image/side-panel/heart.svg";
+  } else {
+    heartIcon.src = "./image/side-panel/heart.svg";
+  }
+}
+
 /*
  * Slider helper function
  */
@@ -137,6 +174,9 @@ const init = () => {
   searchInput.addEventListener("focusout", onSearchInputLoseFocus);
 
   window.addEventListener("click", sidePanelListener);
+
+  renderFavouriteIconPath()
+  renderHeartIconPath()
 
   /* only activate slider at homepage */
   if (checkPathName() === "index.php" || checkPathName() === "") {
