@@ -175,13 +175,13 @@ const init = () => {
 
   window.addEventListener("click", sidePanelListener);
 
-  renderFavouriteIconPath()
-  renderHeartIconPath()
-
   /* only activate slider at homepage */
   if (checkPathName() === "index.php" || checkPathName() === "") {
     imageSlider(9);
   }
+
+  renderFavouriteIconPath()
+  renderHeartIconPath()
 }
 
 const forgotPassword = () => window.alert("Please approach our library admin to reset password!")
